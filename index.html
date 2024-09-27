@@ -6,58 +6,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>"Sumara Prieto - WDD 230 - Web Frontend Development"</title>
   <meta name="description" content="WDD 230 - Web Frontend Development. Sumara Prieto. Course assigment portal">
-  <link rel="icon" href="favicon.ico">
+  <meta name="author" content="Sumara Prieto">
+
+  <meta property="og:title" content="Web Frontend Project for WDD 230">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/sumapri/wdd230/">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Unna:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-  <nav>
-    <li><a href="#">Home</a></li>
-    <li><a href="lesson03/chamber-site-plan.html">site plan</a></li>
-    <li><a href="chamber/index.html">Chamber</a></li>
-    <li><a href="https://www.byui.edu/">School</a></li>
-    <li><a
-        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng#:~:text=7%20And%20it%20came%20to%20pass%20that%20I%2C%20Nephi%2C%20said%20unto%20my%20father%3A%20I%20will%20go%20and%20do%20the%20things%20which%20the%20Lord%20hath%20commanded%2C%20for%20I%20know%20that%20the%20Lord%20giveth%20no%20commandments%20unto%20the%20children%20of%20men%2C%20save%20he%20shall%20prepare%20a%20way%20for%20them%20that%20they%20may%20accomplish%20the%20thing%20which%20he%20commandeth%20them.">scripture</a>
-    </li>
+    <header class="container-header">
+      <div class="container-header-top">
+          <img src="images/profile.webp" alt="Profile Picture" loading="lazy">
+          <h1>Sumara Prieto</h1>
+          <img id="darkMode" src="images/IMG_0445.jpg" alt="DarkMode">
+      </div>
+    </header>
 
+  <nav class="container-header-bottom">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">site plan</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="https://www.byui.edu/">School</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?" target="_blank">scripture</a></li>
+    </ul>
   </nav>
-
-  <header>
-    <img src="images/profile.webp" alt="Profile Picture" loading="lazy">
-    <h1>Sumara Prieto</h1>
-    <img id="darkMode" src="images/IMG_0445.jpg" alt="DarkMode">
-
-  </header>
-
-
 
   <main>
     <h2>"WDD 230 Web Frontend Development"</h2>
     <section class="card">
       <h3>Learning activities</h3>
+      <hr>
       <ul>
+         <li>Week 01 - <a href="lesson01/holygrail.html" target="_blank">Holygrail Page</a></li>
+         <li>Week 02 - <a href="lesson02/media-query.html" target="_blank">media query</a></li>
+         <li>Week 03</li>
+         <li>Week 04</li>
+         <li>Week 05</li>
+         <li>Week 06</li>
+         <li>Week 07</li>
+         <li>Week 08</li>
+         <li>Week 09</li>
+         <li>Week 10</li>
+         <li>Week 11</li> 
+         <li>Week 12</li>
+         <li>Week 13</li>
+         <li>Week 14</li>
       </ul>
-      <li><a href=""></a></li>
-
-
+      <hr>
     </section>
+
     <section class="card">
-      <h3>"information"</h3>
+      <h3>"information"</h3>   
+      <hr>
+      <ul>
+        <li><a>Missouri</a></li>
+        <li><a>Weather</a></li>
+        <li><a>Page Visits</a></li>
+      </ul>
+      <hr>
     </section>
   </main>
+
   <footer>
-    <p>
-      &copy;
-      <span id="year"></span>
-      .:|:. Sumara Prieto .:|:. Missouri
-    </p>
+    <p>&copy; <span id="year"></span>
+      .:|:. Sumara Prieto .:|:. Missouri</p>
     <p>
       Last Modification:
       <span id="lastModified"></span>
     </p>
   </footer>
 
-  <script src="scripts/getdates.js"></script>
+  <script src="scripts/getdates.js" defer></script>
 
 </body>
 
