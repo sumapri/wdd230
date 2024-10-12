@@ -49,3 +49,9 @@ h6 {
     font-family: var(--heading-font);
 }
 
+iframe {
+    width: 100%;
+    height: 450px;
+    border: 0px;
+    margin-top: 30px;
+}
