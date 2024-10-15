@@ -11,16 +11,16 @@ footer {
 }
 
 div.banner {
-  border: 1px solid #bbb;
+  border: 1px solid #918989;
   padding: 1rem;
-  background-color: rgb(230, 243, 254);
+  background-color: rgb(175, 182, 188);
   font-weight: 700;
   word-break: break-word;
   text-align: center;
 }
 
 h1 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(219, 132, 132, 0.1);
   margin: 1rem 0;
 }
 
@@ -31,7 +31,7 @@ main {
 }
 
 h2 {
-  color: navy;
+  color: rgb(22, 175, 235);
   grid-column: 1/3;
 }
 
@@ -48,16 +48,16 @@ h3 {
 }
 
 .callout {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(9, 8, 8, 0.1);
   color: #000;
-  background-color: #eee;
+  background-color: #b1a8a8;
   grid-column: 1/3;
   padding: 1rem;
 }
 
 footer {
   margin-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(235, 219, 219, 0.1);
   font-size: smaller;
   padding: .5rem 0;
 }

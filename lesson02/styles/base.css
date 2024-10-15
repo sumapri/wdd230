@@ -10,9 +10,9 @@ footer {
 
 header, main, footer {
     margin: 1rem auto;
-    border: 1px solid #cccccc;
+    border: 1px solid #918e8e;
     padding: 1rem;
-    background-color: #1D4D72;
+    background-color: #76b8eb;
 }
 
 header, footer {

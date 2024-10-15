@@ -10,3 +10,4 @@ function updateFooterDates() {
 }
 
 document.addEventListener('DOMContentLoaded', updateFooterDates);
+

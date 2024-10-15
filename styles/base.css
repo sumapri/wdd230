@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif&display=swap');
 
 * {
-    border: 2px solid blue;
+    border: 2px solid rgb(18, 18, 19);
 
 }
 */
@@ -15,10 +15,10 @@ body {
     font-family: 'Lato', 'Noto Serif', sans-serif;
     margin: 0px;
     padding: 0px;
-    background: #ffffff;
+    background: selective yellowgreen;
 }
 header {
-    background-color: #1D4D72;
+    background-color: rgba(0, 238, 255, 0.935);
     color: #fff;
     padding: 20px;
     display: flex;
@@ -40,12 +40,12 @@ h2 {
 
 hr {
     visibility: visible;
-    border: 1px solid #daa520;
+    border: 1px solid #ebbd48;
     width: 100%;
 }
 
 header img {
-    border: 05px solid #daa520;
+    border: 05px solid #ebbd48;
 }
 #menu {
     font-size: 1.5rem;
@@ -60,12 +60,12 @@ header img {
 
 #menu::before {
     content: "☰";
-    color: #daa520;;
+    color: #efc459;
 }
 
 #menu.open::before {
     content: "X";
-    color: #daa520;
+    color: #f4f077;
 }
 .navigation {
     display: none;
@@ -98,7 +98,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #daa520;
+    color: #f5cb61;
 }
 
 main {
@@ -106,10 +106,14 @@ main {
     padding-right: 20px;
     padding-bottom: 20px;
 }
+section ul {
+    list-style-type: none;
+}
+
 .card {
     background-color: #ffffff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(237, 74, 74, 0.1);
     margin-top: 20px;
 }
 
@@ -121,7 +125,7 @@ iframe {
 }
 
 footer {
-    background-color: #1D4D72;
+    background-color: #6db8f1;
     text-align: center;
     color: #fff;
     padding: 20px;
@@ -142,7 +146,7 @@ footer {
     position: absolute;
     top: 30px;
     left: 30px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(193, 184, 184, 0.4);
     padding: 10px;
     border-radius: 10px;
 }

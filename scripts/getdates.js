@@ -1,19 +1,18 @@
-function printYear(){    
-  const currentYear = new Date();
-  return currentYear.getFullYear();
-}
+function updateFooterDates() {
+  const currentYear = new Date().getFullYear();
+  const lastModified = document.lastModified;
 
-document.getElementById("currentYear").innerHTML = printYear();
+  const copyrightElement = document.querySelector('footer p');
+  copyrightElement.textContent = `© ${currentYear} ::: Sumara Prieto, Missouri :::`;
 
-function printLastModefied(){
-  const lastModefied = new Date();
-  let month = lastModefied.getMonth();
-  let day = lastModefied.getDate(); 
-  let year = lastModefied.getFullYear();
-  let timeFormated = lastModefied.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12:true});
-  const dateFormated = month + "/" + day + "/" + year + " " + timeFormated;
+  const lastModifiedElement = document.getElementById('lastModified');
   
-  return dateFormated;
+  lastModifiedElement.textContent = `Last Updated: ${lastModified}`;
 }
+ document.addEventListener('DOMContentLoaded', updateFooterDates);
 
-document.getElementById("lastModified").innerHTML = printLastModefied();
+
+
+
+ 
+
