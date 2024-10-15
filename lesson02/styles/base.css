@@ -4,15 +4,14 @@ body {
     font-family: 'Lato', 'Noto Serif', sans-serif;
 }
 
-footer {
-    text-align: center;
-}
+footer, header {
+    text-align: center;}
 
 header, main, footer {
     margin: 1rem auto;
-    border: 1px solid #918e8e;
+    border: 1px solid #0d0c0cef;
     padding: 1rem;
-    background-color: #76b8eb;
+    background-color: #05aff2;
 }
 
 header, footer {
@@ -21,7 +20,7 @@ header, footer {
 
 main {
     display: grid;
-    gap:20px;
+    gap:30px;
 }
 
 main a {
@@ -31,7 +30,7 @@ main a {
 
 section {
     padding: 1rem;
-    background-color: #ffffff;
+    background-color: #f3c808;
 }
 
 section img {
