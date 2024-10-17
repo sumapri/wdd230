@@ -1,26 +1,39 @@
-@media (min-width: 768px) {  
-  nav ul {
-      flex-direction: row;
-      justify-content: space-around;
-  }
-
-  main {
-      display: grid;
-      grid-template-columns: 1fr 1fr; 
-      gap: 20px;
-  }
-
+/* Larger Views ******************************/
+@media only screen and (min-width: 768px) {
   #menu {
-  display: none; 
-}
-
+      display: none;
+  }
   .navigation {
+      flex-direction: row;
+  }
+  .navigation li {
       display: block;
+      flex: 1 1 100%;
+  }
+  .la-card li a {
+      font-size: 0.8em;
   }
 
-  iframe
-  {
+  .attribute {
+      font-size: 1.75em;
+  }
+
+  /* Section Card Area */
+  .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card-grid section:nth-child(1) {
       grid-column: span 2;
   }
 
+  .map {
+      grid-column: span 3;
+  }
+
+  footer .footer-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
 }

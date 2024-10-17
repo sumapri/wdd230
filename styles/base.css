@@ -1,176 +1,252 @@
+/* CSS Style Sheet for indext.html */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=SUSE&family=Unlock&display=swap');
 
-
-
-a {
-    text-decoration: none;
-    color: #000;
-}
 body {
-    font-family: 'Lato', 'Noto Serif', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    background: selective yellowgreen;
+    font-size: 22px;
 }
+
+/* Fonts */
+.suse {
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.unlock-regular {
+    font-family: "Unlock", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* Mobile and Base Views ***********************/
+
 header {
-    background-color: rgba(0, 238, 255, 0.935);
-    color: #fff;
-    padding: 20px;
+    background-color: #046990;
+    font-family: "unlock", 'Times New Roman', Times, serif;
+    color: #4C5B61;
+}
+
+#headertitle {
     display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 30px;
     justify-content: center;
+    align-items: center;
+    color: #f8f5f4;
 }
 
-header img {
-    height: 150px;
-}
-header h1 {
-    margin-left: 20px;
-    color: #fff;
-}
-
-h2 {
-    grid-column: 1/3;
-    text-align: center;
-}
-
-hr {
-    visibility: visible;
-    border: 1px solid #ebbd48;
-    width: 100%;
-}
-
-header img {
-    border: 05px solid #ebbd48;
-}
+/* Nav Bar */
 #menu {
-    font-size: 1.5rem;
-    border: 0;
+	font-size: 1.5rem;
+	border: 0;
+	color: #fbf6f6;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
     background: none;
-    color: #000;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    cursor: pointer;
 }
-
+    
 #menu::before {
-    content: "☰";
-    color: #efc459;
+    font-size: 2rem;
+	content: "☰";
 }
 
 #menu.open::before {
-    content: "X";
-    color: #f4f077;
+    font-size: 2rem;
+	content: "🆇";
 }
+
+
 .navigation {
-    display: none;
-    background-color: #f0f0f0;
-}
-
-.navigation.open {
-    display: block;
-}
-
-nav {
-    background-color: #ffffff;
-    color: #000;
-    padding: 15px 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    list-style: none;
+    background-color: #b2e4eb50;
+    color: #f7f3f3;
+    font-family: "suse", 'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.open li {
+    display: block;
+    width: 100%;
+}
+.open li a {
+    display: block;
 }
 nav a {
-    color: #000;
     text-decoration: none;
-    display: block;
-    padding: 5px;
+
 }
 
 nav a:hover {
-    color: #f5cb61;
+    background-color: #0737f5;
+    color: #d8eb09;
+    font-weight: 700;
 }
 
+/* Main content */
 main {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-section ul {
-    list-style-type: none;
-}
-
-.card {
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(237, 74, 74, 0.1);
-    margin-top: 20px;
 }
 
 iframe {
-    width: 100%;
-    height: 450px;
-    border: 0px;
-    margin-top: 30px;
+    border: none;
 }
 
-footer {
-    background-color: #6db8f1;
+h2 {
+    font-family: "unlock", 'Times New Roman', Times, serif;
+}
+
+
+
+h3{
+    font-family: "unlock", 'Times New Roman', Times, serif;
+    color: #0c0c0c;
+}
+
+.attribute {
+    font-size: 1em;
+    padding: 15px;
     text-align: center;
-    color: #fff;
-    padding: 20px;
-}
-.hero {
-    margin-top: 20px;
-    position: relative;
-    grid-column: 1/3;
+    border-bottom: 1px solid #f0f3f5;
 }
 
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
 }
 
-.hero-content {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    background: rgba(193, 184, 184, 0.4);
-    padding: 10px;
+/* Section Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #0e0e0e;
     border-radius: 10px;
 }
-.hero-content p {
-    margin: 0;
-    padding: .25rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: white;
-}
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.weather-figure {
+.card-header {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
-    margin: 0px;
+    background-color: #06b0c3;
+    color: #fff;
+    padding: 25px 50px;
+    margin-top: auto;
+    font-family: "suse", 'Times New Roman', Times, serif;    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f48507;
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
 }
 
-.weather-figure img {
-    margin-right: 10px;
-    max-width: 100px;
-    height: auto;
-
+.card-content {
+    padding: 20px;
 }
+.card-content div{
+    margin: 0 0 10px 0;
+}
+
+.la-card {
+    list-style-type: none;
+    padding: 0;
+}
+
+.la-card li {
+    padding: 5px;
+    font-family: "suse", 'Times New Roman', Times, serif;
+    color: #232120;
+}
+
+.la-card li a {
+    font-size: 0.72em;
+}
+
+a:active,
+a:link,
+a:visited {
+	color: black;
+}
+
+a:hover {
+    color: rgb(22, 6, 246);
+}
+
+/* Map */
+.map {
+    display: flex;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* footer section */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: #4C5B61;
+    color: #fff;
+    padding: 25px 50px;
+    margin-top: auto;
+    font-family: "suse", 'Times New Roman', Times, serif;
+}
+
+#lastModified {
+    color: rgb(245, 246, 249);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
  
