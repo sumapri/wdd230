@@ -7,9 +7,9 @@ body {
     font-size: 22px;
 }
 
-/* Fonts */
-.suse {
-  font-family: "SUSE", sans-serif;
+
+.robot {
+  font-family: "ROBOT", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -20,7 +20,6 @@ body {
     font-style: normal;
   }
   
-/* Mobile and Base Views ***********************/
 
 header {
     background-color: #046990;
@@ -28,7 +27,7 @@ header {
     color: #4C5B61;
 }
 
-#headertitle {
+#title {
     display: flex;
     flex-direction: row;
     padding: 30px;
@@ -38,7 +37,6 @@ header {
     color: #f8f5f4;
 }
 
-/* Nav Bar */
 #menu {
 	font-size: 1.5rem;
 	border: 0;
@@ -58,7 +56,6 @@ header {
     font-size: 2rem;
 	content: "🆇";
 }
-
 
 .navigation {
     display: flex;
@@ -102,7 +99,6 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* Main content */
 main {
     display: flex;
     flex-direction: column;
@@ -116,8 +112,6 @@ iframe {
 h2 {
     font-family: "unlock", 'Times New Roman', Times, serif;
 }
-
-
 
 h3{
     font-family: "unlock", 'Times New Roman', Times, serif;
@@ -137,7 +131,6 @@ h3{
     grid-gap: 1rem;
 }
 
-/* Section Card */
 .card {
     display: flex;
     flex-direction: column;
@@ -147,18 +140,9 @@ h3{
 
 .card-header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    background-color: #06b0c3;
-    color: #fff;
-    padding: 25px 50px;
-    margin-top: auto;
-    font-family: "suse", 'Times New Roman', Times, serif;    display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #f48507;
+    background-color: #f3a807;
     border-radius: 10px 10px 0 0;
     justify-content: center;
 }
@@ -177,7 +161,7 @@ h3{
 
 .la-card li {
     padding: 5px;
-    font-family: "suse", 'Times New Roman', Times, serif;
+    font-family: "roboto", 'Times New Roman', Times, serif;
     color: #232120;
 }
 
@@ -192,10 +176,9 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(22, 6, 246);
+    color: rgb(6, 94, 246);
 }
 
-/* Map */
 .map {
     display: flex;
     border: solid 1px;
@@ -207,8 +190,6 @@ a:hover {
     height: 450px;
     border-radius: 10px;
 }
-
-/* footer section */
 
 footer {
     display: flex;
