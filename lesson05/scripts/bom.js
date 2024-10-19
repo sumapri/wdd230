@@ -2,16 +2,15 @@
 const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
-const clearButton = document.querySelector('#clear');
 
 // Create a click event listener
 button.addEventListener('click', () => {
-    if (input.value != "") {
+    if(input.value != "") {
         // Create a new list element
         const li = document.createElement("li");
         // Create a delete button for the li
         const deleteButton = document.createElement("button")
-
+        
         // Populate the li elements textContent with the input value
         li.textContent = input.value;
         // Populate the button textContent
@@ -28,19 +27,11 @@ button.addEventListener('click', () => {
             input.focus(); // Focuses back on the input field
         });
 
-        // change the input value to nothing
+        // change the input value to nothing 
         input.value = '';
-    }
+    } 
     else {
         // If input is empty, focus on the input field
         return input.focus();
     }
-});
-
-
-// Function to clear all chapters
-clearButton.addEventListener('click', () => {
-    list.innerHTML = '';
-    input.focus();
-    error.textContent = ''; // Clear error message
 });
