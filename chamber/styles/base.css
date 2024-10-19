@@ -33,6 +33,41 @@ body {
   padding: 0;
   background-color: white;
 }
+body.dark-mode {
+  background: #181818;
+  color: #ffffff;
+}
+body.dark-mode a {
+  color: #FFD700;
+}
+
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode header, body.dark-mode footer {
+  background-color: #222;
+  color: #ffffff;
+}
+
+body.dark-mode section {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.dark-mode .btn {
+  background-color: #FFD700;
+  color: #1D4D72;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #ffffff;
+  color: #1D4D72;
+}
 
 header {
   padding: 1em;
@@ -236,7 +271,7 @@ footer section {
 
 .footer address {
   font-style: normal;
-  color: black 
+  color: rgb(248, 245, 245) 
 }
 
 .footer-btn {
@@ -300,5 +335,5 @@ footer section {
 
 
 #lastModified {
-  color: #0c0c0c;
+  color: #faf6f6;
 }

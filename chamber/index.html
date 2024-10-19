@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Home Page</title>
-    <meta name="description" content="Missouri Chamber Home Page">
+    <title>Missouri Chamber of Commerce</title>
+    <meta name="description" content="Missouri Chamber of Commerce home page">
     <meta name="author" content="Sumara Prieto">
 
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
+    <meta property="og:title" content="Springfield Chamber Of Commerce project">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i0.wp.com/sgfcitizen.org/wp-content/uploads/2024/10/Haw-Creek-near-PG-boulder_DSC2357-Enhanced-NR-Edit.jpg?w=1200&ssl=1">
+    <meta property="og:url" content="https://sumapri.github.io/wdd230/chamber">
    
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="/images/favicon1.ico"
     
 </head>
 <body>
@@ -32,6 +33,10 @@
                 <li><a href="">Contact</a></li>
                 <li><a href="">Join</a></li>
             </ul>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode" class="dark-mode-checkbox">
+                <label for="dark-mode" class="dark-mode-label"></label>
+            </div>
         </nav>
     </header>
     <main>
@@ -84,7 +89,7 @@
             <div class="footer-addr">
                 <h3>Contact</h3>
                 <address>
-                  202 S. John Q Hammons Parkway <br>
+                  202 S. John Q Hammons Pwy <br>
                     
 Springfield, MO 65806<br>
                     <a class="footer-btn" href="">Email Us</a>
@@ -112,5 +117,6 @@ Springfield, MO 65806<br>
         </section>
     </footer>
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/darkmode.js"></script>
 </body>
 </html>
