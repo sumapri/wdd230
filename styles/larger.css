@@ -1,39 +1,51 @@
-/* Larger Views ******************************/
-@media only screen and (min-width: 768px) {
-  #menu {
-      display: none;
-  }
-  .navigation {
-      flex-direction: row;
-  }
-  .navigation li {
-      display: block;
-      flex: 1 1 100%;
-  }
-  .la-card li a {
-      font-size: 0.8em;
-  }
+/* larger.css */
 
-  .attribute {
-      font-size: 1.75em;
-  }
+@media (min-width: 768px) {
+    main {
+        display: grid; /* Use CSS Grid for layout */
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Space between grid items */
+    }
 
-  /* Section Card Area */
-  .card-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-  }
-  .card-grid section:nth-child(1) {
-      grid-column: span 2;
-  }
+    section.card {
+        padding: 20px; /* Add padding to cards */
+        border: 1px solid #ccc; /* Optional border for visual separation */
+        border-radius: 5px; /* Rounded corners */
+        background-color: #f9f9f9; /* Light background for cards */
+    }
+}
 
-  .map {
-      grid-column: span 3;
-  }
+/* Mobile styles (default) */
+main {
+    display: flex; /* Stack sections vertically */
+    flex-direction: column; /* Ensure vertical stacking */
+    gap: 20px; /* Space between sections */
+}
 
-  footer .footer-info {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
+section.card {
+    padding: 10px; /* Less padding for mobile */
+    background-color: #fff; /* White background for sections */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+    nav ul {
+        display: flex; /* Use flexbox for horizontal layout */
+        justify-content: center; /* Center the navigation items */
+        padding: 0; /* Remove default padding */
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Space between items */
+    }
+}/* Mobile styles (default, before media query) */
+nav ul {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 10px 0; /* Space between items in vertical layout */
+}
 }

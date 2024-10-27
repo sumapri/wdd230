@@ -1,0 +1,73 @@
+/* Media Query for Larger Viewer */
+@media ( 541px <= width <= 819px) {
+
+  .container-main {
+      width: 95%;
+      margin: 0 auto;
+  }
+  
+  #portrait-photo {
+      width: 175px; /* Adjust the width of the image to its container */
+      height: auto; /* Automatically adjust the height based on the width to maintain the aspect ratio */
+      padding: 1.75rem;
+      border-radius: 50%;
+  }
+
+  h1 {
+      font-size: 2rem;
+      line-height: 3.5rem;
+  }
+
+  #navigation {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .nav-item {
+      display: block;
+  }
+
+  #navigation li {
+      /* flex: 1 1 auto; Allow items to grow but not take up 100% width  */
+      width: auto; /* Let the width be based on the content */
+      flex-grow: 1; /* Allow the items to grow equally */
+      text-align: center; /* Center align the anchor links */
+  }
+
+  .container-main {
+      display: grid;
+      grid-template-columns: 65% 30%;
+  }
+
+  .container-main-hero {
+      grid-column: span 2;
+  }
+
+  .hero-label {
+      top: 75px;
+      left: 20px;
+      padding: 0.5rem;
+  }
+  
+  .hero-label p {
+      padding: 0.2rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      color: var(--accent3-color);
+  }
+
+  .container-main-title {
+      grid-column: span 2;
+  }
+
+  iframe {
+      grid-column: span 2;
+  }
+
+  #menu {
+      display: none;
+  }
+
+
+
+}

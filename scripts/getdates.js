@@ -1,15 +1,9 @@
-function updateFooterDates() {
-  const currentYear = new Date().getFullYear();
-  const lastModified = document.lastModified;
+// Get the current year and populate the footer
+const currentYear = new Date().getFullYear();
+document.getElementById('currentYear').textContent = currentYear;
 
-  const copyrightElement = document.querySelector('footer p');
-  copyrightElement.textContent = `© ${currentYear} ::: Sumara Prieto, Missouri :::`;
-
-  const lastModifiedElement = document.getElementById('lastModified');
-  
-  lastModifiedElement.textContent = `Last Updated: ${lastModified}`;
-}
- document.addEventListener('DOMContentLoaded', updateFooterDates);
+// Get the last modified date and populate the footer
+document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
 
 
 
