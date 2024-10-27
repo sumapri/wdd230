@@ -1,6 +1,6 @@
 /* larger.css */
 
-@media (min-width: 768px) {
+@media (min-width: 541px) and (max-width: 819px)  {
     main {
         display: grid; /* Use CSS Grid for layout */
         grid-template-columns: repeat(2, 1fr); /* Two columns */
