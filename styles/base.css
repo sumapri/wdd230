@@ -1,26 +1,30 @@
 /* Base styles for the webpage */
+
 body {
-    font-family: 'Roboto', sans-serif; /* Example font */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(232, 228, 228); /* Example background color */
-    color: #333; /* Example text color */
+    font-family: 'Lato', futura; 
+    margin: 0 auto;
+    max-width: 1440px;
+    background-color: rgb(232, 228, 228); 
+    color: #333; 
 }
 
 header {
-    text-align: center;
-    padding: 20px;
+    max-width: 100%;
+}
+h1, h2, h3, nav a, p {
+    font-family: var(--paragraph-font);
+    font-weight: 400;
 }
 
 nav {
-    background-color: #333; /* Example background color */
+    background-color: #333;
+    max-width: 100%; /* Allow the container to take full width */
+    margin: 0 auto; /* Ensure it's centered */ 
 }
 
 /* Hide the navigation links by default in mobile view */
 nav ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove padding */
+    
     display: none; /* Initially hidden */
     flex-direction: column; /* Stack items vertically */
 }
@@ -29,19 +33,42 @@ nav ul {
 nav ul.active {
     display: flex; /* Show when active */
 }
-@media (min-width: 768px) {
-    nav ul {
-        display: flex; /* Show navigation links in larger views */
-        flex-direction: row; /* Horizontal layout */
-    }
+nav ul {
+    display: flex; /* Show navigation links in larger views */
+    flex-direction: row; /* Horizontal layout */
+}
+nav ul li {
+    position: relative; /* Set position for pseudo-element */
+    padding-left: 140px; /* Add space for the marker */
+    text-align: center; /* Center text for each item */
+}
+nav a {
+    color: white; 
+    text-decoration: none; /* Remove underline */
+    padding: 20px; /* Add padding for clickable area */
+    display: block; /* Ensure the entire area is clickable */
+}
+/* Pseudo-element for wayfinding markers */
+nav ul li::before {
+    content: '➤'; /* Marker symbol (you can customize this) */
+    position: absolute; /* Position relative to the list item */
+    left: 0; /* Align to the left */
+    color: white; /* Marker color (adjust as needed) */
+    font-size: 18px; /* Size of the marker */
+    line-height: 1; /* Center the marker vertically */
+
+}
+/* Hover effect to change marker color */
+nav ul li:hover::before {
+    color: #ffb700; 
 }
 
 /* Style for the hamburger button */
 #hamburger {
     background: none;
     border: none;
-    color: white; /* Change color to match your design */
-    font-size: 24px; /* Size of the hamburger icon */
+    color: white; 
+    font-size: 20px; /* Size of the hamburger icon */
     cursor: pointer; /* Change cursor to pointer */
     display: flex; /* Show in mobile view */
 }
@@ -55,7 +82,7 @@ nav ul.active {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background-color: lightblue;
+        background-color: rgb(6, 182, 240);
     }
     
     #portrait-photo {
@@ -64,83 +91,65 @@ nav ul.active {
         padding: 1.5rem;
         border-radius: 50%;
     }
-
-    
-}
-
-/* Additional styles for navigation links */
-nav ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove padding */
-}
-
-nav ul li {
-    position: relative; /* Set position for pseudo-element */
-    padding-left: 20px; /* Add space for the marker */
-    text-align: center; /* Center text for each item */
-}
-
-nav a {
-    color: white; /* Example link color */
-    text-decoration: none; /* Remove underline */
-    padding: 10px; /* Add padding for clickable area */
-    display: block; /* Ensure the entire area is clickable */
-}
-
-/* Pseudo-element for wayfinding markers */
-nav ul li::before {
-    content: '➤'; /* Marker symbol (you can customize this) */
-    position: absolute; /* Position relative to the list item */
-    left: 0; /* Align to the left */
-    color: white; /* Marker color (adjust as needed) */
-    font-size: 18px; /* Size of the marker */
-    line-height: 1; /* Center the marker vertically */
-}
-
-/* Hover effect to change marker color */
-nav ul li:hover::before {
-    color: #ffb700; /* Change marker color on hover */
 }
 
 main {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    max-width: 93%;
+    margin: 0 auto;
 }
 
 .card {
-    background-color: rgba(120, 199, 241, 0.762);
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(14, 13, 13, 0.1);
+    background-color: rgba(193, 214, 225, 0.762);
+    border-style: solid;
+    border-color: gray;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(162, 158, 158, 0.1);
 }
 .card a {
-    color: blue; /* Normal color */
+    color: black;
 }
 
 .card a:hover {
     color: red; /* Color on hover */
 }
-.map-container {
-    margin: 20px 0; /* Add space around the map */
-    text-align: center; /* Center-align the content */
+.card h3 {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+}
+.card ul {
+    margin: 1rem  1rem;
+    list-style-type: none;
+}
+ul li {
+    cursor: pointer;
+    padding: 0.25rem 0;
+}
+ul li:hover {
+    font-weight: 700;
 }
 
+.card p {
+    text-align: center;
+    padding: 1rem;
+}
+
+
 .map-container iframe {
-    width: 100%; /* Make the iframe responsive */
-    max-width: 600px; /* Set a maximum width */
-    height: 450px; /* Set a fixed height */
-    border: none; /* Remove default border */
+    width: 100%;
+    height: 450px;
+    border: 0px;
+    margin-top: 30px;
+    
 }
 
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #143ed4; /* Example footer color */
+    padding: 2rem 2rem;
+    margin-top: 3rem;
+    background-color: #1454d4; 
     color: white;
 }
 footer img {
@@ -184,30 +193,28 @@ body.dark-mode nav {
 }
 
 body.dark-mode section.card {
-    background-color: #444; /* Dark card background */
-    color: #f0f0f0; /* Light text color */
+    background-color: #b4b9bb; 
+    color: #0a0a0a; 
     border: 1px solid #666; /* Darker border */
 }
 /* Additional dark mode styles for specific sections if needed */
 body.dark-mode .card h3 {
-    color: #f5c507; 
+    color: darkviolet; 
 }
 
-.card a:hover {
-    color: rgb(196, 196, 202); /* Hover color in light mode */
-}
-
-@media  (prefers-color-scheme: light) {
     .card a:hover {
-        color: rgb(225, 240, 8); /* Hover color in dark mode */
-    }
+    color: rgb(227, 227, 231); /* Hover color in light mode */
 }
+    .card a:hover {
+        color: rgb(240, 8, 39); /* Hover color in dark mode */
+    }
+
 body.dark-mode #dark-mode-toggle label {
     background: #101011; /* Dark toggle background */
     color: white; /* Light toggle text */
 }
 
-/* Ensure the hero image is responsive */
+
 .hero {
     position: relative;
 }
@@ -220,8 +227,8 @@ body.dark-mode #dark-mode-toggle label {
 /* Overlay styles for the hero image */
 .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 20%;
     transform: translate(-50%, -50%);
     color: white;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
