@@ -192,19 +192,18 @@ body.dark-mode section.card {
 body.dark-mode .card h3 {
     color: #f5c507; 
 }
-css
-Copy code
+
 .card a:hover {
-    color: darkblue; /* Hover color in light mode */
+    color: rgb(196, 196, 202); /* Hover color in light mode */
 }
 
-@media (prefers-color-scheme: dark) {
+@media  (prefers-color-scheme: light) {
     .card a:hover {
-        color: deepskyblue; /* Hover color in dark mode */
+        color: rgb(225, 240, 8); /* Hover color in dark mode */
     }
 }
 body.dark-mode #dark-mode-toggle label {
-    background: #061af4; /* Dark toggle background */
+    background: #101011; /* Dark toggle background */
     color: white; /* Light toggle text */
 }
 
