@@ -117,6 +117,13 @@ main {
     padding: 20px;
     box-shadow: 0 2px 5px rgba(14, 13, 13, 0.1);
 }
+.card a {
+    color: blue; /* Normal color */
+}
+
+.card a:hover {
+    color: red; /* Color on hover */
+}
 .map-container {
     margin: 20px 0; /* Add space around the map */
     text-align: center; /* Center-align the content */
@@ -185,7 +192,17 @@ body.dark-mode section.card {
 body.dark-mode .card h3 {
     color: #f5c507; 
 }
+css
+Copy code
+.card a:hover {
+    color: darkblue; /* Hover color in light mode */
+}
 
+@media (prefers-color-scheme: dark) {
+    .card a:hover {
+        color: deepskyblue; /* Hover color in dark mode */
+    }
+}
 body.dark-mode #dark-mode-toggle label {
     background: #061af4; /* Dark toggle background */
     color: white; /* Light toggle text */
