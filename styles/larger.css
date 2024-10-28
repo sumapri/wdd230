@@ -38,7 +38,7 @@ section.card {
     nav ul li {
         margin: 0 20px; /* Space between items */
     }
-}/* Mobile styles (default, before media query) */
+/* Mobile styles (default, before media query) */
 nav ul {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack items vertically */

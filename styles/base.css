@@ -55,7 +55,7 @@ nav ul.active {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        background-color: var(--accent1-color);
+        background-color: lightblue;
     }
     
     #portrait-photo {
@@ -99,7 +99,7 @@ nav ul li::before {
 
 /* Hover effect to change marker color */
 nav ul li:hover::before {
-    color: #ffcc00; /* Change marker color on hover */
+    color: #ffb700; /* Change marker color on hover */
 }
 
 main {
@@ -183,12 +183,12 @@ body.dark-mode section.card {
 }
 /* Additional dark mode styles for specific sections if needed */
 body.dark-mode .card h3 {
-    color: #ffcc00; /* Change heading color if needed */
+    color: #f5c507; 
 }
 
 body.dark-mode #dark-mode-toggle label {
-    background: #333; /* Dark toggle background */
-    color: #fff; /* Light toggle text */
+    background: #061af4; /* Dark toggle background */
+    color: white; /* Light toggle text */
 }
 
 /* Ensure the hero image is responsive */
