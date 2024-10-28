@@ -122,11 +122,18 @@
   <footer>
     <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.<br>Missouri</p>
     <img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="50" height="30" loading="lazy"
-    <span id="last-modified"></span></p>
+    <p id="lastModified"></p>
+    <p>Current Year: <span id="last-modified"></span></p>
   </footer>
 </main>
 
+<script>
+  const currentYear = new Date().getFullYear();
+  document.getElementById('currentYear').textContent = currentYear;
 
+  // Get the last modified date and populate the footer
+  document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
+</script>
   <script src="scripts/getdates.js"></script>
   <script src="scripts/hamburger.js"></script> <!-- Link to the new hamburger.js -->
   <script src="scripts/darkMode.js"></script> <!-- Link to darkMode.js -->
