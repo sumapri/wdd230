@@ -135,14 +135,14 @@ a {
 .weather-container .data-title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(7, 19, 243);
 
 }
 .weather-container .data-value {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(139, 8, 240);
 }
 
@@ -150,13 +150,13 @@ a {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 1rem;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
 }
 /* Consolidated container styles */
 .events-container,
 .weather-container,
 .spotlights-container {
-  padding: 40px 10px;
+  padding: 30px 5px;
   background-color: rgb(210, 206, 206);
   border-radius: 10px;
   box-shadow: 0 14px 28px black;
