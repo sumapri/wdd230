@@ -149,8 +149,8 @@ a {
 .data-table {
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: 1.5rem;
-  row-gap: 0.5rem;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
 }
 /* Consolidated container styles */
 .events-container,
