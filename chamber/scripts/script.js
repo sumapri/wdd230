@@ -1,16 +1,14 @@
-// Select the DOM element for output
+// Select the DOM elements for output
 const yearCopyright = document.querySelector("#currentYear");
 const pageLastModified = document.querySelector("#lastModified");
-const hambutton = document.querySelector("#menu");
-const navbar = document.querySelector(".header-main-nav");
+const navbar = document.getElementById('navigation');
+const hamburger = document.getElementById('hamburger'); // Ensure hamburger is defined
 
-// Set up the Date format object parameter for toLocaleString method and manipulate
+// Set the current year and last modified date dynamically
 yearCopyright.textContent = new Date().getFullYear();
-pageLastModified.textContent = new Date().toLocaleString();
+pageLastModified.textContent = document.lastModified; // Consider formatting if necessary
 
-// Add a click event listener to the hamburger button and use a callback function that toggles the list element's list of classes.
-hambutton.addEventListener('click', () => {
-    navbar.classList.toggle('open'); // This applies the 'open' class to the whole navigation
-    hambutton.classList.toggle('open'); // Toggles the hamburger button icon (≡ to X)
+// Add a click event listener to the hamburger button
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open'); // Toggles the 'open' class for the navigation
 });
-// Toggle adds the class if it does not currently exist or removes the class if it does exist.
