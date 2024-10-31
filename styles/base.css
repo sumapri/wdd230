@@ -192,7 +192,7 @@ body.dark-mode nav {
     background-color: #333; /* Dark nav background */
 }
 
-body.dark-mode section.card {
+body.dark-mode .card {
     background-color: #b4b9bb; 
     color: #0a0a0a; 
     border: 1px solid #666; /* Darker border */

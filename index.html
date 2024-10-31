@@ -58,7 +58,7 @@
         <picture>
             <source media="(max-width: 540px)" srcset="images/hero-small.webp">
             <source media="(max-width: 820px)" srcset="images/hero-medium.webp">
-            <img src="images/hero-large.webp" alt="Kansas City Temple" width="1280" height="height:auto;">
+            <img src="images/hero-large.webp" alt="Kansas City Temple" width="1280">
         </picture>
 
         <div class="overlay">Kansas City, MO Temple</div>
@@ -78,8 +78,7 @@
               <li>Week 10</li>
               <li>Week 11</li> 
               <li>Week 12</li>
-              <li>Week 13</li>
-              <li>Week 14</li>
+              
             </ul>
         </section>
         <section class="card">
@@ -94,23 +93,22 @@
 
 
     <!-- Dark Mode Toggle -->
-  <div id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
-  <input type="checkbox" id="dark-mode-checkbox">
-  <label for="dark-mode-checkbox">🌙</label>
-  </div>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+      <input type="checkbox" id="dark-mode-checkbox" style="display: none;"> <!-- Hide the checkbox -->
+      🌙
+  </button>
   <section class="map-container">
     <h2>Location Map</h2>
    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206055.8390634004!2d-92.436836!3d38.30466245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6d54822e37d%3A0xb55bc4590466bd72!2sMissouri!5e0!3m2!1sen!2sus!4v1728764416011!5m2!1sen!2sus" width="600"
        height="450" 
        style="border:0;" 
        allowfullscreen="" 
-       loading="lazy" 
-       referrerpolicy="no-referrer-when-downgrade"></iframe> 
+       loading="lazy"></iframe> 
   </section>
 </main>
 
   <footer>
-    <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"</p>
+    <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"/>
     <p id="lastModified"></p>
   </footer>
 
