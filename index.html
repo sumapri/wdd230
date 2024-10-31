@@ -83,12 +83,16 @@
         </section>
         <section class="card">
           <h3>Information</h3>
-            <p>Weather: Placeholder  data - Sunny, 75°F</p>
-            <p>Visits: Placeholder data - 100 visits</p>
-            <p>
-              View the landscape image: 
-              <a href="lesson03/images/landscape.webp" target="_blank">WebP</a>
-          </p>
+          <div class="weather-content">
+            <h4>Springfield, MO</h4>
+            <p><span class="data-label">Conditions: </span><span id="conditions">Sunny</span> </p>
+            <p><span class="data-label">Temperature (°F): </span><span id="current-temperature">91</span></p>
+            <p><span class="data-label">Wind (mph): </span><span id="wind-speed">5</span></p>
+            <p><span class="data-label">Wind Chill (°F):  </span><span id="wind-chill-value"></span></p>
+            <p><span class="data-label">Humidity (%): </span>80</p>
+            <p><span class="data-label">Number of Visits: </span><span class="num-visits"></span></p>
+        </div>
+            
         </section> 
 
 
@@ -121,5 +125,7 @@
   <script src="scripts/getdates.js"></script>
   <script src="scripts/hamburger.js"></script> <!-- Link to the new hamburger.js -->
   <script src="scripts/darkMode.js"></script> <!-- Link to darkMode.js -->
+  <script src="scripts/localStorage.js"></script>
+  <script src="scripts/windchill.js"></script>
 </body>
 </html>
