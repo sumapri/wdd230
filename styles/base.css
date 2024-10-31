@@ -3,6 +3,7 @@
 body {
     font-family: 'Lato', futura; 
     margin: 0 auto;
+    width: 100%; /* Take full width */
     max-width: 1440px;
     background-color: rgb(232, 228, 228); 
     color: #333; 
@@ -12,7 +13,7 @@ header {
     max-width: 100%;
 }
 h1, h2, h3, nav a, p {
-    font-family: var(--paragraph-font);
+    font-family: sans-serif;
     font-weight: 400;
 }
 
@@ -134,7 +135,6 @@ ul li:hover {
     text-align: center;
     padding: 1rem;
 }
-
 
 .map-container iframe {
     width: 100%;

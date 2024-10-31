@@ -1,7 +1,7 @@
-/* Media Query for Larger Viewer */
+/* Media Query for Medium Viewer */
 @media ( 541px <= width <= 819px) {
 
-  .container-main {
+  main {
       width: 95%;
       margin: 0 auto;
   }

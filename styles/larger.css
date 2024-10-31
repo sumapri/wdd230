@@ -1,5 +1,5 @@
 /* Media Query for Larger Viewer */
-@media (541px <= width <= 819px) {
+@media (min-width: 820px) {
     main {
         width: 95%;
         margin: 0 auto;
@@ -11,7 +11,7 @@
         border-radius: 50%;
     }
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 3.5rem;
     }
     #navigation {
@@ -20,13 +20,10 @@
     }
     .nav-item {
         display: block;
-    }
-    .nav-item {
         font-size: 1.2rem;
         font-weight: 700;
     }
     
-
     #navigation li {
         /* flex: 1 1 auto; Allow items to grow but not take up 100% width  */
         width: auto; /* Let the width be based on the content */
@@ -35,10 +32,10 @@
     }
     .container-main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 33% 33% 33%;
     }
     .hero {
-        grid-column: span 2;
+        grid-column: span 3;
     }
 
     .hero-label {
