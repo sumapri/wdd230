@@ -1,0 +1,5 @@
+
+.hero {
+  max-width: 1280px; /* or any other value you prefer */
+  margin: 0 auto; /* centers the hero section */
+}
