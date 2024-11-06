@@ -1,12 +1,16 @@
 /* styles/base.css */
-/* Include normalize styles at the top */
-@import url('normalize.css');
-
+:root {
+  --site-color-01: #f4f4f4;
+  --site-color-02: #333;
+  --site-color-06: #e5e6e3;
+}
+* {
+  box-sizing: border-box; /* Apply box-sizing reset globally */
+}
 
 body {
   font-family: Arial, sans-serif;
   margin: 0 auto;
-  box-sizing: border-box;
   max-width: 1200px;
   height: 80vh;
   color: #333;
@@ -53,9 +57,7 @@ a {
 
 .header-main-nav {
   display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
+  flex-direction: row; /* Ensures horizontal navigation */
 }
 
 .nav-item {
@@ -75,17 +77,10 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 95%;
-  margin-top: 1px auto;
+  margin-top:  2rem; /* More appropriate margin */
 }
-/* .hero-container, */
-.events-container,
-.weather-container,
-.spotlights-container {
-    padding: 40px 10px;
-    background-color: var(--site-color-06);
-    border: 3px solid var(--site-color-01);
-    border-radius: 10px;
-}
+
+
 .hero-container {
   margin: 0 auto ;
 }
@@ -131,8 +126,6 @@ a {
   transition: all ease-in-out 200ms;
 }
 
-
-
 .main-cta a:hover, .main-cta a:active {
   border: 3px solid #DB9817;
   background-color: lightblue;
@@ -151,8 +144,6 @@ a {
   font-size: 2rem;
 
 }
-
-
 .weather-container .data-title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
@@ -173,11 +164,7 @@ a {
   column-gap: 1.75rem;
   row-gap: 0.5rem;
 }
-.data-table .date-title {
-  font-family: var(--headline-font-family);
-  font-weight: bold !important;
-  font-size: 1.2rem;
-}
+
 /* Consolidated container styles */
 .events-container,
 .weather-container,
@@ -253,8 +240,52 @@ a {
   text-align: center;
   font-size: 12px;
 }
+/* Create a grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar takes 1 fraction, main content takes 3 fractions */
+  gap: 20px;
+}
 
+/* Sidebar styling */
+.sidebar {
+  background-color: #f4f4f4; /* Background color */
+  padding: 20px;
+  border-radius: 8px;
+}
 
+/* Main content styling */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for images */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+    gap: 10px;
+  }
+  .main-content {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}
+/* Add a hover effect on gallery images */
+.gallery-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.gallery-image:hover {
+  transform: scale(1.05); /* Slightly scale up the image */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+@media (max-width: 768px) {
+  .gallery-image:hover {
+    transform: none; /* Disable hover effect on mobile */
+    box-shadow: none; /* Disable shadow on mobile */
+  }
+}
 
 
 
