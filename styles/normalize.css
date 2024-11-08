@@ -2,7 +2,8 @@
 
 html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: auto; /* or none */
+: 100%; /* 2 */
 }
 
 body {
@@ -84,23 +85,45 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; /* 1 */
+  appearance: none;  /* Standard property */ 
 }
 
+/* Standard focus styles for all browsers */
+button:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus {
+  outline: 2px solid transparent; /* Custom outline to preserve accessibility */
+  outline-offset: 2px;            /* Optional: adjust outline position */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus ring */
+}
+
+/* Firefox-specific rule (fallback for older versions) */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none; /* 1 */
-  padding: 0; /* 2 */
+  border-style: none;  /* Removes the default border */
+  padding: 0;          /* Removes the default padding */
 }
 
+
+/* Fallback for older Firefox versions (if needed) */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; /* 1 */
+  outline: 1px dotted ButtonText; /* Custom dotted outline */
 }
+
+/* Standard focus styles for all modern browsers */
+button:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus {
+  outline: 1px dotted ButtonText; /* Custom dotted outline */
+}
+
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -108,21 +131,40 @@ input[type="radio"] {
   padding: 0; /* 2 */
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; /* 1 */
+/* Hide spin buttons across all browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* For WebKit browsers */
+  margin: 0; /* Optional: removes any margin */
 }
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none;   /* Chrome, Safari */
+  appearance: none;           /* Modern browsers */
+}
+
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield; /* WebKit browsers */
+  appearance: textfield;         /* Standard property */
+  outline-offset: -2px;          /* Adjust focus outline */
 }
 
+
+/* Hide WebKit-specific search UI elements */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  display: none; /* 1 */
+  display: none;
 }
+
+/* Remove search input decoration (magnifying glass, clear button) for all browsers */
+input[type="search"] {
+  -webkit-appearance: none; /* For WebKit browsers */
+  appearance: none;         /* For modern browsers */
+}
+
 
 textarea {
   overflow: auto; /* 1 */
