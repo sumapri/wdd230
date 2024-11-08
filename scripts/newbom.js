@@ -1,37 +1,65 @@
-// Declare variables
-const input = document.querySelector("#favchap");
-const button = document.querySelector("button");
-const list = document.querySelector("#list");
+// Step 1: Declare references to DOM elements
+const input = document.querySelector('#favchap');
+const button = document.querySelector('button');
+const list = document.querySelector('#list');
 
-// Create a click event listener
-button.addEventListener('click', () => {
-    if(input.value != "") {
-        // Create a new list element
-        const li = document.createElement("li");
-        // Create a delete button for the li
-        const deleteButton = document.createElement("button")
-        
-        // Populate the li elements textContent with the input value
-        li.textContent = input.value;
-        // Populate the button textContent
-        deleteButton.textContent = "❌";
+// Step 2: Initialize chaptersArray from localStorage or as an empty array
+let chaptersArray = getChapterList() || [];
 
-        // Append the li element with the delete button
-        li.append(deleteButton);
-        // Append the li element to the unordered list
-        list.append(li);
-
-        // Add an event listener to the delete button that removes the li element when clicked
-        deleteButton.addEventListener('click', () => {
-            list.removeChild(li); // Removes the li element
-            input.focus(); // Focuses back on the input field
-        });
-
-        // change the input value to nothing 
-        input.value = '';
-    } 
-    else {
-        // If input is empty, focus on the input field
-        return input.focus();
-    }
+// Step 3: Display the existing chapters from localStorage
+chaptersArray.forEach(chapter => {
+  displayList(chapter);
 });
+
+// Step 4: Handle button click to add a new chapter
+button.addEventListener('click', () => {
+  if (input.value !== '') {
+    displayList(input.value);
+    chaptersArray.push(input.value);
+    setChapterList();
+    input.value = '';
+    input.focus();
+  }
+});
+
+// Step 5: Define the displayList function
+function displayList(item) {
+  let li = document.createElement('li');
+  let deleteButton = document.createElement('button');
+  
+  li.textContent = item;
+  deleteButton.textContent = '❌';
+  deleteButton.classList.add('delete');
+  
+  li.append(deleteButton);
+  list.append(li);
+
+  // Step 6: Add event listener for deleting a chapter
+  deleteButton.addEventListener('click', function () {
+    list.removeChild(li);
+    deleteChapter(item);
+    input.focus();
+  });
+}
+
+// Step 7: Define the setChapterList function to save to localStorage
+function setChapterList() {
+  localStorage.setItem('myFavBOMList', JSON.stringify(chaptersArray));
+}
+
+// Step 8: Define the getChapterList function to retrieve from localStorage
+function getChapterList() {
+  return JSON.parse(localStorage.getItem('myFavBOMList'));
+}
+
+// Step 9: Define the deleteChapter function to remove a chapter
+function deleteChapter(chapter) {
+  // Remove the "❌" character at the end of the chapter string
+  chapter = chapter.slice(0, chapter.length - 1);
+  
+  // Filter out the chapter from chaptersArray
+  chaptersArray = chaptersArray.filter(item => item !== chapter);
+  
+  // Update localStorage
+  setChapterList();
+}
