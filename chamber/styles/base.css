@@ -1,8 +1,10 @@
+
 /* styles/base.css */
 :root {
   --site-color-01: #f4f4f4;
   --site-color-02: #333;
   --site-color-06: #e5e6e3;
+  --headline-font-family: 'Arial', sans-serif; /* Add this variable */
 }
 * {
   box-sizing: border-box; /* Apply box-sizing reset globally */
@@ -11,22 +13,18 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0 auto;
-  max-width: 1200px;
-  height: 80vh;
+  width: 100%; /* Take full width */
+  max-width: 1440px;
   color: #333;
   background-color: #e5e6e3;
 }
 
-h1 {
-  font-size: 20px;
-  line-height: 1.2;
-  color: black;
-  font-weight: 800;
-  text-align: center;
+header {
+    max-width: 100%;
 }
-
-h2, h3, h4, h5 {
-  font-family: Arial, Helvetica, sans-serif;
+h1, h2, h3, nav a, p {
+    font-family: sans-serif;
+    font-weight: 400;
 }
 p {
   font-size: 14px;
@@ -46,7 +44,7 @@ a {
 .header-main {
   width: 100%;
   background-color: #007BFF;
-  padding: 10rem;
+  padding: 4rem;
   text-align: center;
 }
 
@@ -80,9 +78,9 @@ a {
   margin-top:  2rem; /* More appropriate margin */
 }
 
-
 .hero-container {
   margin: 0 auto ;
+  width: 100%; /* Ensure it spans the full width */
 }
 
 .hero-container-img {
@@ -92,7 +90,6 @@ a {
 #hero-img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 .hero-container h1 {
   text-align: center;
@@ -218,11 +215,6 @@ a {
 .footer-contact-info {
   padding-left: 20px;
 }
-.footer-main .nav-item {
-  display: block;
-  text-align: left;
-  background-color: blue;
-}
 
 .footer-contact-info p {
   color: var(--site-color-02);
@@ -260,11 +252,57 @@ a {
   grid-template-columns: repeat(3, 1fr); /* 3 columns for images */
   gap: 20px;
 }
+/* Dark mode toggle styles */
+#dark-mode-toggle {
+    position: absolute; /* Position in upper right corner */
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#dark-mode-toggle input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+#dark-mode-toggle label {
+    background: #f0f0f0; /* Light background */
+    border-radius: 25px; /* Rounded switch */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#dark-mode-toggle label:hover {
+    background: #e0e0e0; /* Hover effect */
+}
+body.dark-mode {
+    background-color: #000; /* Dark background */
+    color: #fff; /* Light text */
+}
+
+body.dark-mode nav {
+    background-color: #333; /* Dark nav background */
+}
+body.dark-mode #dark-mode-toggle label {
+    background: #101011; /* Dark toggle background */
+    color: white; /* Light toggle text */
+}
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; 
     gap: 10px;
+    .header-main {
+      padding: 2rem; /* Reduced padding on smaller screens */
+      .header-main-nav {
+        display: none; /* Hide nav items by default */
+      }
+    
+      .open .header-main-nav {
+        display: block; /* Show nav items when the menu is open */
+      }
+    }
   }
   .main-content {
     grid-template-columns: 1fr; /* Single column for mobile */
@@ -277,15 +315,15 @@ a {
 
 .gallery-image:hover {
   transform: scale(1.05); /* Slightly scale up the image */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
 }
 
-@media (max-width: 768px) {
   .gallery-image:hover {
     transform: none; /* Disable hover effect on mobile */
     box-shadow: none; /* Disable shadow on mobile */
   }
-}
+
+
 
 
 

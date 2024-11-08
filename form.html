@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+
+    <!-- Include the course home page's header and navigation here (same as the home page) -->
+    <header>
+        <h1>WDD 230: Web Frontend Development</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="record.html">Confirmation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Form Section -->
+    <main>
+        <h2>Create an Account</h2>
+        <form action="record.html" method="get" id="userForm">
+            
+            <!-- Username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required pattern="[A-Za-z0-9]{8,}">
+            <small>Must be at least 8 characters and contain only letters and numbers.</small>
+            
+            <!-- Confirm Password -->
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <small>Passwords must match.</small>
+            
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu" title="A valid byui.edu email address.">
+            
+            <!-- Page Rating -->
+            <label for="pageRating">Rate this page (1-10):</label>
+            <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1" value="5">
+            <span id="ratingValue">5</span>
+            
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WDD 230: Web Frontend Development. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Script to handle password matching
+        const form = document.getElementById('userForm');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        
+        form.addEventListener('submit', function (event) {
+            if (password.value !== confirmPassword.value) {
+                alert("Passwords do not match.");
+                confirmPassword.focus();
+                password.value = '';
+                confirmPassword.value = '';
+                event.preventDefault();
+            }
+        });
+
+        // Display the page rating value
+        const pageRating = document.getElementById('pageRating');
+        const ratingValue = document.getElementById('ratingValue');
+        pageRating.addEventListener('input', function () {
+            ratingValue.textContent = pageRating.value;
+        });
+    </script>
+
+</body>
+</html>

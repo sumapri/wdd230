@@ -1,0 +1,110 @@
+/* Global styles */
+:root {
+  --primary-color: #2e6da4;
+  --background-color: #f4f4f4;
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Basic reset */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and page setup */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main content */
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form labels and inputs */
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+small {
+  display: block;
+  margin-top: 5px;
+  color: #777;
+}
+
+/* Submit button */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #255b7e;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
