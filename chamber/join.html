@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us - Membership Form</title>
     <meta name="description" content="Springfield Chamber of Commerce. Join us to connect, collaborate, and grow your business.">
     <meta name="author" content="Sumara Prieto">
@@ -94,8 +93,8 @@
                 <textarea id="description" name="description"></textarea>
 
                 <!-- Hidden Date Field -->
-                <label for="form-date">Form Submission Date:</label>
-                <input type="hidden" id="form-date" name="form-date">
+            <input type="hidden"       id="form-date" name="form-date">
+
 
                 <!-- Submit Button -->
                 <button type="submit">Submit</button>
@@ -111,7 +110,7 @@
                 <li><strong>Gold Membership</strong> - All Silver benefits plus exclusive training sessions and event invitations.</li>
             </ul>
         </div>
-    </div> <!-- .form-container -->
+     <!-- .form-container -->
     </main>
         <div class="footer-image-logo">
             <img src="images/footer-logo.webp" alt="Springfield Chamber of Commerce Logo" width="200" height="150" loading="lazy">
@@ -129,10 +128,13 @@
         <p>Phone: 417-5990418</p>
         </div>
         <footer>
-            <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"</p>
+            <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
             <p id="lastModified"></p>
     </footer>
     <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-    
+    <script>
+        // Set the value of the hidden input field with the current timestamp
+        document.getElementById('form-date').value = Date.now();
+        </script>
  </body>
 </html>
