@@ -56,6 +56,7 @@ function getChapterList() {
 function deleteChapter(chapter) {
   // Remove the "❌" character at the end of the chapter string
   chapter = chapter.slice(0, chapter.length - 1);
+
   
   // Filter out the chapter from chaptersArray
   chaptersArray = chaptersArray.filter(item => item !== chapter);

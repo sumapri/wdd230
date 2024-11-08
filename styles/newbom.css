@@ -23,6 +23,7 @@ main {
 	background-color: #ddd;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 input,
@@ -35,7 +36,7 @@ button {
 }
 
 .delete {
-	width: fit-content;
+	width: auto; /* Improved for compatibility */
 }
 
 .input {
@@ -43,13 +44,10 @@ button {
 	gap: 1rem;
 }
 
-.list {
-	padding: 0.5rem;
-}
-
 ul {
 	margin: 1rem;
 	list-style: none;
+	padding: 0.5rem;
 }
 
 li {
@@ -60,10 +58,10 @@ li {
 
 @media only screen and (min-width: 32.5em) {
 	h1 {
-		font-size: 2rem;
+			font-size: 2rem;
 	}
 
 	main {
-		width: 320px;
+			width: 320px;
 	}
 }
