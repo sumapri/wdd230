@@ -8,7 +8,7 @@ const hamburger = document.getElementById('hamburger'); // Ensure hamburger is d
 yearCopyright.textContent = new Date().getFullYear();
 pageLastModified.textContent = document.lastModified; // Consider formatting if necessary
 
-// Add a click event listener to the hamburger button
-hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('open'); // Toggles the 'open' class for the navigation
+document.getElementById('myButton').addEventListener('click', function() {
+    alert('Button clicked!');
 });
+

@@ -293,17 +293,20 @@ body.dark-mode #dark-mode-toggle label {
   .grid-container {
     grid-template-columns: 1fr; 
     gap: 10px;
-    .header-main {
-      padding: 2rem; /* Reduced padding on smaller screens */
-      .header-main-nav {
-        display: none; /* Hide nav items by default */
+  }
+  .header-main {
+    padding: 2rem; 
+  }
+  .header-main-nav {
+    display: none; /* Hide nav items by default */
       }
+  
     
       .open .header-main-nav {
         display: block; /* Show nav items when the menu is open */
       }
     }
-  }
+  
   .main-content {
     grid-template-columns: 1fr; /* Single column for mobile */
   }
