@@ -1,0 +1,30 @@
+{
+  "wardInformation": {
+  "familyName": "Solis",
+  "moveInDate": "2024-08-25",
+  "numberOfPeople": 4,
+  "visitedByBishopric": true,
+  "familyMembers": [
+    {
+      "name": "Juan Solis",
+      "gender": "Male",
+      "birthdate": "1992-02-12"
+    },
+    {
+      "name": "Marie Solis",
+      "gender": "Female",
+      "birthdate": "1995-01-27"
+    },
+    {
+      "name": "Lukas Solis",
+      "gender": "Male",
+      "birthdate": "2015-04-25"
+    },
+    {
+      "name": "Kate Solis",
+      "gender": "Female",
+      "birthdate": "2017-10-29"
+    }
+  ]
+  }
+}
