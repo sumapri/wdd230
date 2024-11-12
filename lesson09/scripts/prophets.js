@@ -1,49 +1,47 @@
 const url = 'https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json';
 const cards = document.querySelector('#cards');
 
-// Fetch data from the JSON URL
+// Fetch the prophet data
 async function getProphetData() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        console.table(data.prophets);  // Temporarily log the data to check the structure
-        displayProphets(data.prophets);
-    } catch (error) {
-        console.error('Error fetching the data:', error);
-    }
+  const response = await fetch(url);
+  const data = await response.json();
+  
+  // Test the response data by logging it to the console
+  console.table(data.prophets);
+
+  // Pass the prophets array to displayProphets function
+  displayProphets(data.prophets);
 }
 
 getProphetData();
 
-// Function to display the prophets
+// Function to display the prophets dynamically
 const displayProphets = (prophets) => {
-    prophets.forEach((prophet) => {
-        // Debugging the image URL
-        console.log('Image URL:', prophet.imageUrl);
+  prophets.forEach((prophet) => {
+    // Create the card section
+    let card = document.createElement('section');
 
-        // Create the elements for each prophet card
-        let card = document.createElement('section');
-        let fullName = document.createElement('h2');
-        let portrait = document.createElement('img');
+    // Create the h2 element for the full name
+    let fullName = document.createElement('h2');
+    fullName.textContent = `${prophet.name} ${prophet.lastname}`;
 
-        // Set the content for the full name
-        fullName.textContent = prophet.fullName;
+    // Create the image element for the portrait
+    let portrait = document.createElement('img');
+    portrait.setAttribute('src', prophet.imageurl);
+    portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`);
+    portrait.setAttribute('loading', 'lazy');
+    portrait.setAttribute('width', '340');
+    portrait.setAttribute('height', '440');
 
-        // Set attributes for the portrait image
-        portrait.setAttribute('src', prophet.imageUrl);  // Use imageUrl for the image source
-        portrait.setAttribute('alt', `Portrait of ${prophet.fullName}`);
-        portrait.setAttribute('loading', 'lazy');
-        portrait.setAttribute('width', '340');
-        portrait.setAttribute('height', '440');
+    // Append the full name and portrait to the card
+    card.appendChild(fullName);
+    card.appendChild(portrait);
 
-        // Append elements to the card section
-        card.appendChild(fullName);
-        card.appendChild(portrait);
-
-        // Append the card to the cards div
-        cards.appendChild(card);
-    });
+    // Append the card to the main cards div
+    cards.appendChild(card);
+  });
 }
+
 
 
 
