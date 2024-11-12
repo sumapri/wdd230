@@ -154,7 +154,6 @@ a {
   font-size: 1rem;
   color: rgb(139, 8, 240);
 }
-
 .data-table {
   display: grid;
   grid-template-columns: auto auto;
@@ -367,6 +366,100 @@ form {
   .membership-benefits {
       flex: 1;  /* Allow the benefits section to take up full width on small screens */
       margin-top: 20px;
+  }
+}
+/* Common styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Directory container */
+#members-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.member-card, .member-list-item {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.member-card h3 {
+  margin-top: 0;
+}
+
+.member-card p {
+  font-size: 0.9rem;
+}
+
+#view-toggle button {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Grid view */
+.grid-view .member-card {
+  width: calc(33.333% - 20px);
+}
+
+/* List view */
+.list-view .member-list-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.list-view .member-list-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-view .member-card {
+      width: calc(50% - 20px);
+  }
+  .list-view .member-list-item {
+      flex-direction: column;
   }
 }
 
