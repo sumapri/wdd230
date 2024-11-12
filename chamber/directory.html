@@ -11,7 +11,6 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     
     <!-- Open Graph / Facebook -->
-    
     <meta property="og:title" content="Springfield Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Join the Chamber of Commerce to enhance your business connections.">
@@ -26,15 +25,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;400;500;600;700;800&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-
 </head>
 
- <body class="body-container">
+<body class="body-container">
 
-    <header class="hearder-main">
+    <header class="header-main">
         <a id="menu" href="#" title="Hamburger menu"></a>
         <div class="header-main-logo">
-        <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Springfield Chamber of Commerce Logo" width="80" height="40">
+            <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Springfield Chamber of Commerce Logo" width="80" height="40">
         </div>
         <nav id="navigation">
             <ul class="header-main-nav">
@@ -44,25 +42,32 @@
                 <li class="nav-item"><a href="#">Join</a></li>
             </ul>
         </nav>
-         <!-- Main Content (this is where the directory will be displayed) -->
+    </header>
+
+    <!-- Main Content (this is where the directory will be displayed) -->
     <main id="directory-main">
-      <h2>Chamber Directory</h2>
-      <!-- View toggle buttons -->
-      <div id="view-toggle">
-          <button id="grid-view" onclick="toggleView('grid')">Grid View</button>
-          <button id="list-view" onclick="toggleView('list')">List View</button>
-      </div>
-      <div id="members-container"></div>
-  </main>
+        <h2>Chamber Directory</h2>
+        <!-- View toggle buttons -->
+        <div id="view-toggle">
+            <button id="grid-view" onclick="toggleView('grid')">Grid View</button>
+            <button id="list-view" onclick="toggleView('list')">List View</button>
+        </div>
+        <div id="members-container"></div>
+    </main>
 
-        <footer>
-          <p>&copy; <span id="currentYear"></span> .:|:. Sumara Prieto .:|:. Missouri <img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
-          <p id="lastModified"></p>
+    <!-- Footer should be outside of header -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> .:|:. Sumara Prieto .:|:. Missouri <img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
+        <p id="lastModified"></p>
+    </footer>
 
-  </footer>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-  <script src="scripts/script.js"></script>
-  <script src="scripts/darkMode.js"></script>
-  <script src="scripts/windchill.js"></script> 
+    <!-- Dark Mode Button -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/windchill.js"></script> 
+
 </body>
 </html>
