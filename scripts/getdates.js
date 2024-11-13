@@ -3,7 +3,7 @@ const currentYear = new Date().getFullYear();
 document.getElementById('currentYear').textContent = currentYear;
 
 // Get the last modified date and populate the footer
-document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
+document.getElementById('lastModified').textContent = `lastModified: ${document.lastModified}`;
 
 
 
