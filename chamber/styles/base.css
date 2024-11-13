@@ -1,11 +1,10 @@
-
-/* styles/base.css */
 :root {
   --site-color-01: #f4f4f4;
   --site-color-02: #333;
   --site-color-06: #e5e6e3;
-  --headline-font-family: 'Arial', sans-serif; /* Add this variable */
+  --headline-font-family: 'Arial', sans-serif;
 }
+
 * {
   box-sizing: border-box; /* Apply box-sizing reset globally */
 }

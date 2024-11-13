@@ -277,8 +277,10 @@ textarea {
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type="number"]
+inner-spin-button,
+[type="number"]
+outer-spin-button {
   height: auto;
 }
 
@@ -296,7 +298,8 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-decoration {
+[type="search"]
+search-decoration {
   appearance: none;
 }
 
@@ -305,7 +308,7 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 
-::-webkit-file-upload-button {
+file-upload-button {
   appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
