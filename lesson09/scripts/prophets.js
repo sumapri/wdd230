@@ -32,10 +32,19 @@ const displayProphets = (prophets) => {
     portrait.setAttribute('loading', 'lazy');
     portrait.setAttribute('width', '340');
     portrait.setAttribute('height', '440');
+      // Create the p element for the birthdate
+      let birthdate = document.createElement('p');
+      birthdate.textContent = `Date of Birth: ${prophet.birthdate}`;
+
+          // Create the p element for the birthplace
+    let birthplace = document.createElement('p');
+    birthplace.textContent = `Born in: ${prophet.birthplace}`;
 
     // Append the full name and portrait to the card
     card.appendChild(fullName);
     card.appendChild(portrait);
+    card.appendChild(birthdate);
+    card.appendChild(birthplace);
 
     // Append the card to the main cards div
     cards.appendChild(card);
