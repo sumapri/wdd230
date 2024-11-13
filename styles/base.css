@@ -49,16 +49,6 @@ nav a {
     padding: 20px; /* Add padding for clickable area */
     display: block; /* Ensure the entire area is clickable */
 }
-/* Pseudo-element for wayfinding markers */
-nav ul li::before {
-    content: '➤'; /* Marker symbol (you can customize this) */
-    position: absolute; /* Position relative to the list item */
-    left: 0; /* Align to the left */
-    color: white; /* Marker color (adjust as needed) */
-    font-size: 18px; /* Size of the marker */
-    line-height: 1; /* Center the marker vertically */
-
-}
 /* Hover effect to change marker color */
 nav ul li:hover::before {
     color: #ffb700; 
