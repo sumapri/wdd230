@@ -134,19 +134,17 @@ input[type="radio"] {
 /* Hide spin buttons across all browsers */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none; /* For WebKit browsers */
+  appearance: none; /* For WebKit browsers */
   margin: 0; /* Optional: removes any margin */
 }
 
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
-  -webkit-appearance: none;   /* Chrome, Safari */
   appearance: none;           /* Modern browsers */
 }
 
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* WebKit browsers */
   appearance: textfield;         /* Standard property */
   outline-offset: -2px;          /* Adjust focus outline */
 }
@@ -161,7 +159,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Remove search input decoration (magnifying glass, clear button) for all browsers */
 input[type="search"] {
-  -webkit-appearance: none; /* For WebKit browsers */
   appearance: none;         /* For modern browsers */
 }
 
