@@ -1,7 +1,7 @@
-/* Global styles */
-:root {
+ /* Global styles */
+ :root {
   --primary-color: #2e6da4;
-  --background-color: #f4f4f4;
+  --background-color: #f3eeee;
   --font-family: 'Arial', sans-serif;
 }
 
@@ -108,3 +108,4 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Confirmation Page</title>
+    <link rel="stylesheet" href="styles/record.css"> <!-- Link to the CSS -->
 </head>
 <body>
     <header>
@@ -12,12 +13,16 @@
     </header>
 
     <main>
-        <h2>Thank you for submitting the form!</h2>
-        <p>Your form has been successfully submitted.</p>
+        <div class="confirmation-container">
+            <h2>Thank you for submitting the form!</h2>
+            <p>Your form has been successfully submitted.</p>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 WDD 230: Web Frontend Development. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
+        <p id="last-modified"></p>
     </footer>
 </body>
 </html>
+

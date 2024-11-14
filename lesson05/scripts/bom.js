@@ -9,6 +9,7 @@ button.addEventListener('click', () => {
         const deleteButton = document.createElement('button');
         const link = `https://www.churchofjesuschrist.org/search?facet=scriptures&lang=eng&query=${input.value}&page=1`
         li.innerHTML = `<a href=${link}>${input.value}</a>`;
+        
         deleteButton.textContent = "❌";
         li.append(deleteButton);
         list.append(li);

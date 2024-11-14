@@ -1,0 +1,70 @@
+/* Global styles */
+:root {
+  --primary-color: #2e6da4;
+  --background-color: #f3eeee;
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Basic reset */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and page setup */
+body, html {
+  height: 100%; /* Full height for centering */
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  padding: 0; /* Remove default padding */
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Main content */
+main {
+  display: flex; /* Flexbox to center the content */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+.confirmation-container {
+  text-align: center; /* Center text within container */
+  width: 100%;
+  max-width: 600px; /* Limit the width of the container */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px; /* Space between heading and content */
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
