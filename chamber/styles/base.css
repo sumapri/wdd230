@@ -12,11 +12,14 @@
   margin: 0 auto;
 }
 
+/* General page container */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make sure the body takes full height */
   font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
-  max-width: 1280px;
-  height: 100vh;
   color: #1f69c4;
   background-color: #e5e6e3;
 }
@@ -160,14 +163,10 @@ a {
   display: none;
 }
 
+/* Main container should take up remaining space */
 .main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-top: 1px;
+  flex-grow: 1; /* Take up remaining space between header and footer */
+  margin-top: 1rem;
 }
 
 .hero-container {
@@ -292,7 +291,15 @@ a {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
+/* Footer styles */
+footer {
+  background-color: rgb(8, 187, 237);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  margin-top: auto; /* Push footer to the bottom of the page */
+}
 
 
 .footer-main {
@@ -331,19 +338,38 @@ a {
   background-color: var(--site-color-07);
 }
 
-.footer-contact-info {
-  padding-left: 20px;
+/* Footer contact info */
+.footer-contact-information {
+  font-size: 1rem;
+  margin: 10px 0;
 }
 
-.footer-contact-info p {
-  color: var(--site-color-02);
-  font-size: 1em;
+.footer-contact-information p {
+  margin: 5px 0;
 }
 
 #footer-address {
   font-weight: 600;
 }
+/* Optional: adjust footer icons and links */
+.footer-main-sm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.footer-main-sm a {
+  color: #fff;
+}
+.footer-main-sm a:hover {
+  color: #f1c40f;
+}
 
+.footer-image-logo img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
 .footer-update-info {
   padding: 20px 0 40px;
 }
