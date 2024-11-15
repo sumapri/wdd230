@@ -352,12 +352,24 @@ footer {
   font-weight: 600;
 }
 /* Optional: adjust footer icons and links */
-.footer-main-sm {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+.footer-main-sm-fb {
+  width: 30px;
+  height: 30px;
+  background-image: url('images/facebook-icon.svg'); /* Ensure this path is correct */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.footer-main-sm-in {
+  width: 30px;
+  height: 30px;
+  background-image: url('images/instagram-icon.svg'); /* Ensure this path is correct */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .footer-main-sm a {
   color: #fff;
 }
