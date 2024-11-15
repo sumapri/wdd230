@@ -80,7 +80,7 @@ function displayMembers(viewType) {
     window.toggleView = function(viewType) {
         displayMembers(viewType);
     };
-});
+};
 if (yearCopyright) {
     yearCopyright.textContent = new Date().getFullYear();
 }
