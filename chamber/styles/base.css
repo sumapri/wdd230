@@ -1,44 +1,102 @@
 :root {
   --site-color-01: #f4f4f4;
-  --site-color-02: #333;
-  --site-color-06: #e5e6e3;
+  --site-color-02: #24aeca;
+  --site-color-04: #333;
+  --site-color-06: #e5e6e3; 
+  --site-color-07: #555; 
   --headline-font-family: 'Arial', sans-serif;
 }
 
 * {
   box-sizing: border-box; /* Apply box-sizing reset globally */
+  margin: 0 auto;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0 auto;
-  width: 100%; /* Take full width */
-  max-width: 1440px;
-  color: #333;
+  padding: 0;
+  max-width: 1280px;
+  height: 100vh;
+  color: #1f69c4;
   background-color: #e5e6e3;
 }
 
-header {
-    max-width: 100%;
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
 }
-h1, h2, h3, nav a, p {
-    font-family: sans-serif;
-    font-weight: 400;
+
+
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../images/fb-color.png) url(../images/in-color.png);
+}
+
+h1 {
+  font-size: 2rem;  /* Adjust size for readability */
+  line-height: 2.5rem;  /* Ensure line height accommodates text */
+}
+
+
+h2, h3, h4, h5 {
+  font-family: var(--headline-font-family);
 }
 p {
   font-size: 14px;
-  line-height: 1.5;
-  color: black;
+    line-height: 18px;
+    color: var(--site-color-06);
+    font-family: var(--body-text-font-family);
+    font-weight: 400;
 }
 a {
   font-size: 14px;
   letter-spacing: 2px;
   line-height: 18px;
-  color: black;
+  color: var(--site-color-04);
+  font-family: var(--navigation-font-family);
   font-weight: 800;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
+}
+#menu {
+  display: block;
+  position:absolute;
+  margin-top: 20px;
+  right: 40px;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: var(--site-color-08);
+  color: var(--site-color-01);
+  text-decoration: none;
+}
+
+#menu::before {
+  content: "≡"; /* Set the content to a hamburger icon */;
+}
+
+#menu.open::before {
+  content: "X"; /* Change the content to an 'X' icon when the menu is open */;
+}
+
+#dark-mode-toggle {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  position: absolute;
+  top: 20px;
+  right: 18px;
+}
+#dark-mode-toggle img {
+  width: 20px;
+  height: 22px;
+  background-color: #fff;
+  opacity: 70%;
+  border-radius: 50%;
 }
 .header-main {
   width: 100%;
@@ -51,10 +109,19 @@ a {
   height: auto;
   padding: 5px 0 0 20px;
 }
-
+#navigation {
+  background-color: var(--site-color-07);
+  max-width: 100%;
+  margin: 0 auto; /* Ensure it's centered */
+}
 .header-main-nav {
   display: flex;
-  flex-direction: row; /* Ensures horizontal navigation */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-item {
@@ -68,18 +135,43 @@ a {
 
 .nav-item:hover {
   background-color: #e5f00c;
+  width: 100%;
+  text-align: center;
+}
+
+.header-main-nav .nav-item a:hover {
+  color: var(--site-color-03);
+}
+.header-main-nav .nav-item {
+  display: none;
+}
+
+.header-main-nav.open .nav-item {
+  display: block;
+}
+
+.header-main-sm {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-right: 30px;
+  display: none;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
-  max-width: 95%;
-  margin-top:  2rem; /* More appropriate margin */
+  justify-content: center;
+  gap: 10px;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 1px;
 }
 
 .hero-container {
   margin: 0 auto ;
-  width: 100%; /* Ensure it spans the full width */
 }
 
 .hero-container-img {
@@ -89,13 +181,14 @@ a {
 #hero-img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 .hero-container h1 {
-  text-align: center;
+  text-align: right;
   color: #0b0b0b;
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 50%;
+  right: 3%;
   background: #e8e3e3a1;
   margin: 0;
 }
@@ -107,17 +200,17 @@ a {
 .main-cta a {
   font-size: 0.8rem;
   position: absolute;
-  top: 17%;
-  right: 8%;
+  top: 75%;
+  right: 3%;
   margin: 0 auto;
   display: block;
   text-align: center; 
   border: 2px solid rgba(12, 12, 12, 0.872);
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgb(231, 243, 6);
   font-weight: 900;
   color: rgb(16, 61, 225);
-  padding: 2px 10px;
+  padding: 2px 5px;
   width: fit-content;
   transition: all ease-in-out 200ms;
 }
@@ -138,26 +231,30 @@ a {
 .weather-container h2 {
   margin: 0 0 10px 0;
   font-size: 2rem;
-
+  color: var(--site-color-01);
 }
 .weather-container .data-title {
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.5rem;
   color: rgb(7, 19, 243);
-
-}
-.weather-container .data-value {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: rgb(139, 8, 240);
 }
 .data-table {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 1.75rem;
   row-gap: 0.5rem;
+}
+.data-table .date-title {
+  font-family: var(--headline-font-family);
+  font-weight: bold !important;
+  font-size: 1.2rem;
+}
+.weather-container .data-value {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(139, 8, 240);
 }
 
 /* Consolidated container styles */
@@ -174,30 +271,48 @@ a {
   align-items: center;
   justify-content: flex-start;
 }
+/* Your existing styles */
 
-.data-table .date-title {
-  font-family: var(--headline-font-family);
-  font-weight: bold !important;
-  font-size: 1.2rem;
+/* Styles for the grid view */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between grid items */
 }
+
+/* Styles for the list view */
+.list-view {
+  display: block; /* Stack the items vertically */
+}
+
+/* You can also apply some basic styling to the individual member cards, if needed */
+.member-card {
+  background: #fff; /* Example background */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
 
 .footer-main {
   width: 100%;
-  height: fit-content;
   padding: 20px 0;
   background-color: rgb(8, 187, 237);
+  margin: 0 auto;
   margin-top: 40px;
 }
 .footer-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-left: 0;
 }
 .footer-sitemap {
   margin: 0;
-  padding: 0 0 0 20px;
+  padding: 0;
 }
 
 .footer-sitemap a{
@@ -210,12 +325,19 @@ a {
   color: rgb(240, 167, 11);
   font-weight: 900;
 }
+.footer-main .nav-item {
+  display: block;
+  text-align: left;
+  background-color: var(--site-color-07);
+}
+
 .footer-contact-info {
   padding-left: 20px;
 }
 
 .footer-contact-info p {
   color: var(--site-color-02);
+  font-size: 1em;
 }
 
 #footer-address {
@@ -229,242 +351,295 @@ a {
   margin: 0;
   text-align: center;
   font-size: 12px;
-}
-/* Create a grid layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr; /* Sidebar takes 1 fraction, main content takes 3 fractions */
-  gap: 20px;
+  color: var(--site-color-02);
+}   
+
+ /* Discover Site */
+
+.main-container-discover {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  /* padding: 20px; */
 }
 
-/* Sidebar styling */
-.sidebar {
-  background-color: #f4f4f4; /* Background color */
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* Main content styling */
-.main-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for images */
-  gap: 20px;
-}
-/* Dark mode toggle styles */
-#dark-mode-toggle {
-    position: absolute; /* Position in upper right corner */
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-#dark-mode-toggle input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
-}
-
-#dark-mode-toggle label {
-    background: #f0f0f0; /* Light background */
-    border-radius: 25px; /* Rounded switch */
-    padding: 5px 10px; /* Padding */
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#dark-mode-toggle label:hover {
-    background: #e0e0e0; /* Hover effect */
-}
-body.dark-mode {
-    background-color: #000; /* Dark background */
-    color: #fff; /* Light text */
-}
-
-body.dark-mode nav {
-    background-color: #333; /* Dark nav background */
-}
-body.dark-mode #dark-mode-toggle label {
-    background: #101011; /* Dark toggle background */
-    color: white; /* Light toggle text */
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; 
-    gap: 10px;
-  }
-  .header-main {
-    padding: 2rem; 
-  }
-  .header-main-nav {
-    display: none; /* Hide nav items by default */
-      }
-  
-    
-      .open .header-main-nav {
-        display: block; /* Show nav items when the menu is open */
-      }
-    }
-  
-  .main-content {
-    grid-template-columns: 1fr; /* Single column for mobile */
-  }
-
-/* Add a hover effect on gallery images */
-.gallery-image {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.gallery-image:hover {
-  transform: scale(1.05); /* Slightly scale up the image */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
-}
-
-  .gallery-image:hover {
-    transform: none; /* Disable hover effect on mobile */
-    box-shadow: none; /* Disable shadow on mobile */
-  }
-  /* Main layout for form and membership benefits */
-.form-container {
+.hero-container-discover{
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-form {
-  flex: 1;  /* The form will take up the remaining space */
-  min-width: 300px;
-}
-
-.membership-benefits {
-  flex: 0 0 30%;  /* This makes the benefits section take up 30% of the space */
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-}
-
-.membership-benefits h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.membership-benefits ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.membership-benefits li {
-  margin-bottom: 10px;
-}
-
-/* Media query to handle smaller screens */
-@media (max-width: 768px) {
-  .form-container {
-      flex-direction: column;  /* Stack the form and benefits vertically on smaller screens */
-  }
-
-  .membership-benefits {
-      flex: 1;  /* Allow the benefits section to take up full width on small screens */
-      margin-top: 20px;
-  }
-}
-/* Common styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-header, footer {
-  background-color: #333;
-  color: white;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 1rem;
+  position: relative;
+  margin-bottom: 2em;
 }
 
-nav ul {
-  list-style: none;
+.hero-container-discover h1 {
+  font-size: 3em;
+  line-height: 1em;
+  background: #f2f2f2a1;
+  position: absolute;
+  /* padding: 1em; */
+}
+
+.main-container-discover h2,
+#latest-visit {
+  margin-bottom: 20px !important;
+  text-align: center;
+  color: var(--site-color-10)
+}
+
+.main-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+}
+
+.main-cards-events {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 1em;
+  margin-bottom: 3.5em;
+}
+
+.main-cards-events figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main-cards-events figure figcaption {
+  text-align: left;
+  background-color: var(--site-color-07);
+  color: var(--site-color-02);
+  font-size: 1em;
+  font-family: var(--body-text-font-family);
+  padding: 5px 0 5px 5px;
+  width: 350px;
+  margin: -1% 0
+}
+
+.main-cards-events-info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 0.2em;
   padding: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 1rem;
+.main-cards-events-info p {
+  margin: 0;
+  text-align: left;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.main-cards-events-info, 
+.category {
+  font-family: var(--navigation-font-family);
+  color: var(--site-color-09);
+  font-weight: 800;
 }
 
-/* Directory container */
-#members-container {
+.main-cards-events-info, 
+.tittle {
+  font-family: var(--body-text-font-family);
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-weight: 900;
+  color: var(--site-color-11);
+}
+
+.main-cards-events-info, 
+.date, 
+.location {
+  margin: 0;
+  font-family: var(--body-text-font-family);
+  color: var(--site-color-10);
+}
+
+.location::before {
+  content: '📌';
+}
+
+/* General styling for form elements */
+.join-main  {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em;
 }
 
-.member-card, .member-list-item {
-  background: white;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.member-card img {
+.form-section{
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 150px;
-  height: auto;
-  border-radius: 8px;
+  max-width: 450px;
+  font-family: var(--body-text-font-family);
+  color: var(--site-color-01);
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
-.member-card h3 {
-  margin-top: 0;
+.form-section h1,
+.benefits-section h2 {
+  font-family: var(--headline-font-family);
+  color: var(--site-color-09);
+  padding: 1em;
+  margin: 0;
+  text-align: center;
 }
 
-.member-card p {
-  font-size: 0.9rem;
+.membership-form {
+  width: clamp(300px, 100%, 450px);
+  border: 1px solid var(--site-color-01);
+  border-radius: 6px;
+  padding: .5rem 2%;
 }
 
-#view-toggle button {
-  margin: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-/* Grid view */
-.grid-view .member-card {
-  width: calc(33.333% - 20px);
-}
-
-/* List view */
-.list-view .member-list-item {
+.membership-form label {
   display: block;
+  padding-top: .5em;
+  font-family: var(--body-text-font-family);
+  color: var(--site-color-01);
+  font-size: 1em;
+}
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form textarea {
   width: 100%;
-  margin-bottom: 10px;
+  padding: 0.5em;
+  font-size: 1.2em;
+  appearance: none;
+  max-width: 450px;
+  border-radius: 6px;
 }
 
-.list-view .member-list-item img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
+.membership-form div {
+  padding-top: 1em;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .grid-view .member-card {
-      width: calc(50% - 20px);
-  }
-  .list-view .member-list-item {
-      flex-direction: column;
-  }
+.membership-form label:has(input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 10px 0; 
+  cursor: pointer;
+  font-size: 1em;
 }
 
+.membership-form input[type="radio"] {
+  margin-right: 6px;
+  padding: 10px 0;
+  cursor: pointer; /* Add cursor pointer for better UX */
+}
 
+.membership-form #label-description {
+  padding-top: 1em;
+}
 
+.membership-form input[type="submit"] {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  height: 2.75em;
+  padding: .8em;
+  max-width: 450px;
+  color: var(--site-color-06);
+  font-size: 1.4em;
+  background: var(--site-color-09);
+  box-shadow: 1px 1px 4px var(--site-color-11);
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 96%;
+  margin: 1.5em 2% 1.5rem 2%;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
 
+.membership-form input[type="submit"]:hover {
+  background: var(--site-color-14);
+  color: var(--site-color-03);
+  font-weight: bold;
+}
 
+/* Styling for the benefits table */
+.benefits-section table {
+  border-collapse: collapse;
+  font-family: var(--body-text-font-family);
+  font-size: 1.1em;
+  border: 1px solid var(--site-color-01);
+  box-shadow: 1px 1px 1px var(--site-color-10);
+  border-radius: 6px;
+  padding: .5rem 2%;
+  width: 100%;
+}
 
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+}
 
+.benefits-section th,
+.benefits-section td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid var(--site-color-01);
+  color: var(--site-color-10);
+}
+
+.benefits-section th {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.1em;
+  /* background: var(--site-color-10); */
+  color: var(--site-color-10);
+}
+
+.benefits-section td ul {
+  padding-left: 1.25em;
+}
+
+.benefits-section tbody tr:nth-child(odd) {
+  background: hsl(0, 0%, 85%);
+}
+
+/* Styling for the Thank You page content */
+.thank-you-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 2em;
+  padding: 1em 2em;
+  gap: 1em;
+  height: calc(100vh - 380px);
+}
+
+.thank-you-main h1 {
+  font-family: var(--headline-font-family);
+  font-size: 1.75em;
+}
+
+.thank-you-main p {
+  color: var(--site-color-10);
+}
+
+.thank-you-main a {
+  font-family: var(--body-text-font-family);
+  text-transform: capitalize;
+  color: var(--site-color-14);
+  transition: all ease-in-out 0.2s;
+}
+
+.thank-you-main a:hover {
+  color: var(--site-color-01);
+}

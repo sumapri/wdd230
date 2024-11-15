@@ -2,16 +2,29 @@
 const yearCopyright = document.querySelector("#currentYear");
 const pageLastModified = document.querySelector("#lastModified");
 const navbar = document.getElementById('navigation');
-const hamburger = document.getElementById('hamburger'); // Ensure hamburger is defined
+const hamburger = document.getElementById('menu'); // Ensure hamburger is defined
 
 // Set the current year and last modified date dynamically
 yearCopyright.textContent = new Date().getFullYear();
 pageLastModified.textContent = document.lastModified; // Consider formatting if necessary
 
-document.getElementById('myButton').addEventListener('click', function() {
-    alert('Button clicked!');
+document.getElementById("menu").addEventListener("click", function() {
+    this.classList.toggle("open");
+    document.querySelector("#navigation .header-main-nav").classList.toggle("open");
+  });
+
+  document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
 });
+
+// On page load, check if dark mode is enabled
 document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+});
+ {
     const membersContainer = document.getElementById('members-container');
     let membersData = [];
 
@@ -22,49 +35,59 @@ document.addEventListener('DOMContentLoaded', () => {
             membersData = data;
             displayMembers('grid'); // Default view
         })
-        .catch(error => console.error('Error loading JSON data:', error));
+        .catch(error => {
+            console.error('Error loading JSON data:', error);
+            membersContainer.innerHTML = '<p>Error loading member data. Please try again later.</p>';
+        });
+        
 
     // Function to generate HTML for each member card
     function generateMemberHTML(member, viewType) {
-        if (viewType === 'grid') {
-            return `
-                <div class="member-card">
-                    <img src="images/${member.image}" alt="${member.name} logo">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>Phone: ${member.phone}</p>
-                    <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-                    <p>Membership Level: ${member.membership_level}</p>
-                </div>
-            `;
-        } else { // List view
-            return `
-                <div class="member-list-item">
-                    <img src="images/${member.image}" alt="${member.name} logo">
-                    <h3>${member.name}</h3>
-                    <p>${member.address}</p>
-                    <p>Phone: ${member.phone}</p>
-                    <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-                    <p>Membership Level: ${member.membership_level}</p>
-                </div>
-            `;
-        }
+        const imageSrc = member.image ? `images/${member.image}` : 'images/default.jpg'; // Use default image if missing
+        return `
+            <div class="member-card">
+                <img src="${imageSrc}" alt="${member.name} logo">
+                <h3>${member.name || 'Unknown'}</h3>
+                <p>${member.address || 'Address not available'}</p>
+                <p>Phone: ${member.phone || 'N/A'}</p>
+                <p>Website: <a href="${member.website || '#'}" target="_blank">${member.website || 'No website'}</a></p>
+                <p>Membership Level: ${member.membership_level || 'N/A'}</p>
+            </div>
+        `;
     }
+    
 
-    // Function to display members in the selected view
-    function displayMembers(viewType) {
-        membersContainer.innerHTML = '';
-        membersData.forEach(member => {
-            membersContainer.innerHTML += generateMemberHTML(member, viewType);
-        });
+    // Function to display members in the selected view (grid or list)
+function displayMembers(viewType) {
+    // Clear current content in the container
+    membersContainer.innerHTML = '';
+    
+    // Loop through members data and generate HTML for each member
+    membersData.forEach(member => {
+        membersContainer.innerHTML += generateMemberHTML(member, viewType);
+    });
 
-        // Apply the correct CSS class based on the view type
-        membersContainer.className = viewType + '-view';
+    // Apply the appropriate class based on the viewType passed
+    if (viewType === 'grid') {
+        membersContainer.className = 'grid-view'; // Apply grid layout
+    } else {
+        membersContainer.className = 'list-view'; // Apply list layout
     }
+}
+
 
     // Toggle view between grid and list
     window.toggleView = function(viewType) {
         displayMembers(viewType);
     };
 });
+if (yearCopyright) {
+    yearCopyright.textContent = new Date().getFullYear();
+}
+
+if (pageLastModified) {
+    pageLastModified.textContent = document.lastModified;
+}
+
+
 
