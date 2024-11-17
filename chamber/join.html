@@ -1,158 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Join Springfiled Chamber of Commerce- Membership Form</title>
-        <meta name="description" content="WDD230 - Web Frontend Development - Springfield Chamber of Commerce. Join us to connect, collaborate, and grow your business.">
-        <meta name="author" content="Sumara Prieto">
-        
-        <!-- Favicon -->
-        <link rel="icon" href="images/favicon1.ico">
-        
-        <!-- Open Graph / Facebook -->
-        
-        <meta property="og:title" content="Springfield Chamber of Commerce">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://trendsetterhomes.com/wp-content/uploads/2023/02/famous-wonders-of-springfield-missouri-1.jpg">
-        <meta property="og:url" content="https://sumapri.github.io/wdd230/chamber">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Missouri Chamber of Commerce home page">
+    <meta name="author" content="Sumara Prieto">
+    <title>Missouri Chamber of Commerce</title>
 
-        <!-- CSS Links -->
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/medium.css">
-        <link rel="stylesheet" href="styles/larger.css"> 
-        <script src="scripts/script.js" defer></script>
-        <script src="scripts/dark-mode.js" defer></script>
-        <script src="scripts/form.js" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;400;500;600;700;800&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+     <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Springfield Chamber Of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="wdd230/images/Springfield.png">
+    <meta property="og:url" content="https://sumapri.github.io/wdd230">
+   
+ <!-- Link to External Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
+ <!-- Favicon -->
+    <link rel="icon" href="/images/favicon1.ico"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;400;500;600;700;800&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    
 </head>
-
- <body>
-
-  <header class="hearder-main">
+<body>
+    <!-- Dark Mode Toggle -->
+    <label class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeSwitch">
+        <span class="slider round"></span>
+    </label>
+    
+    <!-- Header -->
+    <header class="header-main">
         <a id="menu" href="#" title="Hamburger menu"></a>
         <div class="header-main-logo">
-        <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Springfield Chamber of Commerce Logo" width="70" height="30">
-      </div>
-      <nav id="navigation">
-        <ul class="header-main-nav">
-            <li class="nav-item"><a href="https://sumapri.github.io/wdd230/chamber/index.html">Home</a></li>
-            <li class="nav-item"><a href="https://sumapri.github.io/wdd230/chamber/discover.htm">Discover</a></li>
-            <li class="nav-item"><a href="#">Directory</a></li>
-            <li class="nav-item"><a href="https://sumapri.github.io/wdd230/chamber/join.htm">Join</a></li>
-        </ul>
-    </nav>
-
-  </header>
-        
-  <main class="join-main">
-    <!-- Form content goes here -->
-    <section class="form-section">
-    <h1>Join Our Organization</h1>
-    <form action="thankyou.html" method="get" id="membership-form">
-
-            <!-- First Name -->
-            <label for="first-name">First Name: *</label>
-            <input type="text" id="first-name" name="first-name" required>
-
-            <!-- Last Name -->
-            <label for="last-name">Last Name: *</label>
-            <input type="text" id="last-name" name="last-name" required>
-
-            <!-- Title/Position -->
-            <label for="title">Title/Position: *</label>
-            <input type="text" id="title" name="title" required pattern="[A-Za-z\s\-]{7,}" title="Only letters, hyphens, and spaces allowed. Minimum 7 characters." required>
-
-            <!-- Email -->
-            <label for="email">Email: *</label>
-            <input type="email" id="email" name="email" required placeholder="example@domain.com" required="">
-
-                <!-- Mobile Phone -->
-                <label for="mobile">Mobile Phone:</label>
-                <input type="tel" id="phone" name="mobile" required>
-
-                <!-- Business/Organization Name -->
-                <label for="org-name">Business/Organization Name: *</label>
-                <input type="text" id="org-name" name="org-name" required>
-
-                <!-- Membership Level -->
-                <div class="membership-level">Membership Level</div>
-                <label for="np"> <input type="radio" id="np" name="membership-level" value="np" required>Non Profit Membership (No Fee)
-                    </label>
-                    <label for="bronze"> <input type="radio" id="bronze" name="membership-level" value="bronze"> Bronze Membership </label>
-                    <label for="silver">
-                        <input type="radio" id="silver" name="membership-level" value="silver">
-                        Silver Membership
-                    </label>
-                    <label for="gold">
-                        <input type="radio" id="gold" name="membership-level" value="gold">
-                        Gold Membership
-                    </label>
-               
-                <!-- Organization Description -->
-                <label for="org-description" id="label-description">Business/Organization's Description</label>
-                <textarea name="org-description" id="org-description" rows="4"></textarea>
-
-                <!-- Hidden Date Field -->
-            <input type="hidden"       id="form-date" name="form-date">
-
-
-                <!-- Submit Button -->
-                <button type="submit">Submit</button>
-        </form>
-    </section>
-         <!-- Membership Benefits Section -->
-         <aside class="benefits-section">
-            <h2>Membership Levels & Benefits</h2>
-            <table>
-                <thead>
-            <tr>
-                <th>Membership Level</th>
-                <th>Benefits</th>
-            </tr>
-        </thead>
-               <tbody>
-                <tr>
-                <td>NP Membership</td> 
-                <td>
-                    <ul>
-                        <li>No fee, basic access to resources.</li>
-                        </ul>
-                        </td>
-                        </tr>
-                        <tr>
-                <td>Bronze Membership</td>
-                <td>
-                    <ul>
-                        <li> $135 Annual fee.Access to events, 10% discount on services.</li>
-                        </ul>
-                        </td>
-                        </tr>
-                        <tr>
-
-                <td>Silver Membership</td>
-                <td>
-                <ul>
-                    <li> $150 annual fee. All Bronze benefits plus spotlight feature on the homepage.</li>
-                    </ul>
-                    </td>
-                    </tr>
-               <tr>
-                <td>Gold Membership</td>
-                <td>
-                    <ul>
-                        <li> $200 annual fee. All Silver benefits plus exclusive training sessions and event invitations.</li>
+            <img src="images/Flag_of_Missouri.webp" id="logo-img" alt="Flag of Missouri" width="80" height="40">   
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discovery</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
-            </td>
-            </tr>
-        </tbody>
-    </table>
+        </nav>              
+    </header>
+        
+<!-- join.html -->
+<main>
+    <h1>Join the Chamber of Commerce</h1>
+    <p>Complete the form below to apply for membership.</p>
+
+    <form action="thankyou.html" method="get">
+        <!-- First Name -->
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <!-- Last Name -->
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <!-- Job Title -->
+        <label for="jobTitle">Title/Position:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required pattern="[A-Za-z\s\-]{7,}">
+
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="example@email.com">
+
+        <!-- Phone Number -->
+        <label for="phone">Mobile Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Organization Name -->
+        <label for="orgName">Business/Organization Name:</label>
+        <input type="text" id="orgName" name="orgName" required>
+
+        <!-- Membership Level -->
+        <label for="membershipLevel">Membership Level:</label>
+        <select id="membershipLevel" name="membershipLevel" required>
+            <option value="NP">Non-profit Membership</option>
+            <option value="Bronze">Bronze Membership</option>
+            <option value="Silver">Silver Membership</option>
+            <option value="Gold">Gold Membership</option>
+        </select>
+
+        <!-- Business Description -->
+        <label for="description">Business Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <!-- Hidden Input (Date) -->
+        <input type="hidden" id="formDate" name="formDate">
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
+        
+        <!-- Membership Levels Sidebar -->
+<aside class="membership-benefits">
+    <h3>Membership Benefits</h3>
+
+    <div class="benefit">
+        <h4>Non-profit Membership (NP)</h4>
+        <p>Free membership for non-profit organizations. Includes access to community resources and events.</p>
+    </div>
+
+    <div class="benefit">
+        <h4>Bronze Membership</h4>
+        <p>Basic membership with access to networking events, training, and basic advertising opportunities.</p>
+    </div>
+
+    <div class="benefit">
+        <h4>Silver Membership</h4>
+        <p>Includes all Bronze benefits plus event discounts, additional advertising, and a spotlight on the home page.</p>
+    </div>
+
+    <div class="benefit">
+        <h4>Gold Membership</h4>
+        <p>Includes all Silver benefits plus priority placement on events, special member discounts, and a dedicated section on the home page.</p>
+    </div>
 </aside>
+
+    </form>
 </main>
+
     <footer>
         <div class="footer-image-logo">
             <img src="images/footer-logo.webp" alt="Springfield Chamber of Commerce Logo" width="100" height="50" loading="lazy">
@@ -181,5 +156,7 @@
         // Set the value of the hidden input field with the current timestamp
         document.getElementById('form-date').value = Date.now();
         </script>
+        <script src="scripts/formDate.js"></script>
+
  </body>
 </html>

@@ -1,59 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Springfield Chamber of Commerce</title>
-    <meta name="description" content="Springfield Chamber of Commerce. Join us to connect, collaborate, and grow your business.">
+    <meta name="description" content="Missouri Chamber of Commerce home page">
     <meta name="author" content="Sumara Prieto">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Springfield Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Join the Chamber of Commerce to enhance your business connections.">
-    <meta property="og:image" content="https://trendsetterhomes.com/wp-content/uploads/2023/02/famous-wonders-of-springfield-missouri-1.jpg">
-    <meta property="og:url" content="https://sumapri.github.io/wdd230/chamber">
+    <title>Missouri Chamber of Commerce</title>
 
-    <!-- CSS Links -->
+     <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Springfield Chamber Of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="wdd230/images/Springfield.png">
+    <meta property="og:url" content="https://sumapri.github.io/wdd230">
+   
+ <!-- Link to External Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/larger.css"> 
+    <link rel="stylesheet" href="styles/larger.css">
+
+ <!-- Favicon -->
+    <link rel="icon" href="/images/favicon1.ico"> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;400;500;600;700;800&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    
 </head>
-
-<body class="body-container">
-
+<body>
+    <!-- Dark Mode Toggle -->
+    <label class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeSwitch">
+        <span class="slider round"></span>
+    </label>
+    
+    <!-- Header -->
     <header class="header-main">
         <a id="menu" href="#" title="Hamburger menu"></a>
         <div class="header-main-logo">
-            <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Springfield Chamber of Commerce Logo" width="80" height="40">
+            <img src="images/Flag_of_Missouri.webp" id="logo-img" alt="Flag of Missouri" width="80" height="40">   
         </div>
-        <nav id="navigation">
-            <ul class="header-main-nav">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="#">Discover</a></li>
-                <li class="nav-item"><a href="#">Directory</a></li>
-                <li class="nav-item"><a href="#">Join</a></li>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discovery</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
+                 
     </header>
 
-    <!-- Main Content (this is where the directory will be displayed) -->
-    <main id="directory-main">
-        <h2>Chamber Directory</h2>
-        <!-- View toggle buttons -->
-        <div id="view-toggle">
-            <button id="grid-view" onclick="toggleView('grid')">Grid View</button>
-            <button id="list-view" onclick="toggleView('list')">List View</button>
-        </div>
-        <div id="members-container"></div>
-    </main>
+   <!-- directory.html -->
+<main>
+    <h1>Chamber Directory</h1>
+    <p>Explore the businesses and organizations that are members of our Chamber of Commerce.</p>
+
+    <!-- View toggle buttons (grid/list) -->
+    <div class="view-toggle">
+        <button id="gridViewBtn" class="active">Grid View</button>
+        <button id="listViewBtn">List View</button>
+    </div>
+
+    <!-- Container to display members -->
+    <div id="membersContainer" class="grid-view">
+        <!-- Member cards will be dynamically injected here -->
+    </div>
+</main>
+
 
     <!-- Footer should be outside of header -->
     <footer>

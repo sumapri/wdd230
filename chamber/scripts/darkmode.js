@@ -1,21 +1,19 @@
-// Select the dark mode toggle button and logo image
-const darkModeToggle = document.querySelector("#dark-mode-button");
-const logoImg = document.querySelector('#logo-img');
+// Get the dark mode toggle switch
+const darkModeSwitch = document.getElementById('darkModeSwitch');
 
-// Function to toggle dark mode and update logo
-const toggleDarkMode = () => {
-    // Check if dark mode is enabled
-    // if it is enabled, turn it off
-    // if it is disabled, turn it on
-    document.body.classList.toggle("dark-mode");
+// Check if dark mode was previously set in localStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeSwitch.checked = true;
+}
 
-    // Change the logo image based on the dark mode
-    if(document.body.classList.contains('dark-mode')) {
-        logoImg.src = "images/footer-logo.webp"; // Change to dark logo
+// Add event listener to toggle dark mode
+darkModeSwitch.addEventListener('change', () => {
+    if (darkModeSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');  // Save preference in localStorage
     } else {
-        logoImg.src = "images/nav-main-logo.webp"; //Revert to light logo
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');  // Save preference in localStorage
     }
-};
-
-// Add a click event listener to the toggle button
-darkModeToggle.addEventListener('click', toggleDarkMode);
+});

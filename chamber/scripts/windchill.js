@@ -1,21 +1,23 @@
-// scripts/windchill.js
+// windchill.js
 
-function calculateWindChill(temperature, windSpeed) {
-    if (temperature <= 50 && windSpeed > 3.0) {
-        const windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
-        return windChill.toFixed(2); // Round to two decimal places
+// Function to calculate wind chill
+function calculateWindChill() {
+    // Get the temperature and wind speed from the HTML
+    const temp = parseFloat(document.getElementById('tempValue').innerText);
+    const windSpeed = parseFloat(document.getElementById('windSpeed').innerText);
+
+    // Check if the values meet the wind chill calculation requirements
+    if (temp <= 50 && windSpeed > 3) {
+        // Wind Chill Formula (Fahrenheit)
+        const windChill = 35.74 + (0.6215 * temp) - (35.75 * Math.pow(windSpeed, 0.16)) + (0.4275 * temp * Math.pow(windSpeed, 0.16));
+        
+        // Update the wind chill in the HTML
+        document.getElementById('windChill').innerText = `${windChill.toFixed(1)}°F`;
     } else {
-        return "N/A"; // Not applicable if conditions are not met
+        // If the conditions are not met, show "N/A"
+        document.getElementById('windChill').innerText = "N/A";
     }
 }
 
-function updateWindChill() {
-    const temperature = parseFloat(document.getElementById('temperature').innerText);
-    const windSpeed = parseFloat(document.getElementById('wind-speed').innerText);
-    const windChillValue = calculateWindChill(temperature, windSpeed);
-    
-    document.getElementById('wind-chill').innerText = windChillValue;
-}
-
-// Run the wind chill calculation on page load
-window.onload = updateWindChill;
+// Call the function when the page loads
+window.onload = calculateWindChill;

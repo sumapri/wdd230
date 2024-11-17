@@ -1,125 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Springfield Chamber of Commerce</title>
-    <meta name="description" content="Springfield Chamber of Commerce. Join us to connect, collaborate, and grow your business.">
+    <meta name="description" content="Missouri Chamber of Commerce home page">
     <meta name="author" content="Sumara Prieto">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <!-- Open Graph / Facebook -->
-    
-    <meta property="og:title" content="Springfield Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Join the Chamber of Commerce to enhance your business connections.">
-    <meta property="og:image" content="https://trendsetterhomes.com/wp-content/uploads/2023/02/famous-wonders-of-springfield-missouri-1.jpg">
-    <meta property="og:url" content="https://sumapri.github.io/wdd230/chamber">
+    <title>Missouri Chamber of Commerce</title>
 
-    <!-- CSS Links -->
+     <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Springfield Chamber Of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="wdd230/images/Springfield.png">
+    <meta property="og:url" content="https://sumapri.github.io/wdd230">
+   
+ <!-- Link to External Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/larger.css"> 
+    <link rel="stylesheet" href="styles/larger.css">
+    <!-- Link to weather.js -->
+<script src="scripts/weather.js" defer></script>
+<!-- Link to banner.js -->
+<script src="scripts/banner.js" defer></script>
+
+
+
+ <!-- Favicon -->
+    <link rel="icon" href="/images/favicon1.ico"> 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100;400;500;600;700;800&family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-
+    
 </head>
-
- <body class="body-container">
-
-    <header class="hearder-main">
+<body>
+    <!-- Dark Mode Toggle -->
+    <label class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeSwitch">
+        <span class="slider round"></span>
+    </label>
+    
+    <!-- Header -->
+    <header class="header-main">
         <a id="menu" href="#" title="Hamburger menu"></a>
         <div class="header-main-logo">
-        <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Springfield Chamber of Commerce Logo" width="80" height="40">
+            <img src="images/Flag_of_Missouri.webp" id="logo-img" alt="Flag of Missouri" width="80" height="40">   
         </div>
-        <nav id="navigation">
-            <ul class="header-main-nav">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="#">Discover</a></li>
-                <li class="nav-item"><a href="#">Directory</a></li>
-                <li class="nav-item"><a href="#">Join</a></li>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discovery</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
-
+                 
     </header>
-    <main class="main-container">
-        <section class="hero-container">
-            <div class="hero-container-img">
-                <picture>
-                    <source media="(max-width: 540px)" srcset="images/hero-chamber-small.webp">
-                    <source media="(max-width: 819px)" srcset="images/hero-chamber-medium.webp">
-                    <img src="images/hero-chamber-large.webp" id="hero-img" alt="Team having a business meeting" title="Springfield Chamber of Commerce" width="1680" height="1120">
-                </picture>
-                <h1>Springfield<br><span id="subheading">Chamber of Commerce</span><br></h1>
-                <div class="main-cta">
-                    <a href="#">Join Us</a>
-                </div> 
-            </div>
-            <div id="members-container"></div>
+
+    <main>
+        <section id="hero">
+            <picture>
+                <source srcset="images/hero-chamber-small.webp" media="(max-width: 600px)">
+                <source srcset="images/hero-chamber-medium.webp" media="(max-width: 1024px)">
+                <img src="images/hero-chamber-large.webp" alt="Springfield Chamber of Commerce Hero Image">
+            </picture>
+        <div class="hero-text">
+          <h1>Welcome to Springfield Chamber of Commerce</h1>
+          <p>We want to supporting local businesses and fostering growth in our community.</p>
+          <a href="join.html" class="cta-button">Join Now</a>
+          </div>
+          </section>
+                    <!-- Current Events Section -->
+        <section id="events">
+                <h2>Current Events</h2>
+            <div class="event"
+            <h3>Networking Breakfast</h3>
+            <p>Join us for a morning of networking and discussion with local business leaders.</p>
+        </div>
+        <div class="event">
+            <h3>Business Expo</h3>
+            <p>Showcase your business at the annual Chamber Business Expo.</p>
+        </div>
+        <!-- Meet & Greet Banner -->
+<div id="event-banner" class="event-banner">
+    <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+    <button id="close-banner" aria-label="Close">✖</button>
+</div>
 
         </section>
+        
+        <!-- Weather Section -->
+<section id="weather">
+    <h2>Current Weather</h2>
+    <p id="current-weather">Loading...</p>
+    <p id="current-temp">Temperature: Loading...</p>
 
-        <section class="events-container">
-            <div>
-                <h2>Events</h2>
+    <h3>3-Day Forecast</h3>
+    <div id="forecast">
+        <p>Loading forecast...</p>
+    </div>
+</section>
+
+ <!-- Member Spotlights Section -->
+        <section id="spotlights">
+            <h2>Member Spotlights</h2>
+            <div class="spotlight">
+                <h3>Marie Clair - Local Artisan</h3>
+                <p>Marie crafts handmade jewelry using sustainable materials. Visit her shop at 123 Main St.</p>
             </div>
-        </section>
-        <section class="weather-container">
-            <div>
-               <h2>Weather</h2>
-            </div>
-            <div class="data-table">
-                <span class="data-title">Temperature (°F):</span>
-                <span class="data-value" id="current-temperature">70</span>
-                <span class="data-title">Conditions:</span>
-                <span class="data-value">Sunny</span>
-                <span class="data-title">Wind (mph):</span>
-                <span class="data-value" id="wind-speed">10</span>
-                <span class="data-title">Wind Chill (°F):</span>
-                <span class="data-value" id="wind-chill-value">75</span>
-            </div>
-        </section>
-        <section class="spotlights-container">
-            <div>
-                <h2>Spotlights</h2>
+            <div class="spotlight">
+                <h3>Prietos Construction</h3>
+                <p>Prietos Construction has been serving the community for over 20 years, specializing in commercial and residential projects.</p>
             </div>
         </section>
     </main>
-  
-        <footer>
-            <!-- This is the logo and social media links section -->
+            <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Chamber of Commerce. All Rights Reserved.</p>
+        <p>Follow us on: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </p>
+
             <div class="footer-image-logo">
-                <img src="images/footer-logo.webp" alt="Springfield Chamber of Commerce Logo" width="200" height="150" loading="lazy">
-                <div class="footer-main-sm">
-                    <a href="images/facebook_icon.png" target="_blank" aria-label="Follow us on Facebook">
-                        <div class="footer-main-sm-fb"></div>
-                    </a>
-                    <a href="images/Instagram_icon.png" target="_blank" aria-label="Follow us on Instagram">
-                        <div class="footer-main-sm-in"></div>
-                    </a>
+                <img src="images/Flag_of_Missouri.webp" alt="Flag of Missouri" width="200" height="150" loading="lazy">
                 </div>
-            </div>
-        
-            <!-- Contact Information -->
+
             <div class="footer-contact-information">
                 <p><span id="footer-address">Address:</span></p>
-                <p>S. John Q Hammons Pwy</p>
-                <p>Springfield, MO</p> 
-                <p>Phone: 417-5990418</p>
+                  <p>S. John Q Hammons Pwy</p>
+                  <p>Springfield, MO</p> 
+                  <p>Phone: 417-5990418</p>
             </div>
-        
-            <!-- Copyright Information -->
-            <p>&copy; <span id="currentYear"></span> .:|:. Sumara Prieto .:|:. Missouri </p>
-            <p id="lastModified"></p>
-        </footer>        
-        
-    <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/darkMode.js"></script>
-    <script src="scripts/windchill.js"></script> 
- </body>
+                    <div class="footer-update-information">
+                        <p>&copy; <span id="currentYear"></span></p>
+                <p>Sumara Prieto - WDD 230</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div> 
+        </footer>
+        <script src="scripts/script.js" defer></script>
+        <script src="scripts/darkMode.js" defer></script>
+        <script src="scripts/windchill.js" defer></script>
+</body>
 </html>
+
