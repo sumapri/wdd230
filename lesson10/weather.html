@@ -18,18 +18,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f4f4f9; /* Light gray background */
+      background-color: #e4ebec; /* Light gray background */
     }
 
+    /* Main content container */
     main {
       text-align: center;
       padding: 20px;
-      background-color: white; /* White background for the content */
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
       width: 80%;
       max-width: 500px; /* Max width for better responsive design */
     }
+
+    /* Style for the title */
+    h1 {
+    margin:4em 0 1em;
+    text-align: center;
+    max-width: 80%;
+    padding: 1em 0;
+}
 
     /* Style for the footer */
     footer {
@@ -51,20 +58,22 @@
   </style>
 </head>
 <body>
-  <h1>OpenWeatherMap.org API Test</h1>
+
   <main>
+    <h1>OpenWeatherMap.org API Test</h1>
     <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
     <figure>
       <img id="weather-icon" src="" alt="">
       <figcaption></figcaption>
     </figure>
   </main>
+
   <footer>
     Sumara Prieto | OpenWeatherMap.org | CC BY-SA 4.0
   </footer>
 
-  <!-- Link to your weather.js script -->
   <script src="scripts/weather.js"></script>
 </body>
 </html>
+
 
