@@ -8,32 +8,30 @@
    
   <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal by Sumara Prieto">
   <meta name="author" content="Sumara Prieto">
-      <!-- Open Graph Meta Tags -->
-      <meta property="og:title" content="Sumara Prieto - WDD 230 - Web Frontend Development">
-      <meta property="og:type" content="website">
-      <meta property="og:image" content="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/springfield/bass-pro-exterior-sr-1093-1-_b289f6d1-5056-a348-3ad9c56cf23f0548.jpg"> 
-      <meta property="og:url" content="https://sumapri.github.io/wdd230/">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Sumara Prieto - WDD 230 - Web Frontend Development">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/springfield/bass-pro-exterior-sr-1093-1-_b289f6d1-5056-a348-3ad9c56cf23f0548.jpg"> 
+  <meta property="og:url" content="https://sumapri.github.io/wdd230/">
 
-      <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
+  <!-- Custom Normalization CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <!-- Larger CSS for media queries -->
+  <link rel="stylesheet" href="styles/larger.css">
 
-       <!-- Custom Normalization CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <!-- Your custom styles -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/medium.css">
-     <!-- Larger CSS for media queries -->
-     <link rel="stylesheet" href="styles/larger.css">
-        
-   
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 
-  <body>
-    <header class="container-header">
-      <a id="menu" href="#" title="Hamburger menu"></a>
-      <div class="container-header-top">
+<body>
+  <header class="container-header">
+    <a id="menu" href="#" title="Hamburger menu"></a>
+    <div class="container-header-top">
       <img src="images/portrait-photo.webp" id="portrait-photo" alt="Photo of Sumara Prieto" width="250" height="239" loading="lazy">
       <h1>Sumara Prieto</h1>
     </div>
@@ -48,65 +46,58 @@
         <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng">Scripture</a></li>
       </ul>
     </nav>
-    </header>
+  </header>
 
-<main class="container-main">
+  <main class="container-main">
   
-      <h2>WDD 230: Web Frontend Development</h2>
+    <h2>WDD 230: Web Frontend Development</h2>
 
-      <div class="hero">
-        <picture>
-            <source media="(max-width: 540px)" srcset="images/hero-small.webp">
-            <source media="(max-width: 820px)" srcset="images/hero-medium.webp">
-            <img src="images/hero-large.webp" alt="Kansas City Temple" width="1280">
-        </picture>
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 540px)" srcset="images/hero-small.webp">
+        <source media="(max-width: 820px)" srcset="images/hero-medium.webp">
+        <img src="images/hero-large.webp" alt="Kansas City Temple" width="1280">
+      </picture>
 
-        <div class="overlay">Kansas City, MO Temple</div>
+      <div class="overlay">Kansas City, MO Temple</div>
     </div>
-    <div id="links">
-      <!-- The lesson links will be dynamically inserted here -->
-    </div>
-        <section class="card">
-          <h3>Information</h3>
-          <div class="weather-content">
-            <h4>Springfield, MO</h4>
-            <p><span class="data-label">Conditions: </span><span id="conditions">Sunny</span> </p>
-            <p><span class="data-label">Temperature (°F): </span><span id="current-temperature">91</span></p>
-            <p><span class="data-label">Wind (mph): </span><span id="wind-speed">5</span></p>
-            <p><span class="data-label">Wind Chill (°F):  </span><span id="wind-chill-value"></span></p>
-            <p><span class="data-label">Humidity (%): </span>80</p>
-            <p><span class="data-label">Number of Visits: </span><span class="num-visits"></span></p>
-        </div>
-            
-        </section> 
 
+    <!-- The lesson links will be dynamically inserted here -->
+    <div id="links"></div>
+
+    <section class="card">
+      <h3>Information</h3>
+      <div class="weather-content">
+        <h4>Springfield, MO</h4>
+        <p><span class="data-label">Conditions: </span><span id="conditions">Sunny</span> </p>
+        <p><span class="data-label">Temperature (°F): </span><span id="current-temperature">91</span></p>
+        <p><span class="data-label">Wind (mph): </span><span id="wind-speed">5</span></p>
+        <p><span class="data-label">Wind Chill (°F):  </span><span id="wind-chill-value"></span></p>
+        <p><span class="data-label">Humidity (%): </span>80</p>
+        <p><span class="data-label">Number of Visits: </span><span class="num-visits"></span></p>
+      </div>
+    </section> 
 
     <!-- Dark Mode Toggle -->
     <input type="checkbox" id="dark-mode-checkbox" style="display: none;"> <!-- Hide the checkbox -->
-<button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode" onclick="toggleDarkMode()">
-    🌙
-</button>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode" onclick="toggleDarkMode()">
+      🌙
+    </button>
 
-
-  <section class="map-container">
-    <h2>Location Map</h2>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206055.8390634004!2d-92.436836!3d38.30466245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6d54822e37d%3A0xb55bc4590466bd72!2sMissouri!5e0!3m2!1sen!2sus!4v1728764416011!5m2!1sen!2sus" width="600"
-       height="450" 
-       style="border:0;" 
-       allowfullscreen="" 
-       loading="lazy"></iframe> 
-  </section>
-</main>
+    <section class="map-container">
+      <h2>Location Map</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206055.8390634004!2d-92.436836!3d38.30466245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6d54822e37d%3A0xb55bc4590466bd72!2sMissouri!5e0!3m2!1sen!2sus!4v1728764416011!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
     <p id="last-modified"></p>
   </footer>
 
-<script> 
-
-  document.getElementById('last-modified').textContent = `lastModified: ${document.lastModified}`;
-    </script>
+  <script> 
+    document.getElementById('last-modified').textContent = `lastModified: ${document.lastModified}`;
+  </script>
   <script src="scripts/getdates.js"></script>
   <script src="scripts/hamburger.js"></script> <!-- Link to the new hamburger.js -->
   <script src="scripts/darkMode.js"></script> <!-- Link to darkMode.js -->

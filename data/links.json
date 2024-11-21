@@ -1,102 +1,104 @@
-// Define the lessons data (you can also fetch this data from an external JSON file)
-const lessonsData = {
-  "lessons": [
-    {
-      "links": [
-        { "url": "lesson01/holygrail.html", "title": "Holygrail Page" },
-        { "url": "images/lighthouse.png", "title": "Lighthouse" },
-        { "url": "https://codepen.io/sumapri/pen/poMYobR", "title": "Applied JavaScript" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "lesson02/mediaquery.html", "title": "Media Queries" },
-        { "url": "lesson02/design-principles.html", "title": "Design Principles Document" },
-        { "url": "lesson02/design.html", "title": "Web Design Principles" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "images/css_combinators.png", "title": "CSS Combinators" },
-        { "url": "https://codepen.io/sumapri/pen/JjgEZqr", "title": "CSS-Pseudo-Elements" },
-        { "url": "https://codepen.io/sumapri/pen/YzmZeax", "title": "Responsive Menu" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "https://codepen.io/sumapri/pen/LYwWQrx", "title": "CSS Pseudo-Classes" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "lesson05/bom.html", "title": "Book of Mormon - Top 10" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "images/landscape.webp", "title": "WebP" },
-        { "url": "lesson06/responsive-image.html", "title": "Responsive Images" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "lesson07/lazyload.html", "title": "Lazy-Load" },
-        { "url": "newbom.html", "title": "New BOM Scriptures" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "tablebuild.html", "title": "Responsive Table" },
-        { "url": "form.html", "title": "Form" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "lesson09/new-ward-members.json", "title": "JSON Ward Members" },
-        { "url": "lesson09/prophets.html", "title": "Latter-Day Prophets" }
-      ]
-    },
-    {
-      "links": [
-        { "url": "lesson10/weather.html", "title": "Weather API" }
-      ]
-    }
-  ]
-};
-
-// Function to display the lesson links in a compact format
-function displayLessonLinks() {
-  const linksContainer = document.getElementById('links');
-
-  // Loop through the lessons array
-  lessonsData.lessons.forEach((lesson, index) => {
-    const lessonNumber = String(index + 1).padStart(2, '0'); // Format the number with leading zero (e.g., 01, 02)
-
-    // Create a div to hold the lesson number and links
-    const lessonDiv = document.createElement('div');
-    
-    // Start building the content for each lesson
-    let lessonContent = `${lessonNumber}: `;
-
-    // Add the links for each lesson
-    lesson.links.forEach((link, linkIndex) => {
-      lessonContent += `<a href="${link.url}" title="${link.title}">${link.title}</a>`;
-      // Add a separator (" | ") unless it's the last link
-      if (linkIndex < lesson.links.length - 1) {
-        lessonContent += ' | ';
+document.addEventListener('DOMContentLoaded', function () {
+  // Define the lessons data
+  const lessonsData = {
+    "lessons": [
+      {
+        "links": [
+          { "url": "lesson01/holygrail.html", "title": "Holygrail Page" },
+          { "url": "images/lighthouse.png", "title": "Lighthouse" },
+          { "url": "https://codepen.io/sumapri/pen/poMYobR", "title": "Applied JavaScript" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "lesson02/mediaquery.html", "title": "Media Queries" },
+          { "url": "lesson02/design-principles.html", "title": "Design Principles Document" },
+          { "url": "lesson02/design.html", "title": "Web Design Principles" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "images/css_combinators.png", "title": "CSS Combinators" },
+          { "url": "https://codepen.io/sumapri/pen/JjgEZqr", "title": "CSS-Pseudo-Elements" },
+          { "url": "https://codepen.io/sumapri/pen/YzmZeax", "title": "Responsive Menu" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "https://codepen.io/sumapri/pen/LYwWQrx", "title": "CSS Pseudo-Classes" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "lesson05/bom.html", "title": "Book of Mormon - Top 10" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "images/landscape.webp", "title": "WebP" },
+          { "url": "lesson06/responsive-image.html", "title": "Responsive Images" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "lesson07/lazyload.html", "title": "Lazy-Load" },
+          { "url": "newbom.html", "title": "New BOM Scriptures" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "tablebuild.html", "title": "Responsive Table" },
+          { "url": "form.html", "title": "Form" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "lesson09/new-ward-members.json", "title": "JSON Ward Members" },
+          { "url": "lesson09/prophets.html", "title": "Latter-Day Prophets" }
+        ]
+      },
+      {
+        "links": [
+          { "url": "lesson10/weather.html", "title": "Weather API" }
+        ]
       }
+    ]
+  };
+
+  // Function to display the lesson links in a compact format
+  function displayLessonLinks() {
+    const linksContainer = document.getElementById('links');
+    
+    // Loop through the lessons array
+    lessonsData.lessons.forEach((lesson, index) => {
+      const lessonNumber = String(index + 1).padStart(2, '0'); // Format the number with leading zero (e.g., 01, 02)
+
+      // Create a div to hold the lesson number and links
+      const lessonDiv = document.createElement('div');
+      
+      // Start building the content for each lesson
+      let lessonContent = `${lessonNumber}: `;
+
+      // Add the links for each lesson
+      lesson.links.forEach((link, linkIndex) => {
+        lessonContent += `<a href="${link.url}" title="${link.title}">${link.title}</a>`;
+        // Add a separator (" | ") unless it's the last link
+        if (linkIndex < lesson.links.length - 1) {
+          lessonContent += ' | ';
+        }
+      });
+
+      // Insert the lesson content into the div
+      lessonDiv.innerHTML = lessonContent;
+
+      // Append the lessonDiv to the links container
+      linksContainer.appendChild(lessonDiv);
     });
+  }
 
-    // Insert the lesson content into the div
-    lessonDiv.innerHTML = lessonContent;
-
-    // Append the lessonDiv to the links container
-    linksContainer.appendChild(lessonDiv);
-  });
-}
-
-// Call the function to display the lesson links
-displayLessonLinks();
+  // Call the function to display the lesson links
+  displayLessonLinks();
+});
 
 
 
