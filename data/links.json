@@ -4,12 +4,16 @@
       "lesson": "01",
       "links": [
         {
-          "url": "lesson01/activity1.html",
-          "title": "Activity 1"
+          "url": "lesson01/holygrail.html",
+          "title": "Holygrail Page"
         },
         {
-          "url": "lesson01/activity2.html",
-          "title": "Activity 2"
+          "url": "images/lighthouse.png",
+          "title": "Lighthouse"
+        },
+        {
+          "url": "https://codepen.io/sumapri/pen/poMYobR",
+          "title": "Applied JavaScript"
         }
       ]
     },
@@ -23,22 +27,101 @@
         {
           "url": "lesson02/design-principles.html",
           "title": "Design Principles Document"
-        }
-      ]
-    },
+        },
+        {
+          "url": "lesson02/design.html",
+          "title": "Web Design Principles"
+        },
     {
       "lesson": "03",
       "links": [
         {
-          "url": "lesson03/flexbox.html",
-          "title": "Flexbox Layout"
+          "url": "images/css_combinators.png",
+          "title": "CSS Combinators"
         },
         {
-          "url": "lesson03/css-grid.html",
-          "title": "CSS Grid"
+          "url": "https://codepen.io/sumapri/pen/JjgEZqr",
+          "title": "CSS-Pseudo-Elements"
+        },
+        {
+          "url": "https://codepen.io/sumapri/pen/YzmZeax",
+          "title": "Responsive Menu"
         }
       ]
-    }
-  ]
-}
+    },
+
+    {
+      "lesson": "04",
+      "links": [
+
+        {
+          "url": "https://codepen.io/sumapri/pen/LYwWQrx",
+          "title": "CSS Pseudo-Classes"
+        },
+        {
+          "lesson": "05",
+          "links": [
+            {
+              "url": "lesson05/bom.html",
+              "title": "Book of Mormon - Top 10"
+            },
+            {
+              "lesson": "06",
+              "links": [
+                {
+                  "url": "images/landscape.webp",
+                  "title": "WebP"
+                },
+                "lesson": "06",
+              "links": [
+                {
+                  "url": "lesson06/responsive-image.html",
+                  "title": "Responsive Images"
+                },
+                {
+                  "lesson": "07",
+                  "links": [
+                    {
+                      "url": "lesson07/lazyload.html",
+                      "title": "Lazy-Load"
+                    },
+                    {
+                      "url": "newbom.html",
+                      "title": "New BOM Scriptures"
+                    },
+                    {
+                      "lesson": "08",
+                      "links": [
+                        {
+                          "url": "tablebuild.html",
+                          "title": "Responsible Table"
+                        },
+                        {
+                          "url": "form.html",
+                          "title": "Form"
+                        },
+                        {
+                          "lesson": "09",
+                          "links": [
+                            {
+                              "url": "lesson09/new-ward-members.json",
+                              "title": "JSON Ward Members"
+                            },
+                            "lesson": "09",
+                          "links": [
+                            {
+                              "url": "lesson09/prophets.html",
+                              "title": "Latter-Day Prophets"
+                            },
+                            {
+                              "lesson": "10",
+                              "links": [
+                                {
+                                  "url": "lesson10/weather.html",
+                                  "title": "Weather API"
+                                },
+                              ]
+                            }
+                            
+
 
