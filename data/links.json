@@ -53,7 +53,85 @@
     },
     {
       "lesson": "04",
-      "l
-                            
+      "links": [
+        {
+          "url": "https://codepen.io/sumapri/pen/LYwWQrx",
+          "title": "CSS Pseudo-Classes"
+        }
+      ]
+    },
+    {
+      "lesson": "05",
+      "links": [
+        {
+          "url": "lesson05/bom.html",
+          "title": "Book of Mormon - Top 10"
+        }
+      ]
+    },
+    {
+      "lesson": "06",
+      "links": [
+        {
+          "url": "images/landscape.webp",
+          "title": "WebP"
+        },
+        {
+          "url": "lesson06/responsive-image.html",
+          "title": "Responsive Images"
+        }
+      ]
+    },
+    {
+      "lesson": "07",
+      "links": [
+        {
+          "url": "lesson07/lazyload.html",
+          "title": "Lazy-Load"
+        },
+        {
+          "url": "newbom.html",
+          "title": "New BOM Scriptures"
+        }
+      ]
+    },
+    {
+      "lesson": "08",
+      "links": [
+        {
+          "url": "tablebuild.html",
+          "title": "Responsive Table"
+        },
+        {
+          "url": "form.html",
+          "title": "Form"
+        }
+      ]
+    },
+    {
+      "lesson": "09",
+      "links": [
+        {
+          "url": "lesson09/new-ward-members.json",
+          "title": "JSON Ward Members"
+        },
+        {
+          "url": "lesson09/prophets.html",
+          "title": "Latter-Day Prophets"
+        }
+      ]
+    },
+    {
+      "lesson": "10",
+      "links": [
+        {
+          "url": "lesson10/weather.html",
+          "title": "Weather API"
+        }
+      ]
+    }
+  ]
+}
+                  
 
 
