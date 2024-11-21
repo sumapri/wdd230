@@ -1,137 +1,69 @@
 {
   "lessons": [
     {
-      "lesson": "01",
       "links": [
-        {
-          "url": "lesson01/holygrail.html",
-          "title": "Holygrail Page"
-        },
-        {
-          "url": "images/lighthouse.png",
-          "title": "Lighthouse"
-        },
-        {
-          "url": "https://codepen.io/sumapri/pen/poMYobR",
-          "title": "Applied JavaScript"
-        }
+        { "url": "lesson01/holygrail.html", "title": "Holygrail Page" },
+        { "url": "images/lighthouse.png", "title": "Lighthouse" },
+        { "url": "https://codepen.io/sumapri/pen/poMYobR", "title": "Applied JavaScript" }
       ]
     },
     {
-      "lesson": "02",
       "links": [
-        {
-          "url": "lesson02/mediaquery.html",
-          "title": "Media Queries"
-        },
-        {
-          "url": "lesson02/design-principles.html",
-          "title": "Design Principles Document"
-        },
-        {
-          "url": "lesson02/design.html",
-          "title": "Web Design Principles"
-        }
+        { "url": "lesson02/mediaquery.html", "title": "Media Queries" },
+        { "url": "lesson02/design-principles.html", "title": "Design Principles Document" },
+        { "url": "lesson02/design.html", "title": "Web Design Principles" }
       ]
     },
     {
-      "lesson": "03",
       "links": [
-        {
-          "url": "images/css_combinators.png",
-          "title": "CSS Combinators"
-        },
-        {
-          "url": "https://codepen.io/sumapri/pen/JjgEZqr",
-          "title": "CSS-Pseudo-Elements"
-        },
-        {
-          "url": "https://codepen.io/sumapri/pen/YzmZeax",
-          "title": "Responsive Menu"
-        }
+        { "url": "images/css_combinators.png", "title": "CSS Combinators" },
+        { "url": "https://codepen.io/sumapri/pen/JjgEZqr", "title": "CSS-Pseudo-Elements" },
+        { "url": "https://codepen.io/sumapri/pen/YzmZeax", "title": "Responsive Menu" }
       ]
     },
     {
-      "lesson": "04",
       "links": [
-        {
-          "url": "https://codepen.io/sumapri/pen/LYwWQrx",
-          "title": "CSS Pseudo-Classes"
-        }
+        { "url": "https://codepen.io/sumapri/pen/LYwWQrx", "title": "CSS Pseudo-Classes" }
       ]
     },
     {
-      "lesson": "05",
       "links": [
-        {
-          "url": "lesson05/bom.html",
-          "title": "Book of Mormon - Top 10"
-        }
+        { "url": "lesson05/bom.html", "title": "Book of Mormon - Top 10" }
       ]
     },
     {
-      "lesson": "06",
       "links": [
-        {
-          "url": "images/landscape.webp",
-          "title": "WebP"
-        },
-        {
-          "url": "lesson06/responsive-image.html",
-          "title": "Responsive Images"
-        }
+        { "url": "images/landscape.webp", "title": "WebP" },
+        { "url": "lesson06/responsive-image.html", "title": "Responsive Images" }
       ]
     },
     {
-      "lesson": "07",
       "links": [
-        {
-          "url": "lesson07/lazyload.html",
-          "title": "Lazy-Load"
-        },
-        {
-          "url": "newbom.html",
-          "title": "New BOM Scriptures"
-        }
+        { "url": "lesson07/lazyload.html", "title": "Lazy-Load" },
+        { "url": "newbom.html", "title": "New BOM Scriptures" }
       ]
     },
     {
-      "lesson": "08",
       "links": [
-        {
-          "url": "tablebuild.html",
-          "title": "Responsive Table"
-        },
-        {
-          "url": "form.html",
-          "title": "Form"
-        }
+        { "url": "tablebuild.html", "title": "Responsive Table" },
+        { "url": "form.html", "title": "Form" }
       ]
     },
     {
-      "lesson": "09",
       "links": [
-        {
-          "url": "lesson09/new-ward-members.json",
-          "title": "JSON Ward Members"
-        },
-        {
-          "url": "lesson09/prophets.html",
-          "title": "Latter-Day Prophets"
-        }
+        { "url": "lesson09/new-ward-members.json", "title": "JSON Ward Members" },
+        { "url": "lesson09/prophets.html", "title": "Latter-Day Prophets" }
       ]
     },
     {
-      "lesson": "10",
       "links": [
-        {
-          "url": "lesson10/weather.html",
-          "title": "Weather API"
-        }
+        { "url": "lesson10/weather.html", "title": "Weather API" }
       ]
     }
   ]
 }
+
+
                  
 
 
