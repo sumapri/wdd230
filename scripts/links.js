@@ -1,38 +1,30 @@
-const baseURL = "https://sumapri.github.io/wdd230/";
-const linksURL = `${baseURL}data/links.json`;
+const linksURL = 'https://sumapri.github.io/wdd230/data/links.json';
 
-// Fetch the links data from the JSON file
 async function getLinks() {
-  const response = await fetch(linksURL);
-  const data = await response.json();
-  displayLinks(data.lessons);  // Pass the lessons array to displayLinks
+  try {
+    const response = await fetch(linksURL);
+    const data = await response.json();
+
+    displayLinks(data.lessons);
+  } catch (error) {
+    console.error('Error fetching the links:', error);
+  }
 }
 
-// Create HTML for each lesson's links dynamically
-function displayLinks(weeks) {
-  const linksContainer = document.getElementById('links'); // Make sure this matches the element's id in your HTML
+function displayLinks(lessons) {
+  const linksContainer = document.querySelector('#linksContainer');
+  linksContainer.innerHTML = '';
 
-  weeks.forEach(week => {
-    const weekSection = document.createElement('section');
-    const weekTitle = document.createElement('h2');
-    weekTitle.textContent = `Lesson ${week.lesson}`;
-    weekSection.appendChild(weekTitle);
+  lessons.forEach(lesson => {
+    const lessonNumber = lesson.lesson.toString().padStart(2, '0');
 
-    const list = document.createElement('ul');
+    const linksText = lesson.links.map(link => `<a href="${link.url}" target="_blank">${link.title}</a>`).join(' | ');
 
-    week.links.forEach(link => {
-      const listItem = document.createElement('li');
-      const anchor = document.createElement('a');
-      anchor.href = baseURL + link.url;
-      anchor.textContent = link.title;
-      listItem.appendChild(anchor);
-      list.appendChild(listItem);
-    });
+    const lessonElement = document.createElement('p');
+    lessonElement.innerHTML = `${lessonNumber}: ${linksText}`;
 
-    weekSection.appendChild(list);
-    linksContainer.appendChild(weekSection);
+    linksContainer.appendChild(lessonElement);
   });
 }
 
-// Call the function to load the links when the page loads
 getLinks();
