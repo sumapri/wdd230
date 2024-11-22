@@ -1,9 +1,10 @@
-/* Base styles for the webpage */
+/* General Reset and Import */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif&display=swap');
 
 body {
-    font-family: 'Lato', futura; 
+    font-family: 'Lato','Noto Serif', futura; 
     margin: 0 auto;
-    width: 100%; /* Take full width */
+    width: 100%; 
     max-width: 1440px;
     background-color: rgb(232, 228, 228); 
     color: #333; 
@@ -11,129 +12,177 @@ body {
 
 header {
     max-width: 100%;
-}
-h1, h2, h3, nav a, p {
-    font-family: sans-serif;
-    font-weight: 400;
+    position: relative; /* Keep this for absolute positioning of the button */
+    padding: 20px; /* Add padding to prevent content from touching the edges */
+    display: flex; /* Flexbox to align items within header */
+    justify-content: space-between; /* Ensure content is spread out (logo, nav, and dark mode toggle) */
+    align-items: center; /* Vertically align content */
 }
 
+/* Position the dark mode toggle in the top right corner of the header */
+#dark-mode-toggle {
+    position: absolute; /* Position it relative to the header */
+    top: 20px; /* Adjust this value to control the vertical position */
+    right: 20px; /* Adjust this value to control the horizontal position */
+    font-size: 24px; /* Adjust the size of the icon */
+    background: none; /* No background */
+    border: none; /* Remove any border */
+    cursor: pointer; /* Change cursor to pointer */
+    color: white; /* Ensure the icon is visible */
+}
+
+/* Navigation Menu */
 nav {
     background-color: #333;
-    max-width: 100%; /* Allow the container to take full width */
-    margin: 0 auto; /* Ensure it's centered */ 
+    width: 100%; /* Ensure navigation takes full width */
+    margin: 0; /* Reset any unwanted margins */
+    display: flex; /* Flexbox for the nav items */
+    justify-content: space-between; /* Align items evenly */
+    padding: 10px 20px; /* Add padding for spacing */
+}
+#nav-links {
+    display: flex; /* Use flexbox to align links horizontally */
+    flex-direction: row; /* Ensure the links are in a row */
 }
 
-/* Hide the navigation links by default in mobile view */
-nav ul {
-    
-    display: none; /* Initially hidden */
-    flex-direction: column; /* Stack items vertically */
+#nav-links li {
+    position: relative;
+    text-align: center;
+    margin-right: 15px; /* Space out the links */
 }
 
-/* Show the navigation links when the hamburger menu is active */
-nav ul.active {
-    display: flex; /* Show when active */
-}
-nav ul {
-    display: flex; /* Show navigation links in larger views */
-    flex-direction: row; /* Horizontal layout */
-}
-nav ul li {
-    position: relative; /* Set position for pseudo-element */
-    padding-left: 140px; /* Add space for the marker */
-    text-align: center; /* Center text for each item */
-}
 nav a {
-    color: white; 
-    text-decoration: none; /* Remove underline */
-    padding: 20px; /* Add padding for clickable area */
-    display: block; /* Ensure the entire area is clickable */
+    color: white; /* Text color for nav links */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
 }
-/* Hover effect to change marker color */
-nav ul li:hover::before {
-    color: #ffb700; 
-}
-
-/* Style for the hamburger button */
 #hamburger {
     background: none;
     border: none;
-    color: white; 
-    font-size: 20px; /* Size of the hamburger icon */
-    cursor: pointer; /* Change cursor to pointer */
-    display: flex; /* Show in mobile view */
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hide hamburger by default */
 }
 
-/* Hide the hamburger button in larger views */
-@media (min-width: 768px) {
+/* Mobile Navigation - Hamburger Menu */
+@media (max-width: 768px) {
     #hamburger {
-        display: none; /* Hide button in larger views */
+        display: block; /* Show hamburger on small screens */
     }
-    .container-header-top {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        background-color: rgb(6, 182, 240);
+    #nav-links {
+        display: none;
+        flex-direction: column; /* Stack links vertically */
     }
-    
-    #portrait-photo {
-        width: 150px; /* Adjust the width of the image to its container */
-        height: auto; /* Automatically adjust the height based on the width to maintain the aspect ratio */
-        padding: 1.5rem;
-        border-radius: 50%;
+
+    #nav-links.active {
+        display: flex; /* Show links when menu is active */
     }
 }
 
-main {
-    max-width: 93%;
-    margin: 0 auto;
+/* Dark Mode */
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
 }
 
+body.dark-mode nav {
+    background-color: #333;
+}
+
+body.dark-mode .card {
+    background-color: #b4b9bb;
+    color: #0a0a0a;
+    border: 1px solid #666;
+}
+#dark-mode-toggle {
+    position: absolute; /* Keep it absolutely positioned in the top-right */
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#dark-mode-toggle label {
+    background: #f0f0f0;
+    border-radius: 25px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.dark-mode #dark-mode-toggle label {
+    background: #101011;
+    color: white;
+}
+
+/* Hero Section */
+/* General Hero Section */
+.hero {
+    position: relative; /* Position to hold the overlay */
+    width: 100%; /* Make sure it takes up full width */
+    height: 500px; /* Default height for the hero section */
+    overflow: hidden; /* Prevent the image from spilling outside */
+}
+
+.hero img {
+    width: 100%;  /* Ensure the image takes full width of the container */
+    height: 100%; /* Ensure the image takes full height of the container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    object-position: center; /* Center the image to ensure important parts are visible */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px; /* Shorter height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 200px; /* Even shorter height for very small screens */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 2rem;
+    margin-top: 3rem;
+    background-color: #1454d4;
+    color: white;
+}
+
+/* Card Styles */
 .card {
     background-color: rgba(193, 214, 225, 0.762);
-    border-style: solid;
-    border-color: gray;
     border-radius: 0.5rem;
-    border-width: 1px;
     box-shadow: 0 1px 3px rgba(162, 158, 158, 0.1);
-}
-.card a {
-    color: black;
-}
-
-.card a:hover {
-    color: red; /* Color on hover */
-}
-.card h3 {
     text-align: center;
-    letter-spacing: 0.1rem;
-    padding: 1rem;
-}
-.card ul {
-    margin: 1rem  1rem;
-    list-style-type: none;
-}
-ul li {
-    cursor: pointer;
-    padding: 0.25rem 0;
-}
-ul li:hover {
-    font-weight: 700;
-}
-
-.card p {
-    text-align: center;
-    padding: 1rem;
-}
-.card {
-    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+    margin: 20px;
 }
 
+/* Weather */
 #weather-container {
     display: flex;
     flex-direction: column;
@@ -146,106 +195,15 @@ ul li:hover {
     margin-top: 10px;
 }
 
+/* Map Styling */
 .map-container iframe {
     width: 100%;
     height: 450px;
     border: 0px;
     margin-top: 30px;
-    
 }
 
 
-footer {
-    text-align: center;
-    padding: 2rem 2rem;
-    margin-top: 3rem;
-    background-color: #1454d4; 
-    color: white;
-}
-footer img {
-    vertical-align: middle; /* Align the image with the text */
-    margin-left: 10px; /* Add some space between the text and the flag */
-}
-/* Dark mode toggle styles */
-#dark-mode-toggle {
-    position: absolute; /* Position in upper right corner */
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-#dark-mode-toggle input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
-}
-
-#dark-mode-toggle label {
-    background: #f0f0f0; /* Light background */
-    border-radius: 25px; /* Rounded switch */
-    padding: 5px 10px; /* Padding */
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#dark-mode-toggle label:hover {
-    background: #e0e0e0; /* Hover effect */
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #000; /* Dark background */
-    color: #fff; /* Light text */
-}
-
-body.dark-mode nav {
-    background-color: #333; /* Dark nav background */
-}
-
-body.dark-mode .card {
-    background-color: #b4b9bb; 
-    color: #0a0a0a; 
-    border: 1px solid #666; /* Darker border */
-}
-/* Additional dark mode styles for specific sections if needed */
-body.dark-mode .card h3 {
-    color: darkviolet; 
-}
-
-    .card a:hover {
-    color: rgb(227, 227, 231); /* Hover color in light mode */
-}
-    .card a:hover {
-        color: rgb(240, 8, 39); /* Hover color in dark mode */
-    }
-
-body.dark-mode #dark-mode-toggle label {
-    background: #101011; /* Dark toggle background */
-    color: white; /* Light toggle text */
-}
-
-
-.hero {
-    position: relative;
-}
-
-.hero img {
-    width: 100%;  /* Set the width to 100% of its parent container */
-    height: auto; /* Maintain the aspect ratio by setting height to auto */
-}
-
-/* Overlay styles for the hero image */
-.overlay {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 5px;
-    white-space: nowrap; /* Prevent text wrapping */
-}
 
 
 

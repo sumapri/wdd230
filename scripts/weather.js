@@ -1,6 +1,6 @@
 
 const apiKey = 'ca1520dfe40aa5f66f93ba299db4f35d';
-const city = 'Springfield,Missouri';
+const city = 'Kansas City, Missouri';
 const units = 'imperial';
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
 

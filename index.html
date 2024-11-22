@@ -46,11 +46,12 @@
         <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng">Scripture</a></li>
       </ul>
     </nav>
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+      🌙
+  </button>
   </header>
 
   <main class="container-main">
-  
-    <h2>WDD 230: Web Frontend Development</h2>
 
     <div class="hero">
       <picture>
@@ -61,14 +62,19 @@
 
       <div class="overlay">Kansas City, MO Temple</div>
     </div>
-
-    <!-- The lesson links will be dynamically inserted here -->
-    <div id="links"></div>
+    <h2>WDD 230: Web Frontend Development</h2>
+  
+    <section class="card">
+      <h3>Learning Activities</h3>
+      <hr>
+      <div id="links"></div>
+      <hr>
+  </section>
 
     <section class="card">
       <h2>Weather Information</h2>
       <div class="weather-content">
-        <h4>Springfield, MO</h4>
+        <h4>Kansas City, MO</h4>
         <p id="temperature">Temperature: --°F</p>
         <p id="weather-description">Condition: ---</p>
         <img id="weather-icon" src="" alt="Weather icon">
@@ -76,16 +82,10 @@
       </div>
     </section> 
 
-    <!-- Dark Mode Toggle -->
-    <input type="checkbox" id="dark-mode-checkbox" style="display: none;"> <!-- Hide the checkbox -->
-    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode" onclick="toggleDarkMode()">
-      🌙
-    </button>
 
-    <section class="map-container">
-      <h2>Location Map</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206055.8390634004!2d-92.436836!3d38.30466245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6d54822e37d%3A0xb55bc4590466bd72!2sMissouri!5e0!3m2!1sen!2sus!4v1728764416011!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206055.8390634004!2d-92.436836!3d38.30466245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e6d54822e37d%3A0xb55bc4590466bd72!2sMissouri!5e0!3m2!1sen!2sus!4v1728764416011!5m2!1sen!2sus" title="Kansas City, MO" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
   </main>
 
   <footer>
