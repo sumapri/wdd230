@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       {
         "links": [
-          { "url": "lesson09/new-ward-members.json", "title": "JSON Ward Members" },
+          { "url": "members.json", "title": "JSON Ward Members" },
           { "url": "lesson09/prophets.html", "title": "Latter-Day Prophets" }
         ]
       },
