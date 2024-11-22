@@ -85,6 +85,10 @@ body.dark-mode {
     background-color: #000;
     color: #fff;
 }
+/* Title Color in Dark Mode */
+body.dark-mode .main-title {
+    color: #fff;  /* White text for dark mode */
+}
 
 body.dark-mode nav {
     background-color: #333;
@@ -229,7 +233,8 @@ footer {
 /* Map Container Styles */
 .map-container {
     width: 100%; /* Ensure it takes full width */
-    margin-top: 30px; /* Add space between map and cards */
+    margin-top: 30px; /* Add space between cards and map */
+    padding: 0 10px; /* Optional: Add padding if you want space around the map */
 }
 
 .map-container iframe {
@@ -237,6 +242,19 @@ footer {
     height: 450px; /* Set a height for the map */
     border: none; /* Remove iframe border */
 }
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px; /* Adjust map height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 250px; /* Further adjust map height for very small screens */
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -282,6 +300,7 @@ footer {
     border: 0px;
     margin-top: 30px;
 }
+
 
 
 
