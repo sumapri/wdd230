@@ -171,6 +171,12 @@ footer {
     background-color: #1454d4;
     color: white;
 }
+/* General Layout */
+.container-main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
 
 /* Card Styles */
 .card {
@@ -179,7 +185,34 @@ footer {
     box-shadow: 0 1px 3px rgba(162, 158, 158, 0.1);
     text-align: center;
     padding: 20px;
-    margin: 20px;
+    margin-bottom: 30px;
+}
+/* Map Container Styles */
+.map-container {
+    width: 100%; /* Ensure it takes full width */
+    margin-top: 30px; /* Add space between map and cards */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px; /* Set a height for the map */
+    border: none; /* Remove iframe border */
+}
+/* Ensure proper positioning for large views */
+@media (min-width: 1024px) {
+    .map-container {
+        margin-top: 50px; /* Add extra space if needed */
+    }
+
+    .card {
+        margin-bottom: 50px; /* Add extra spacing between cards and map */
+    }
+}
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 300px; /* Adjust map height for smaller screens */
+    }
 }
 
 /* Weather */
