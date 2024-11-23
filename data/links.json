@@ -110,7 +110,7 @@
       "lesson": "09",
       "links": [
         {
-          "url": "members.json",
+          "url": "new-ward-members.json",
           "title": "JSON Ward  Members"
         },
         {
