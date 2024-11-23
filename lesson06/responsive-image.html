@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Images - WDD 230 - Web Frontend Development</title>
-    <meta name="author" content="Sumara Prieto">
-    <!-- External styles -->
+    <title>Responsive Images</title>
     <link rel="stylesheet" href="styles/responsive-images.css">
 </head>
 <body>
     <main>
         <div class="hero">
             <picture>
-                <source media="(max-width: 500px)" srcset="images/hero-small-temple.webp">
-                <source media="(max-width: 1000px)" srcset="images/hero-medium-temple.webp">
-                <img src="images/hero-large-temple.webp" alt="Bentoville-Ar Temple" width="1280">
+                <!-- Source for small screens (max-width: 500px) -->
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                
+                <!-- Source for medium screens (max-width: 1000px) -->
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                
+                <!-- Default image for larger screens -->
+                <img src="images/hero-large.webp" alt="Bentoville Temple at Night" width="1500" height="750">
             </picture>
         </div>
     </main>
-    
 </body>
 </html>
