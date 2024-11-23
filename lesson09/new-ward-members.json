@@ -2,7 +2,7 @@
   "wardInformation": {
   "familyName": "Solis",
   "moveInDate": "2024-08-25",
-  "numberOfPeople": 4,
+  "numberOfPeople": 6,
   "visitedByBishopric": true,
   "familyMembers": [
     {
@@ -24,6 +24,16 @@
       "name": "Kate Solis",
       "gender": "Female",
       "birthdate": "2017-10-29"
+    },
+    {
+      "name": "Zara Solis",
+      "gender": "Female",
+      "birthdate": "2019-1-09"
+    },
+    {
+      "name": "Nicholas Solis",
+      "gender": "Male",
+      "birthdate": "2022-3-22"
     }
   ]
   }
