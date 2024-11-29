@@ -39,7 +39,7 @@
     <header class="header-main">
         <a id="menu" href="#" title="Hamburger menu"></a>
         <div class="header-main-logo">
-            <img src="images/Flag_of_Missouri.webp" id="logo-img" alt="Flag of Missouri" width="80" height="40">   
+            <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Chamber logo" width="100" height="60">   
         </div>
         <nav>
             <ul>
@@ -59,8 +59,13 @@
 
     <!-- View toggle buttons (grid/list) -->
     <div class="view-toggle">
-        <button id="gridViewBtn" class="active">Grid View</button>
-        <button id="listViewBtn">List View</button>
+        <button id="gridViewBtn" class="active" aria-pressed="true" aria-label="Grid view">
+            Grid View
+        </button>
+        <button id="listViewBtn" aria-pressed="false" aria-label="List view">
+            List View
+        </button>
+        
     </div>
 
     <!-- Container to display members -->
@@ -72,9 +77,29 @@
 
     <!-- Footer should be outside of header -->
     <footer>
-        <p>&copy; <span id="currentYear"></span> .:|:. Sumara Prieto .:|:. Missouri <img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
-        <p id="lastModified"></p>
-    </footer>
+        <p>&copy; 2024 Chamber of Commerce. All Rights Reserved.</p>
+        <p>Follow us on: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </p>
+
+            <div class="footer-image-logo">
+                <img src="images/footer-logo.webp" alt="Logo of Chamber of Commerce" width="100" height="50" loading="lazy">
+                </div>
+
+            <div class="footer-contact-information">
+                <p><span id="footer-address">Address:</span></p>
+                  <p>S. John Q Hammons Pwy</p>
+                  <p>Springfield, MO</p> 
+                  <p>Phone: 417-5990418</p>
+            </div>
+                    <div class="footer-update-information">
+                        <p>&copy; <span id="currentYear"></span>.:|:. Sumara Prieto .:|:.Missouri<img src="images/Flag_of_Missouri.svg.png" alt="Flag of Missouri" width="20" height="10" loading="lazy"></p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div> 
+        </footer>
 
     <!-- Dark Mode Button -->
     <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
@@ -82,7 +107,8 @@
     <!-- Scripts -->
     <script src="scripts/script.js"></script>
     <script src="scripts/darkMode.js"></script>
-    <script src="scripts/windchill.js"></script> 
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/directory.js"></script> 
 
 </body>
 </html>

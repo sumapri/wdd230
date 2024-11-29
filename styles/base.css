@@ -269,6 +269,15 @@ footer {
     background-color: #1454d4;
     color: white;
 }
+footer a {
+    color: #ffffff; /* Make sure the footer links have high contrast */
+    font-weight: bold; /* Make the links more prominent */
+  }
+  
+  footer a:hover {
+    color: #ff9900; /* Change color on hover for better visibility */
+  }
+  
 /* Ensure proper positioning for large views */
 @media (min-width: 1024px) {
     .map-container {

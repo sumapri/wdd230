@@ -89,67 +89,62 @@ header nav ul li a {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
   background-color: #333;
   color: white;
 }
-/* Dark Mode Styles */
+footer a {
+  color: #ffffff; /* Make sure the footer links have high contrast */
+  font-weight: bold; /* Make the links more prominent */
+}
+
+footer a:hover {
+  color: #ff9900; /* Change color on hover for better visibility */
+}
+
+/* Dark Mode */
 body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
+}
+/* Title Color in Dark Mode */
+body.dark-mode .main-title {
+  color: #fff;  /* White text for dark mode */
 }
 
-header.dark-mode {
+body.dark-mode nav {
   background-color: #333;
 }
 
-footer.dark-mode {
-  background-color: #333;
-  color: #ffffff;
+body.dark-mode .card {
+  background-color: #b4b9bb;
+  color: #0a0a0a;
+  border: 1px solid #666;
 }
-
-/* Toggle Switch Styling */
-.dark-mode-toggle {
-  position: fixed;
+#dark-mode-toggle {
+  position: absolute; /* Keep it absolutely positioned in the top-right */
   top: 20px;
   right: 20px;
-  display: inline-block;
+  font-size: 24px;
+  background: none;
+  border: none;
   cursor: pointer;
+  color: white;
 }
 
-.dark-mode-toggle input {
-  display: none;
+#dark-mode-toggle label {
+  background: #f0f0f0;
+  border-radius: 25px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.dark-mode-toggle .slider {
-  width: 34px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 34px;
-  position: relative;
-  transition: background-color 0.2s ease;
+body.dark-mode #dark-mode-toggle label {
+  background: #101011;
+  color: white;
 }
 
-.dark-mode-toggle .slider:before {
-  content: "";
-  position: absolute;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background-color: white;
-  transition: transform 0.2s ease;
-  left: 4px;
-  top: 4px;
-}
-
-/* When the checkbox is checked, change the background color and move the slider */
-.dark-mode-toggle input:checked + .slider {
-  background-color: #4caf50;
-}
-
-.dark-mode-toggle input:checked + .slider:before {
-  transform: translateX(14px);
-}
 /* General layout */
 .container {
   display: grid;
@@ -200,8 +195,17 @@ footer.dark-mode {
 /* Responsive layout (mobile view) */
 @media (max-width: 768px) {
   .container {
-      grid-template-columns: 1fr; /* Stack sidebar and main content */
+      display: flex;
+      flex-direction: column;
   }
+  .sidebar {
+      order: 2; /* Move sidebar below content on small screens */
+  }
+  .main-content {
+      order: 1; /* Main content comes first on small screens */
+  }
+}
+
 
   .gallery img {
       max-width: 100%; /* Full width on mobile */
@@ -270,9 +274,11 @@ form input, form select, form textarea {
 
 .member-card img {
   width: 100%;
+  max-width: 200px; /* Limit max width for images in cards */
   height: auto;
   border-radius: 10px;
 }
+
 
 .member-card h3 {
   font-size: 1.2em;
@@ -338,15 +344,44 @@ form input, form select, form textarea {
   z-index: 1000;
 }
 
+/* Improve button color for event banner */
 .event-banner button {
-  background-color: transparent;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #333;
-  margin-left: 10px;
+  color: #333; /* Dark text for the button for better contrast */
 }
+
 
 .event-banner.hidden {
   display: none;
 }
+button:focus, a:focus {
+  outline: 2px solid #005fa3; /* Add outline to focused buttons and links */
+  outline-offset: 2px;
+}
+
+button:hover, a:hover {
+  background-color: #005fa3; /* Hover effect on buttons */
+  color: white;
+}
+.submit-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 200px; /* Add width to center the button */
+  margin-top: 20px; /* Space above the button */
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #005fa3;
+}
+
+@media (max-width: 768px) {
+  .submit-button {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
