@@ -24,7 +24,11 @@ header nav ul {
   justify-content: center;
   list-style-type: none;
 }
-
+header h1 {
+  display: flex;
+  justify-content: center;
+  list-style-type: none; 
+}
 header nav ul li {
   margin: 0 15px;
 }
@@ -54,7 +58,7 @@ header nav ul li a {
 }
 
 #hero .cta-button {
-  background-color: #ff9900;
+  background-color: #f68a06;
   color: white;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -236,6 +240,8 @@ body.dark-mode #dark-mode-toggle label {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 8px;
+  min-width: 200px;
+  border: 1px solid #ccc; /* Add a border to the sidebar */ 
 }
 
 .sidebar h2, .sidebar h3 {
@@ -286,6 +292,10 @@ body.dark-mode #dark-mode-toggle label {
     max-width: 100%; /* Full width on mobile */
   }
 }
+body.dark-mode .sidebar {  
+  background-color: #333; /* Dark background color */  
+  color: #fff; /* White text color */  
+} 
 /* Two-column layout for larger screens */
 form {
   display: grid;
@@ -402,12 +412,12 @@ form input, form select, form textarea {
 
 
 button:focus, a:focus {
-  outline: 2px solid #005fa3; /* Add outline to focused buttons and links */
+  outline: 2px solid #f69d04; /* Add outline to focused buttons and links */
   outline-offset: 2px;
 }
 
 button:hover, a:hover {
-  background-color: #005fa3; /* Hover effect on buttons */
+  background-color: #f59d06; /* Hover effect on buttons */
   color: white;
 }
 
