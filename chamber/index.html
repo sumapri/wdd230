@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,15 +18,9 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <!-- Link to weather.js -->
-<script src="scripts/weather.js" defer></script>
-<!-- Link to banner.js -->
-<script src="scripts/banner.js" defer></script>
-
-
 
  <!-- Favicon -->
-    <link rel="icon" href="favicon.ico"> 
+    <link rel="icon" href="favicon1.ico"> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +36,8 @@
             <img src="images/springfield-chamber-logo.webp" id="logo-img" alt="Chamber logo" width="100" height="60">   
         </div>
         <nav>
-            <ul>
+            <button id="hamburger" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discovery</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -70,39 +64,32 @@
           </div>
           </section>
                     <!-- Current Events Section -->
-        <section id="events">
-                <h2>Current Events</h2>
-            <div class="event"
-            <h3>Networking Breakfast</h3>
-            <p>Join us for a morning of networking and discussion with local business leaders.</p>
-        </div>
-        <div class="event">
-            <h3>Business Expo</h3>
-            <p>Showcase your business at the annual Chamber Business Expo.</p>
-        </div>
-        <!-- Meet & Greet Banner -->
-<div id="event-banner" class="event-banner">
-    <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
-    <button id="close-banner" aria-label="Close">✖</button>
-</div>
-
-        </section>
-        
-        <!-- Weather Section -->
-
-        <section class="card">
-            <h2>Weather Information</h2>
-            <div class="weather-content">
-              <h4>Springfield, MO</h4>
-              <p id="temperature">Temperature: --°F</p>
-              <p id="weather-description">Condition: ---</p>
-              <img id="weather-icon" src="" alt="Weather icon">
-              <p><span class="data-label">Number of Visits: </span><span class="num-visits">0</span></p>
-            </div>
-          </section>
+                    <section id="events-weather">
+                        <div id="events" class="card">
+                          <h2>Current Events</h2>
+                          <div class="event">
+                            <h3>Networking Breakfast</h3>
+                            <p>Join us for a morning of networking and discussion with local business leaders.</p>
+                          </div>
+                          <div class="event">
+                            <h3>Business Expo</h3>
+                            <p>Showcase your business at the annual Chamber Business Expo.</p>
+                          </div>
+                        </div>
+                      
+                        <div id="weather" class="card">
+                          <h2>Weather Information</h2>
+                          <div class="weather-content">
+                            <h4>Springfield, MO</h4>
+                            <p id="temperature">Temperature: --°F</p>
+                            <p id="weather-description">Condition: ---</p>
+                            <img id="weather-icon" src="" alt="Weather icon">
+                            <p><span class="data-label">Number of Visits: </span><span class="num-visits">0</span></p>
+                          </div>
+                        </div>
 
  <!-- Member Spotlights Section -->
-        <section id="spotlights">
+        <section id="spotlights" class="card">
             <h2>Member Spotlights</h2>
             <div class="spotlight">
                 <h3>Marie Clair - Local Artisan</h3>
@@ -113,6 +100,12 @@
                 <p>Prietos Construction has been serving the community for over 20 years, specializing in commercial and residential projects.</p>
             </div>
         </section>
+         <!-- Meet & Greet Banner -->
+<div id="event-banner" class="event-banner">
+    <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.</p>
+    <button id="close-banner" aria-label="Close">✖</button>
+</div>
+
     </main>
             <!-- Footer -->
     <footer>
@@ -142,7 +135,8 @@
         <script src="scripts/script.js" defer></script>
         <script src="scripts/darkMode.js" defer></script>
         <script src="scripts/windchill.js" defer></script>
-        <script src="scripts/weather.js"defer></script>
+        <script src="scripts/weather.js" defer></script>
+        <script src="scripts/banner.js" defer></script>
 </body>
 </html>
 
