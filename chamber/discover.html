@@ -29,11 +29,6 @@
     
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <label class="dark-mode-toggle">
-        <input type="checkbox" id="darkModeSwitch">
-        <span class="slider round"></span>
-    </label>
     
     <!-- Header -->
     <header class="header-main">
@@ -116,13 +111,11 @@
                 <p>Last Modification: <span id="lastModified"></span></p>
             </div> 
         </footer>
-        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode" onclick="toggleDarkMode()">
-            🌙
-        </button>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
 
     <script src="scripts/localStorage.js"></script>
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/dark-mode.js" defer></script>
+    <script src="scripts/darkMode.js" defer></script>
     <script src="scripts/windchill.js" defer></script>
     <script src="scripts/lazyload.js"></script>
     <script src="scripts/visitMessage.js"></script>

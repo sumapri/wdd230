@@ -15,11 +15,6 @@ document.getElementById("menu").addEventListener("click", function() {
     document.querySelector("#navigation .header-main-nav").classList.toggle("open");
   });
 
-  document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-});
-
 // On page load, check if dark mode is enabled
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('darkMode') === 'true') {
