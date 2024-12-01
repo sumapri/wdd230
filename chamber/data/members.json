@@ -1,59 +1,58 @@
 [
     {
         "name": "Tech Innovations Inc.",
-        "address": "123 Tech Lane, Silicon Valley, CA",
-        "phone": "(555) 123-4567",
-        "website": "https://www.techinnovations.com",
+        "address": "123 Tech Lane, Springfield, MO",
+        "phone": "(417) 123-4567",
+        "website": "https://www.springfieldregion.com/key-industries/technology-innovation/",
         "image": "tech-innovations.jpg",
         "membershipLevel": "Gold"
     },
     {
         "name": "Green Earth Solutions",
-        "address": "456 Green St, EcoCity, TX",
-        "phone": "(555) 987-6543",
-        "website": "https://www.greenearthsolutions.com",
+        "address": "456 Green St, Springfield, MO",
+        "phone": "(417) 987-6543",
+        "website": "https://greenearthcleaning.com/",
         "image": "green-earth.jpg",
         "membershipLevel": "Silver"
     },
     {
-        "name": "Downtown Bistro",
-        "address": "789 Bistro Blvd, Downtown, NY",
-        "phone": "(555) 234-5678",
-        "website": "https://www.downtownbistro.com",
+        "name": "Downtown Bistro 160",
+        "address": "789 Bistro Blvd, Springfield, MO",
+        "phone": "(417) 234-5678",
+        "website": "https://nixabistro.com/index.html#/",
         "image": "downtown-bistro.jpg",
         "membershipLevel": "Bronze"
     },
     {
-        "name": "Healthy Living Clinic",
-        "address": "321 Wellness Ave, Holistic City, FL",
-        "phone": "(555) 321-8765",
-        "website": "https://www.healthylivingclinic.com",
+        "name": "Healthy Clinic",
+        "address": "321 Wellness Ave, Springfield, MO",
+        "phone": "(417) 321-8765",
+        "website": "https://equality.healthcare/",
         "image": "healthy-living.jpg",
         "membershipLevel": "Gold"
     },
     {
-        "name": "City Builders Construction",
-        "address": "555 Build St, Uptown, IL",
-        "phone": "(555) 654-3210",
-        "website": "https://www.citybuilders.com",
+        "name": "Wise Builders Construction",
+        "address": "555 Build St, Springfield, MO",
+        "phone": "(417) 654-3210",
+        "website": "https://www.wise-built.com//",
         "image": "city-builders.jpg",
         "membershipLevel": "Silver"
     },
     {
-        "name": "Creative Solutions Agency",
-        "address": "234 Creative Dr, Midtown, NJ",
-        "phone": "(555) 432-1098",
-        "website": "https://www.creativesolutions.com",
+        "name": "Creative Solutions Bigpxl",
+        "address": "234 Creative Dr, Springfield, MO",
+        "phone": "(417) 432-1098",
+        "website": "https://bigpxl.com/",
         "image": "creative-solutions.jpg",
         "membershipLevel": "Bronze"
     },
     {
-        "name": "Sunshine Landscaping",
-        "address": "987 Sun Rd, Sunnyville, CA",
-        "phone": "(555) 876-5432",
-        "website": "https://www.sunshinelandscaping.com",
-        "image": "sunshine-landscaping.jpg",
+        "name": "Custom Creation Landscaping",
+        "address": "987 Sun Rd, Springfield, MO",
+        "phone": "(417) 876-5432",
+        "website": "https://customcreations417.com/news/landscape-design-installation-springfield-mo/?gad_source=1&gclid=CjwKCAiAjKu6BhAMEiwAx4UsAlpo-ezbP5twmfvSwwMolS3LrDztuBC2fkmmARu7esELKedGQt3OCBoCauAQAvD_BwE",
+        "image": "imaginationlandscape.jpg",
         "membershipLevel": "Non-Profit"
     }
 ]
-
