@@ -384,10 +384,10 @@ body.dark-mode .sidebar {
   height: 2.75em;
   padding: .8em;
   max-width: 450px;
-  color: var(--site-color-06);
+  color: blue;
   font-size: 1.4em;
-  background: var(--site-color-09);
-  box-shadow: 1px 1px 4px var(--site-color-11);
+  background: gold;
+  box-shadow: 1px 1px 4px grey;
   text-transform: uppercase;
   font-weight: 700;
   width: 96%;
@@ -396,8 +396,8 @@ body.dark-mode .sidebar {
   transition: all ease-in-out 0.2s;
 }
 .membership-form input[type="submit"]:hover {
-  background: var(--site-color-14);
-  color: var(--site-color-03);
+  background: gold;
+  color: blue;
   font-weight: bold;
 }
 /* Styling for the benefits table */
