@@ -32,4 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+setTimeout(function() {  
+    // code here  
+  }, 100);
 

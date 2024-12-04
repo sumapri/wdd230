@@ -204,6 +204,10 @@ footer a {
 }  
   
 /* Dark Mode */  
+body.dark-mode {  
+  background-color: #000;  
+  color: #fff;  
+} 
 body.dark-mode nav {  
   background-color: #333;  
 }  
@@ -236,8 +240,47 @@ body.dark-mode .card {
 body.dark-mode #dark-mode-toggle label {  
   background: #101011;  
   color: white;  
+} 
+body.dark-mode .sidebar {  
+  background-color: #333;  
+  color: #fff;  
 }  
   
+body.dark-mode .header-main {  
+  background-color: #333;  
+}  
+  
+body.dark-mode .header-main-logo {  
+  color: #fff;  
+}  
+body.dark-mode .nav-links {  
+  color: #fff;  
+}  
+  
+body.dark-mode .nav-links a {  
+  color: #fff;  
+}  
+  
+body.dark-mode .hero {  
+  background-color: #333;  
+}
+body.dark-mode .hero-text {  
+  color: #fff;  
+}  
+  
+body.dark-mode .cta-button {  
+  background-color: #333;  
+  color: #fff;  
+}  
+  
+body.dark-mode .event-banner {  
+  background-color: #333;  
+  color: #fff;  
+}   
+body.dark-mode .footer {  
+  background-color: #333;  
+  color: #fff;  
+}
 /* General Layout */  
 .container {  
   display: grid;  
