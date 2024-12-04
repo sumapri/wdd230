@@ -1,3 +1,5 @@
-document.getElementById("hamburger").addEventListener("click", function() {
-	document.getElementById("nav-links").classList.toggle("active");
+document.getElementById('hamburger').addEventListener('click', function() {
+  var navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('active');
 });
+
