@@ -8,14 +8,14 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
+  color:  #333;
+  background-color: #9BDEFF;
 }
 
 
 /* Header and Navigation */
 header {
-  background-color: #0044cc;
+  background-color:   #0044cc;
   color: white;
   padding: 10px 0;
 }
@@ -39,9 +39,10 @@ header nav ul li a {
   text-decoration: none;
   font-weight: bold;
 }
+
 /* Hero Section */
 #hero {
-  background-color: #0055aa;
+  background-color: #0044cc;
   color: white;
   text-align: center;
   padding: 50px 0;
@@ -79,7 +80,11 @@ header nav ul li a {
   cursor: pointer;
   z-index: 1001; /* Ensure it's on top */
 }
-
+/* Adjust #spotlights to be full width below events/weather section */
+#spotlights {
+  flex: 1 1 100%; /* Full width on larger screens */
+  margin-top: 20px; /* Space between sections */
+}
 /* Events Section */
 /* General layout for the events-weather container */
 #events-weather {
@@ -89,7 +94,16 @@ header nav ul li a {
   margin-top: 20px; /* Space above the sections */
   flex-wrap: wrap; /* Allow the sections to wrap if the screen is small */
 }
+/* On mobile view, stack sections vertically */
+@media (max-width: 768px) {
+  #events-weather {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
 
+  #spotlights {
+    flex: 1 1 100%; /* Make the spotlights section take full width on small screens */
+  }
+}
 /* Styling for the individual cards inside events-weather */
 #events, #weather {
   flex: 1 1 30%; /* Each section should take up 30% of the container, but shrink if needed */
@@ -167,22 +181,41 @@ header nav ul li a {
     flex: 1 1 100%; /* Full width for spotlights on small screens */
   }
 }
+/* CSS for mobile navigation */
+#nav-links {
+  display: none; /* Hide the nav links initially */
+  list-style-type: none;
+}
+
+#nav-links.active {
+  display: block; /* Show nav links when active class is added */
+}
+
+#hamburger {
+  display: block;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure the hamburger button is on top */
+}
 
 /* Footer Styles */
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #333;
+  background-color: #001258;
   color: white;
 }
 
 footer a {
-  color: #ffffff; /* Make sure the footer links have high contrast */
+  color:#FF8DD9; /* Make sure the footer links have high contrast */
   font-weight: bold; /* Make the links more prominent */
 }
 
 footer a:hover {
-  color: #ff9900; /* Change color on hover for better visibility */
+  color: #FF8DD9; /* Change color on hover for better visibility */
 }
 /* Dark Mode */
 body.dark-mode {

@@ -2,7 +2,16 @@
 const yearCopyright = document.querySelector("#currentYear");
 const pageLastModified = document.querySelector("#lastModified");
 const navbar = document.getElementById('navigation');
-const hamburger = document.getElementById('menu'); // Ensure hamburger is defined
+
+// JavaScript for Mobile Navigation
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Toggle the 'active' class when the hamburger is clicked
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 
 
 
