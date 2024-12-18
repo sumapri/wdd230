@@ -1,46 +1,53 @@
-// Get the current weather data from OpenWeatherMap API  
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Cozumel,MX&units=imperial&appid=ca1520dfe40aa5f66f93ba299db4f35d')  
-   .then(response =>  {
-      console.log(response);  // Debug log to check if the fetch is successful
-   return response.json();  
-})  
-   .then(data => {  
-      // Display the current weather data  
-      document.getElementById('current-temperature').innerHTML = `Current Temperature: ${data.main.temp}°F`;  
-      document.getElementById('current-humidity').innerHTML = `Current Humidity: ${data.main.humidity}%`;  
-      document.getElementById('next-day-forecast').innerHTML = `Next Day's Forecast: ${data.weather[0].description}`;  
-      document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-   })
-   .catch(error => {  // Add the catch block to handle errors
-      console.error("Error fetching weather data: ", error);  
-   });  
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Cozumel,MX&units=imperial&appid=ca1520dfe40aa5f66f93ba299db4f35d')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch weather data');
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById('current-temperature').innerHTML = `Current Temperature: ${data.main.temp}°F`;
+        document.getElementById('current-humidity').innerHTML = `Current Humidity: ${data.main.humidity}%`;
+        document.getElementById('next-day-forecast').innerHTML = `Next Day's Forecast: ${data.weather[0].description}`;
+        document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    })
+    .catch(error => {
+        console.error("Error fetching weather data:", error);
+    });
+ 
   
-// Get the rental data from the JSON file  
-fetch('data/rental-data.json')  
-   .then(response => response.json())  
-   .then(data => {  
-      // Display the rental data in the table  
-      const rentalTable = document.getElementById('rental-table');
-      if (rentalTable) {  
-      const tbody = rentalTable.getElementsByTagName('tbody')[0];  
-      data.rentals.forEach(rental => {  
-        const row = tbody.insertRow();  
-        row.innerHTML = `  
-           <td>${rental.type}</td>  
-           <td>${rental.maxPersons}</td>  
-           <td>$${rental.halfDayReservation}</td>  
-           <td>$${rental.fullDayReservation}</td>  
-           <td>$${rental.halfDayWalkIn}</td>  
-           <td>$${rental.fullDayWalkIn}</td>  
-        `;  
-      });  
-   }else {
-      console.error("Rental table not found.");
-   }
-})
-   .catch(error => {  // Add a catch block for this fetch as well
-      console.error("Error fetching rental data: ", error);
-   }); 
+    document.addEventListener('DOMContentLoaded', function() {
+      // Fetch the rental data
+      fetch('data/rental-data.json')  
+          .then(response => response.json())  
+          .then(data => {  
+              const rentalTable = document.getElementById('rental-table');
+              if (rentalTable) {
+                  const tbody = rentalTable.getElementsByTagName('tbody')[0];
+                  if (tbody) {
+                      data.rentals.forEach(rental => {  
+                          const row = tbody.insertRow();
+                          row.innerHTML = `
+                              <td>${rental.type}</td>  
+                              <td>${rental.maxPersons}</td>  
+                              <td>$${rental.halfDayReservation}</td>  
+                              <td>$${rental.fullDayReservation}</td>  
+                              <td>$${rental.halfDayWalkIn}</td>  
+                              <td>$${rental.fullDayWalkIn}</td>  
+                          `;
+                      });
+                  } else {
+                      console.error('No <tbody> found in rental table');
+                  }
+              } else {
+                  console.error('Rental table not found');
+              }
+          })
+          .catch(error => {
+              console.error("Error fetching rental data: ", error);
+          });
+  });
+  
   
 // Handle the reservation form submission  
 document.getElementById('reservation-form').addEventListener('submit', event => {  
