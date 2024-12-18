@@ -65,7 +65,7 @@ nav {
 }
  
 .hero {  
-  background-image: linear-gradient(to bottom, rgba(95, 229, 234, 0.5), rgba(178, 245, 160, 0.5), rgba(221, 171, 21, 0.5)),url("../images/hero.webp");  
+  background-image: linear-gradient(to bottom, rgba(95, 229, 234, 0.5), rgba(178, 245, 160, 0.5), rgba(221, 171, 21, 0.5)),url("./images/hero.webp");  
   background-size: cover;  
   background-position: center;  
   height: 100vh;  
