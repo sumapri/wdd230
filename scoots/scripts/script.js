@@ -1,6 +1,9 @@
 // Get the current weather data from OpenWeatherMap API  
 fetch('https://api.openweathermap.org/data/2.5/weather?q=Cozumel,MX&units=imperial&appid=ca1520dfe40aa5f66f93ba299db4f35d')  
-   .then(response => response.json())  
+   .then(response =>  {
+      console.log(response);  // Debug log to check if the fetch is successful
+   return response.json();  
+})  
    .then(data => {  
       // Display the current weather data  
       document.getElementById('current-temperature').innerHTML = `Current Temperature: ${data.main.temp}°F`;  
@@ -17,7 +20,8 @@ fetch('data/rental-data.json')
    .then(response => response.json())  
    .then(data => {  
       // Display the rental data in the table  
-      const rentalTable = document.getElementById('rental-table');  
+      const rentalTable = document.getElementById('rental-table');
+      if (rentalTable) {  
       const tbody = rentalTable.getElementsByTagName('tbody')[0];  
       data.rentals.forEach(rental => {  
         const row = tbody.insertRow();  
@@ -30,7 +34,10 @@ fetch('data/rental-data.json')
            <td>$${rental.fullDayWalkIn}</td>  
         `;  
       });  
-   })
+   }else {
+      console.error("Rental table not found.");
+   }
+})
    .catch(error => {  // Add a catch block for this fetch as well
       console.error("Error fetching rental data: ", error);
    }); 
