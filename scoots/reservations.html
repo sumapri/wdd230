@@ -1,0 +1,99 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Scoots Rental |Reservations</title> 
+   <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal by Sumara Prieto">
+  <meta name="author" content="Sumara Prieto">
+  <meta property="og:url" content="https://sumapri.github.io/wdd230/">
+  <link rel="icon" href="images/favicon.ico">
+  <!-- Custom Normalization CSS -->
+  <link rel="stylesheet" href="styles/normalize.css"> 
+   <link rel="stylesheet" href="styles/style.css">  
+</head>  
+<body>  
+   <header>  
+      <nav> 
+         <img src="images/logo.webp" alt="company logo" width="60" height="60" loading="lazy" />  
+         <h1 id="nav-title">Scoots Rentals</h1> 
+         <ul id="nav-menu">    
+           <li><a href="index.html">Home</a></li>  
+           <li><a href="rentals.html">Rentals</a></li>  
+           <li><a href="reservations.html">Reservations</a></li>  
+           <li><a href="contact.html">Contact</a></li>  
+        </ul>  
+      </nav>
+        
+   </header>  
+   <main> 
+      <div class="reservation-terms">
+         <div class="reservation-terms-title"> 
+
+         <h2>Rental Services & Terms</h2>
+         </div>
+         <ul>
+            <li>A $50 security deposit is required to secure your reservation.</li><li>A valid driver’s license must be presented at the time of rental.</li><li>Riders must be at least 12 years old to use the scooters.</li><li>Fuel costs are not included in the rental price.</li><li>Unlimited mileage is offered with each rental.</li><li>Liability coverage is provided at no extra charge.</li><li>Optional damage protection is available for purchase.</li><li>Complimentary delivery is available to Cozumel hotels or Airbnbs for rentals of 2 days or more.</li><li>Payment options include Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li><li>Rentals can be returned to either of our physical locations.</li>
+         </ul>
+      </div>
+      <section class="reservation-form"> 
+         <form id="reservation-form">  
+        <h2>Reserve Your Ride</h2>
+        <p>Get ready for an adventure! Choose the perfect scooter for your trip and secure it today.</p>
+            
+           <label for="date">Reservation Date:</label>  
+           <input type="date" id="date" name="date"><br><br>  
+           <label for="period">Rental Duration:</label>  
+           <select id="period" name="period">  
+              <option value="half-day">Half Day</option>  
+              <option value="full-day">Full Day</option>  
+           </select><br><br>  
+           <label for="rental-type">Choose Your Vehicle:</label>  
+           <select id="rental-type" name="rental-type">  
+              <option value="honda-metro-scooter">Honda Metro Scooter</option>  
+              <option value="honda-dio-scooter">Honda Dio Scooter</option>  
+              <option value="honda-pcx150-scooter">Honda PCX150 Scooter</option>  
+              <option value="honda-pioneer-atv">Honda Pioneer ATV</option>  
+              <option value="jeep-wrangler-4-door-with-ac">Jeep Wrangler - 4 door with a/c</option>  
+              <option value="jeep-wrangler-2-door">Jeep Wrangler - 2 door</option>  
+           </select><br><br>  
+           <label for="number">Number of Vehicles:</label>  
+           <input type="number" id="number" name="number"><br><br>  
+           <label for="phone-number">Phone Number:</label>  
+           <input type="tel" id="phone-number" name="phone-number"><br><br>  
+           <label for="name">Full Name:</label>  
+           <input type="text" id="name" name="name"><br><br>  
+           <label for="email">Email Address:</label>  
+           <input type="email" id="email" name="email"><br><br>  
+           <label for="home-state-or-country">Home State or Country:</label>  
+           <input type="text" id="home-state-or-country" name="home-state-or-country"><br><br>  
+           <label for="cruise-line">Cruise Line (if applicable):</label>  
+           <input type="text" id="cruise-line" name="cruise-line"><br><br>  
+           <label for="special-accommodations">Special Requests or Comments:</label>  
+           <textarea id="special-accommodations" name="special-accommodations"></textarea><br><br>  
+           <button id="submit-button">Submit Reservation</button>  
+        </form>  
+      </section>  
+   </main> 
+   <footer>
+      <section>
+         <div class="footer-title">
+             <img src="images/logo.webp" alt="Scooter Logo" width="60" height="60" loading="lazy" />
+             <h2>Scoots Rentals</h2>
+             <a class="btn btn-secondary" href="./rentals.html">Browse Our Rentals</a>
+            </div>
+            <div class="legal">
+                   <span><span id="cYear">&copy;</span> Scoots Rentals | Sumara Prieto | WDD 230 Final Project | </span>
+               </div>
+               <p id="last-modified"></p>
+              </div>
+              <p id="last-modified"></p>
+        </div>
+      </div>
+   </section>
+   </footer> 
+   <script src="scripts/script.js"></script>  
+   <script src="scripts/lastModifeid.js"></script>
+   
+</body>  
+</html>

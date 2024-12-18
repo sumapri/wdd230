@@ -1,0 +1,120 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Scoots</title> 
+   <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal by Sumara Prieto">
+   <meta name="author" content="Sumara Prieto">
+   <meta property="og:url" content="https://sumapri.github.io/wdd230/">
+   <link rel="icon" href="images/favicon.ico">
+   <!-- Custom Normalization CSS -->
+   <link rel="stylesheet" href="styles/normalize.css"> 
+   <link rel="stylesheet" href="styles/style.css">  
+</head>  
+<body>  
+   <header>  
+      <nav>
+         <img src="images/logo.webp" alt="company logo" width="60" height="60" loading="lazy" />  
+         <h1 id="nav-title">Scoots Rentals</h1> 
+          <ul id="nav-menu">  
+           <li><a href="index.html">Home</a></li>  
+           <li><a href="rentals.html">Rentals</a></li>  
+           <li><a href="reservations.html">Reservations</a></li>  
+           <li><a href="contact.html">Contact</a></li>  
+        </ul>  
+      </nav> 
+       
+   </header>  
+   <main>  
+      <section class="hero">  
+        <h1>Welcome to Scoots</h1>  
+        <p>Motor Scooter/Jeeps Rentals on the island of Cozumel, Mexico</p>  
+        <a href="reservations.html">
+          <form id="reservation-form">  
+         <button type="submit">Make a Reservation</button>  
+        </form>  
+      </section>  
+      <section class="weather">  
+        <h2>Current Weather</h2>  
+        <p id="current-temperature"></p>  
+        <p id="current-humidity"></p>  
+        <p id="next-day-forecast"></p>  
+        <p id="weather-description"></p>  
+        <img id="weather-icon" src="" alt="">  
+      </section>  
+      <section class="home-rides-info">
+         <h2 class="separator">Choose Your Ride!</h2>
+         <div style="pointer-events: none;">  
+          <p>"Where every journey is an adventure just waiting to unfold!"</p>  
+        </div>
+
+         <div class="card-container">
+            <article class="card">
+                <img src="./images/honda.webp" alt="honda-metro" width="300" height="auto" loading="lazy" />
+                <div class="card-body"> 
+                  <h3>Honda Metro Scooter</h3>
+                  <p>Honda Metropolitan (49cc) - 1 person</p>
+              </div>
+          </article>
+          <article class="card">
+            <img src="./images/honda1.webp" alt="honda-dio" width="300" height="auto" loading="lazy" />
+            <div class="card-body">
+                <h3>Honda Dio Scooter</h3>
+                <p>Honda Dio (110cc) - 2 person</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="./images/honda2.webp" alt="honda-pcx" width="300" height="auto" loading="lazy" />
+            <div class="card-body">
+                <h3>Honda PCX150 Scooter</h3>
+                <p>Honda PCX150 (149cc) - 2 person</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="./images/honda3.webp" alt="honda-pioneer" width="300" height="auto" loading="lazy" />
+            <div class="card-body">
+                <h3>Honda Pioneer ATV</h3>
+                <p>Honda Pioneer 1000 - 4 person</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/wrangler.webp" alt="jeep-2-door" width="300" height="auto" loading="lazy" />
+            <div class="card-body">
+                <h3>Jeep Wrangler - 2 door</h3>
+                <p>Jeep Wrangler - 2 door - open air - manual - 4 person</p>
+               </div>
+           </article>
+           <article class="card">
+            <img src="images/wrangler4.webp" alt="jeep-4-door" width="300" height="auto" loading="lazy" />
+            <div class="card-body">
+                <h3>Jeep Wrangler - 4 door</h3>
+                <p>Jeep Wrangler - 4 door manual with A/C - 5 person</p>
+               </div>
+           </article>
+         </div>
+      </section>  
+
+   </main> 
+   <footer>
+   <section>
+      <div class="footer-title">
+          <img src="images/logo.webp" alt="Scooter Logo" width="60" height="60" loading="lazy" />
+          <h2>Scoots Rentals</h2>
+          <a class="btn btn-secondary" href="./rentals.html">Browse Our Rentals</a>
+      </div>
+      <div class="legal">
+             <span
+                 ><span id="cYear">&copy;</span> Scoots Rentals | Sumara Prieto | WDD 230 Final Project | </span>
+         </div>
+         <p id="last-modified"></p>
+        </div>
+      </div>
+   </section>
+   </footer>
+
+   <script src="scripts/script.js"></script> 
+   <script src="scripts/lastModifeid.js"></script>
+   
+</body>  
+</html>

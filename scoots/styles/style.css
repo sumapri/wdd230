@@ -1,0 +1,597 @@
+/* Global Styles */  
+* {  
+  box-sizing: border-box;  
+  margin: 0;  
+  padding: 0;  
+}  
+body {  
+  font-family: Arial, sans-serif;  
+  line-height: 1.6;  
+   color: #0e0e0e;  
+   background-color: #d3d0d0;  
+}  
+ 
+header {  
+  background-color: rgb(6, 170, 246);  
+  color: #fff;  
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;  
+}  
+nav {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  width: 100%;  
+}  
+  
+#nav-title {  
+  margin-right: auto;  
+  font-size: 1.5em;  
+  font-weight: 700;  
+  color: rgb(7, 7, 7);  
+} 
+#nav-menu {  
+  list-style: none;  
+  margin: 0;  
+  padding: 0;  
+  display: flex;  
+  justify-content: space-between;  
+}  
+  
+#nav-menu li {  
+  margin-left: 20px;  
+}  
+#nav-menu a {  
+  color: #0c0c0c;  
+  text-decoration: none;  
+} 
+ /* Responsive Styles */  
+@media (max-width: 768px) {  
+  header {  
+   flex-direction: column;  
+  }  
+  nav {  
+   flex-direction: column;  
+   align-items: flex-start;  
+  }  
+  #nav-menu {  
+   flex-direction: column;  
+  }  
+  #nav-menu li {  
+   margin-left: 0;  
+   margin-bottom: 10px;  
+  }
+}
+ 
+.hero {  
+  background-image: linear-gradient(to bottom, rgba(100, 240, 245, 0.5), rgba(178, 245, 160, 0.5), rgba(221, 171, 21, 0.5)),url("/scoots/images/hero.webp");  
+  background-size: cover;  
+  background-position: center;  
+  height: 100vh;  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;  
+  align-items: center;
+  color: #090909;  
+}  
+
+.hero h1 {  
+  font-size: 48px; 
+}  
+ 
+.hero p {  
+  font-size: 24px;  
+  margin-bottom: 20px; 
+} 
+.hero button {  
+  padding: 10px 20px; /* Add this line to make the button a bit bigger */  
+  font-size: 18px; /* Add this line to make the button text a bit bigger */  
+  border: none; /* Add this line to remove the default button border */  
+  border-radius: 5px; /* Add this line to make the button a bit rounded */  
+  cursor: pointer; /* Add this line to make the button clickable */  
+}
+.weather {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  background-color: #c6eff5;  
+  padding: 1em;  
+  border: 1px solid #141515;  
+  margin: 20px;  
+  border-radius: 10px;  
+}  
+  
+.weather h2 {  
+  font-size: 24px;  
+}  
+  
+.weather p {  
+  margin-bottom: 20px;  
+}  
+  
+.weather img {  
+  width: 100px;  
+  height: 100px;  
+  border-radius: 50%;  
+  margin-bottom: 20px;  
+}
+ 
+.home-rides-info {  
+  text-align: center;  
+}
+.home-rides-info p {  
+  pointer-events: none !important;  
+  cursor: default !important;  
+}
+
+.card-container {  
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);  
+  grid-gap: 20px;  
+  padding: 1em;  
+}  
+  
+.card {  
+  background-color: #fff;  
+  border: 1px solid #ddd;  
+  padding: 1em;  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.card img {  
+  width: 100%;  
+  height: auto;  
+  border-radius: 10px 10px 0 0;  
+}  
+  
+.card-body {  
+  padding: 1em;  
+}  
+  
+.card-body h3 {  
+  font-size: 18px;  
+  margin-bottom: 10px;  
+}  
+  
+.card-body p {  
+  font-size: 14px;  
+  color: #666;  
+}
+/* Reservation Section (Rental Services & Terms) */
+.reservation-terms {  
+  background-image: linear-gradient(to bottom, rgba(243, 247, 247, 0.5), rgba(243, 247, 244, 0.5), rgba(247, 246, 243, 0.5)),url("/scoots/images/hero1.webp");   
+  background-size: cover;   
+  background-position: center;  
+  padding: 40px;  
+  margin: 0;  
+  border-radius: 0;  
+  box-shadow: none;  
+  text-align: center;  
+  display: flex;  
+  flex-direction: column; /* Add this line to make the content stack vertically */  
+  justify-content: center;  
+  align-items: center;  
+  min-height: 100%;  
+}
+.reservation-terms-title {  
+  text-align: center;  
+  margin-bottom: 20px;  
+}
+
+ 
+.reservation-terms h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center; /* Add this line to center the title */  
+  position: relative; /* Add this line to make the title more visible */  
+  z-index: 1; /* Add this line to make the title more visible */ 
+} 
+.reservation-terms ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reservation-terms li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #090909;
+  margin-bottom: 10px;
+}
+
+.reservation-terms li::before {
+  content: "✔️"; /* Adds a checkmark before each item */
+  margin-right: 10px;
+  color: #06aaf6;
+}
+@media screen and (max-width: 768px) {
+  .reservation-terms {
+    padding: 30px;
+  }
+
+  .reservation-terms h2 {
+    font-size: 1.5em;
+  }
+
+  .reservation-terms li {
+    font-size: 1em;
+  }
+}
+#reservation-form {
+  background-color: #ede8e8;
+  padding: 30px;
+  max-width: 700px; /* Limit the width to make it more compact */
+  margin: 2em auto;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}  
+.reservation-form h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #06aaf6;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.reservation-form p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.reserve-btn {
+  background-color: #06aaf6;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.reserve-btn:hover {
+  background-color: #009cdb;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+.reserve-btn:active {
+  background-color: #007bbf;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .reservation-form {
+    padding: 20px;
+  }
+
+  .reservation-form h2 {
+    font-size: 1.4em;
+  }
+  .reservation-form p {
+    font-size: 1em;
+  }
+
+  .reserve-btn {
+    font-size: 1.1em;
+    padding: 10px 20px;
+  }
+}
+#reservation-form label {  
+  grid-column: 1;  
+}  
+ 
+#reservation-form input, #reservation-form select, #reservation-form textarea {  
+  grid-column: 2; 
+  padding: 10px;  
+  border: 1px solid #ddd;  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}  
+ 
+#submit-button {    
+  padding: 10px 20px;  
+  border: none;  
+  border-radius: 10px;  
+  background-color: #333;  
+  color: #fff;  
+  cursor: pointer;  
+}  
+ 
+#submit-button:hover {  
+  background-color: #444;  
+}  
+main {
+  background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+  padding: 2em;
+  }
+ 
+  .contact-info {  
+    background-image: linear-gradient(to bottom, rgba(247, 249, 250, 0.5), rgba(80, 217, 248, 0.5), rgba(6, 136, 162, 0.5)),url("/scoots/images/hero2.webp");   
+    background-size: cover;   
+    background-position: center;  
+    background-attachment: fixed; /* Add this line to fix the background image in place */  
+    padding: 2em;    
+    border-radius: 10px;   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
+    display: flex; /* Add this line to center the content */  
+    justify-content: center; /* Add this line to center the content horizontally */  
+    align-items: center; /* Add this line to center the content vertically */  
+    min-height: 100%; /* Add this line to make the section at least as tall as its content */  
+  }
+  
+   
+  .contact-header {  
+    text-align: center;  
+    margin-bottom: 20px;  
+  }  
+    
+  .contact-header h1 {  
+    font-size: 24px;  
+    margin-bottom: 10px;  
+  } 
+  .contact-header p {  
+    font-size: 18px; 
+    color: white; 
+  } 
+  .contact-details-container {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: flex-start;  
+  } 
+  .contact-container {  
+    margin: 2em 0;  
+  }  
+    
+  .contact-form-container {  
+    min-height: 420px;  
+    overflow-y: auto;  
+  } 
+  
+  .hours-of-operation, .contact-details {  
+    width: 45%;  
+    background-color: #fff;  
+    padding: 20px;  
+    border: 1px solid #ddd;  
+    border-radius: 10px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  }  
+    
+  .hours-of-operation h2, .contact-details h2 {  
+    font-size: 18px;  
+    margin-bottom: 10px;  
+  }  
+    
+  .hours-of-operation ul, .contact-details ul {  
+    list-style: none;  
+    padding: 0;  
+    margin: 0;  
+  } 
+  .hours-of-operation li, .contact-details li {  
+    font-size: 16px;  
+    margin-bottom: 10px;  
+  }  
+    
+  .contact-details i{  
+    margin-right: 10px;   
+  }  
+  .contact-container {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: flex-start;  
+  }  
+    
+  .map-container {  
+    width: 50%;  
+    padding: 20px;  
+  }  
+    
+  .map-container h2 {  
+    font-size: 18px;  
+    margin-bottom: 10px;  
+  } 
+  .map-container iframe { 
+    width: 100%;  
+    height: 300px;  
+    border: 1px solid #ddd;  
+    border-radius: 10px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  }  
+  /* Responsive Styles */  
+@media (max-width: 768px) {  
+  .contact-container {  
+   flex-direction: column;  
+  }  
+  .map-container, .contact-form-container {  
+   width: 100%;  
+  }  
+  .map-container iframe {  
+   height: 200px;  
+  }  
+  .contact-form-container {  
+    height: auto;
+} 
+}
+@media (max-width: 480px) {  
+  .map-container iframe {  
+   height: 150px;  
+  }  
+}
+    
+  .contact-form-container {  
+    width: 50%;  
+    padding: 20px;  
+    background-color: #fff;  
+    border: 1px solid #ddd;  
+    border-radius: 10px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    height: 340px;
+    display: flex;  
+  flex-direction: column;  
+  justify-content: center;
+  } 
+  .contact-form-container h2 {  
+    font-size: 18px;  
+    margin-bottom: 10px;  
+  } 
+  #contact-form {  
+    display: flex;  
+    flex-direction: column;  
+  }  
+    
+  #contact-form label {  
+    font-size: 16px;  
+    margin-bottom: 10px;  
+  } 
+  #contact-form input, #contact-form textarea {  
+    padding: 10px;  
+    border: 1px solid #ddd;  
+    border-radius: 10px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    margin-bottom: 20px;  
+  } 
+ 
+#submit-button {  
+  padding: 10px 20px;  
+  border: none;  
+  border-radius: 10px;  
+  background-color: #333;  
+  color: #fff;  
+  cursor: pointer; 
+}  
+ 
+#submit-button:hover {  
+  background-color: #444;  
+} 
+  
+.rental-choice {
+  background-image: linear-gradient(to bottom, rgba(6, 246, 122, 0.947), rgba(8, 202, 245, 0.5), rgba(204, 243, 7, 0.5)),url("/scoots/images/hero3.webp");  
+  background-size: cover;   
+  background-position: center;  
+  padding: 40px;  
+  margin: 0;  
+  border-radius: 0;  
+  box-shadow: none;  
+  text-align: center;  
+  display: flex;  
+  flex-direction: column; /* Add this line to make the content stack vertically */  
+  justify-content: center;  
+  align-items: center;  
+  min-height: 100%;    
+}
+.rental-choice-title {
+  text-align: center;  
+  margin-bottom: 20px; 
+}
+/* Heading Styling */
+.rental-choice h2 {
+  font-size: 1.8em;
+  color: #080808;
+  margin-bottom: 1em; /* Space below the heading */
+  font-weight: 600; /* Bold for emphasis */
+}
+/* Styling the List */
+.rental-choice ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px; /* Adds space between list items */
+}
+
+/* List Items Styling */
+.rental-choice ul li {
+  font-size: 1.2em;
+  color: #f9f5f5;
+  position: relative;
+  padding-left: 30px; /* Space for custom bullet */
+  line-height: 1.6; /* More space between lines */
+}
+/* Add custom bullet to each list item */
+.rental-choice ul li::before {
+  content: "•"; /* Unicode bullet character */
+  font-size: 1.6em;
+  color: #f5f7f8; /* Accent color for the bullets */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Hover effect for list items */
+.rental-choice ul li:hover {
+  color: #06aaf6; /* Change text color on hover */
+  cursor: pointer; /* Pointer cursor for interaction */
+}
+  
+.rental-options {  
+  background-image: linear-gradient(to bottom, #bbf3f3, #e1dcdc);  
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr);  
+  grid-gap: 20px;  
+  padding: 1em;   
+}
+.rental-options h2 {  
+  grid-column: 1 / -1;  
+}  
+  
+.rental-options table {  
+  grid-column: 1 / -1;  
+}
+#rental-table {  
+  border-collapse: collapse;  
+  width: 100%;  
+  border: 1px solid #ddd;  
+  border-radius: 10px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+#rental-table th, #rental-table td {  
+  padding: 10px;  
+  border: 1px solid #ddd;  
+}  
+  
+#rental-table th {  
+  background-color: #333;  
+  color: #fff;  
+  padding: 10px;  
+  border: 1px solid #ddd;   
+}
+
+/* Footer Styles */  
+footer {  
+  background-color: rgb(47, 211, 236);  
+  color: #070707;  
+  padding: 1em;  
+  text-align: center;  
+} 
+footer h2, footer a { color: rgb(7, 7, 7) }
+footer a {  
+  padding: 10px 20px;  
+  border-radius: 5px;  
+  text-decoration: none;  
+}
+
+/* Responsive Styles */  
+@media (max-width: 768px) {  
+  .hero {  
+     height: 50vh;  
+  }
+  .rental-options {  
+    grid-template-columns: repeat(2, 1fr);  
+ }  
+} 
+@media (max-width: 480px) {  
+  .hero {  
+     height: 30vh;  
+  }  
+  .rental-options {  
+     grid-template-columns: 1fr;  
+  }  
+}

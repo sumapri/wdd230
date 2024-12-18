@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Jeep, Scootes Rentals</title> 
+   <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal by Sumara Prieto">
+   <meta name="author" content="Sumara Prieto">
+   <meta property="og:url" content="https://sumapri.github.io/wdd230/">
+   <link rel="icon" href="images/favicon.ico">
+   <!-- Custom Normalization CSS -->
+   <link rel="stylesheet" href="styles/normalize.css"> 
+   <link rel="stylesheet" href="styles/style.css">  
+</head>  
+<body>  
+   <header>  
+      <nav> 
+         <img src="images/logo.webp" alt="company logo" width="60" height="60" loading="lazy" />  
+         <h1 id="nav-title">Scoots Rentals</h1>
+         <ul id="nav-menu">   
+           <li><a href="index.html">Home</a></li>  
+           <li><a href="rentals.html">Rentals</a></li>  
+           <li><a href="reservations.html">Reservations</a></li>  
+           <li><a href="contact.html">Contact</a></li>  
+        </ul>  
+      </nav> 
+      
+   </header>  
+   <main>  
+      <div class="rental-choice">
+         <div class="rental-choice-title">
+         <h2>Why Choose Scoots Rental?</h2>
+         </div>
+             <ul>
+               <li>Family Business CIA</li>
+               <li>Unlimited mileage</li>
+               <li>Free delivery to you</li>
+               <li>Reservation or walk-ins</li>
+               <li>Easy payment options</li>
+             </ul>
+      </div>
+
+      <section class="rental-options">  
+        <h2>Rental Options</h2> 
+        <p>Which vehicle is right for you?</p> 
+        <table id="rental-table">  
+           <thead>  
+              <tr>  
+                <th>Rental Type</th>  
+                <th>Max Persons</th>  
+                <th>Half Day Reservation</th>  
+                <th>Full Day Reservation</th>  
+                <th>Half Day Walk-In</th>  
+                <th>Full Day Walk-In</th>  
+              </tr>  
+           </thead>  
+           <tbody id="rental-data.json"></tbody>  
+        </table>  
+      </section>  
+   </main>  
+   <footer>
+      <section>
+         <div class="footer-title">
+             <img src="images/logo.webp" alt="Scooter Logo" width="60" height="60" loading="lazy" />
+             <h2>Scoots Rentals</h2>
+             <a class="btn btn-secondary" href="./rentals.html">Browse Our Rentals</a>
+            </div>
+            <div class="legal">
+                   <span
+                       ><span id="cYear">&copy;</span> Scoots Rentals | Sumara Prieto | WDD 230 Final Project | </span>
+               </div>
+               <p id="last-modified"></p>
+        </div>
+      </div>
+   </section>
+   </footer>
+   <script src="scripts/script.js"></script> 
+   <script src="scripts/lastModifeid.js"></script>
+   
+</body>  
+</html>
