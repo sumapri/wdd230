@@ -470,7 +470,7 @@ main {
 } 
   
 .rental-choice {
-  background-image: linear-gradient(to bottom, rgba(6, 246, 122, 0.947), rgba(8, 202, 245, 0.5), rgba(204, 243, 7, 0.5)),url("/scoots/images/hero3.webp");  
+  background-image: linear-gradient(to bottom, rgba(6, 246, 122, 0.947), rgba(8, 202, 245, 0.5), rgba(209, 246, 20, 0.5)),url("/scoots/images/hero3.webp");  
   background-size: cover;   
   background-position: center;  
   padding: 40px;  
@@ -509,7 +509,7 @@ main {
 /* List Items Styling */
 .rental-choice ul li {
   font-size: 1.2em;
-  color: #f9f5f5;
+  color: white;
   position: relative;
   padding-left: 30px; /* Space for custom bullet */
   line-height: 1.6; /* More space between lines */
