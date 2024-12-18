@@ -6,7 +6,10 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Cozumel,MX&units=imperi
       document.getElementById('current-temperature').innerHTML = `Current Temperature: ${data.main.temp}°F`;  
       document.getElementById('current-humidity').innerHTML = `Current Humidity: ${data.main.humidity}%`;  
       document.getElementById('next-day-forecast').innerHTML = `Next Day's Forecast: ${data.weather[0].description}`;  
-      document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;  
+      document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+   })
+   .catch(error => {  // Add the catch block to handle errors
+      console.error("Error fetching weather data: ", error);  
    });  
   
 // Get the rental data from the JSON file  
@@ -27,7 +30,10 @@ fetch('data/rental-data.json')
            <td>$${rental.fullDayWalkIn}</td>  
         `;  
       });  
-   });  
+   })
+   .catch(error => {  // Add a catch block for this fetch as well
+      console.error("Error fetching rental data: ", error);
+   }); 
   
 // Handle the reservation form submission  
 document.getElementById('reservation-form').addEventListener('submit', event => {  
