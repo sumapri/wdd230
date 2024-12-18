@@ -10,7 +10,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Cozumel,MX&units=imperi
   document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;  
 });  
   
-document.addEventListener('DOMContentLoaded', () => {  
+window.onload = function() {  
   // Get the rental data from the JSON file  
   fetch('data/rental-data.json')  
   .then(response => response.json())  
@@ -31,51 +31,60 @@ document.addEventListener('DOMContentLoaded', () => {
   });  
   
   // Handle the reservation form submission  
-  document.getElementById('reservation-form').addEventListener('submit', event => {  
-   event.preventDefault();  
-   // Get the form data  
-   const formData = new FormData(event.target);  
-   // Send the form data to the server  
-   fetch('reservations.html', {  
-    method: 'POST',  
-    body: formData  
-   })  
-   .then(response => response.text())  
-   .then(data => {  
-    // Display a success message  
-    alert('Reservation made successfully!');  
-   })  
-   .catch(error => {  
-    // Display an error message  
-    alert('Error making reservation!');  
+  const reservationForm = document.getElementById('reservation-form');  
+  if (reservationForm) {  
+   reservationForm.addEventListener('submit', event => {  
+    event.preventDefault();  
+    // Get the form data  
+    const formData = new FormData(event.target);  
+    // Send the form data to the server  
+    fetch('reservations.html', {  
+      method: 'POST',  
+      body: formData  
+    })  
+    .then(response => response.text())  
+    .then(data => {  
+      // Display a success message  
+      alert('Reservation made successfully!');  
+    })  
+    .catch(error => {  
+      // Display an error message  
+      alert('Error making reservation!');  
+    });  
+    window.location.href = 'reservations.html';  
    });  
-   window.location.href = 'reservations.html';  
-  });  
+  }  
   
   // Handle the contact form submission  
-  document.getElementById('contact-form').addEventListener('submit', event => {  
-   event.preventDefault();  
-   // Get the form data  
-   const formData = new FormData(event.target);  
-   // Send the form data to the server  
-   fetch('contact.html', {  
-    method: 'POST',  
-    body: formData  
-   })  
-   .then(response => response.json())  
-   .then(data => {  
-    // Display a success message  
-    alert('Message sent successfully!');  
-   })  
-   .catch(error => {  
-    // Display an error message  
-    alert('Error sending message!');  
-   })  
-  });  
+  const contactForm = document.getElementById('contact-form');  
+  if (contactForm) {  
+   contactForm.addEventListener('submit', event => {  
+    event.preventDefault();  
+    // Get the form data  
+    const formData = new FormData(event.target);  
+    // Send the form data to the server  
+    fetch('contact.html', {  
+      method: 'POST',  
+      body: formData  
+    })  
+    .then(response => response.json())  
+    .then(data => {  
+      // Display a success message  
+      alert('Message sent successfully!');  
+    })  
+    .catch(error => {  
+      // Display an error message  
+      alert('Error sending message!');  
+    })  
+   });  
+  }  
   
-  document.querySelector('.weather').addEventListener('click', event => {  
-   event.preventDefault();  
-   event.stopPropagation();  
-  });  
-});
-    
+  const weatherElement = document.querySelector('.weather');  
+  if (weatherElement) {  
+   weatherElement.addEventListener('click', event => {  
+    event.preventDefault();  
+    event.stopPropagation();  
+   });  
+  }  
+}
+   
