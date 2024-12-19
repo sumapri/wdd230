@@ -199,7 +199,7 @@ nav {
 .reservation-terms li {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #090909;
+  color: #f9f5f5;
   margin-bottom: 10px;
 }
 
@@ -337,7 +337,7 @@ main {
   } 
   .contact-header p {  
     font-size: 18px; 
-    color: rgb(5, 4, 4); 
+    color: rgb(246, 242, 242); 
   } 
   .contact-details-container {  
     display: flex;  
