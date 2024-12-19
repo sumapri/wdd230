@@ -65,7 +65,7 @@ nav {
 }
  
 .hero {  
-  background-image: linear-gradient(to bottom, rgba(95, 229, 234, 0.5), rgba(178, 245, 160, 0.5), rgba(221, 171, 21, 0.5)),url("../images/hero.webp");  
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("../images/hero.webp");  
   background-size: cover;  
   background-position: center;  
   height: 100vh;  
@@ -83,6 +83,8 @@ nav {
 .hero p {  
   font-size: 24px;  
   margin-bottom: 20px; 
+  color: rgb(8, 8, 8);
+  font-weight: bold;
 } 
 .hero button {  
   padding: 10px 20px; /* Add this line to make the button a bit bigger */  
@@ -165,7 +167,7 @@ nav {
 }
 /* Reservation Section (Rental Services & Terms) */
 .reservation-terms {  
-  background-image: linear-gradient(to bottom, rgba(243, 247, 247, 0.5), rgba(243, 247, 244, 0.5), rgba(247, 246, 243, 0.5)),url("../images/hero1.webp");   
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("../images/hero3.webp");   
   background-size: cover;   
   background-position: center;  
   padding: 40px;  
@@ -201,9 +203,10 @@ nav {
 }
 
 .reservation-terms li {
-  font-size: 1.1em;
+  font-size: 1.6em;
   line-height: 1.6;
-  color: #f9f5f5;
+  color: #0d0d0d;
+  font-weight: bold; 
   margin-bottom: 10px;
 }
 
@@ -316,33 +319,27 @@ main {
   }
  
   .contact-info {  
-    background-image: linear-gradient(to bottom, rgba(247, 249, 250, 0.5), rgba(80, 217, 248, 0.5), rgba(6, 136, 162, 0.5)),url("../images/hero2.webp");   
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("../images/hero1.webp");   
     background-size: cover;   
     background-position: center;  
     background-attachment: fixed; /* Add this line to fix the background image in place */  
     padding: 2em;    
     border-radius: 10px;   
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
-    display: flex; /* Add this line to center the content */  
-    justify-content: center; /* Add this line to center the content horizontally */  
-    align-items: center; /* Add this line to center the content vertically */  
-    min-height: 100%; /* Add this line to make the section at least as tall as its content */  
+    display: flex;
+    flex-direction: column;  
+    align-items: center;   
   }
   
-   
   .contact-header {  
     text-align: center;  
     margin-bottom: 20px;  
   }  
     
   .contact-header h1 {  
-    font-size: 24px;  
+    font-size: 34px;  
     margin-bottom: 10px;  
-  } 
-  .contact-header p {  
-    font-size: 18px; 
-    color: #333; 
-  } 
+  }  
   .contact-details-container {  
     display: flex;  
     justify-content: space-between;  
@@ -485,7 +482,7 @@ main {
 } 
   
 .rental-choice {
-  background-image: linear-gradient(to bottom, rgba(6, 246, 122, 0.947), rgba(8, 202, 245, 0.5), rgba(209, 246, 20, 0.5)),url("../images/hero3.webp");  
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url("../images/hero2.webp");  
   background-size: cover;   
   background-position: center;  
   padding: 40px;  
@@ -523,8 +520,9 @@ main {
 
 /* List Items Styling */
 .rental-choice ul li {
-  font-size: 1.2em;
-  color: rgb(6, 6, 6);
+  font-size: 1.5em;
+  color: rgb(10, 10, 10);
+  font-weight: bold;
   position: relative;
   padding-left: 30px; /* Space for custom bullet */
   line-height: 1.6; /* More space between lines */
@@ -541,7 +539,7 @@ main {
 
 /* Hover effect for list items */
 .rental-choice ul li:hover {
-  color: #06aaf6; /* Change text color on hover */
+  color: #2e06f6; /* Change text color on hover */
   cursor: pointer; /* Pointer cursor for interaction */
 }
   
