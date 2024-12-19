@@ -159,6 +159,10 @@ nav {
   font-size: 14px;  
   color: #666;  
 }
+.responsive-img {
+  width: 100%;  /* Makes the image fill the container's width */
+  height: auto; /* Adjust the height to maintain aspect ratio */
+}
 /* Reservation Section (Rental Services & Terms) */
 .reservation-terms {  
   background-image: linear-gradient(to bottom, rgba(243, 247, 247, 0.5), rgba(243, 247, 244, 0.5), rgba(247, 246, 243, 0.5)),url("../images/hero1.webp");   
