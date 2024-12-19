@@ -341,18 +341,14 @@ main {
   } 
   .contact-header p {  
     font-size: 18px; 
-    color: rgb(11, 71, 237); 
+    color: #333; 
   } 
   .contact-details-container {  
     display: flex;  
     justify-content: space-between;  
     align-items: flex-start;  
-  } 
-  .contact-container {  
-    margin: 2em 0;  
   }  
     
-  
   .hours-of-operation, .contact-details {  
     width: 45%;  
     background-color: #fff;  
