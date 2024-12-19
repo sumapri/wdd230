@@ -348,10 +348,6 @@ main {
     margin: 2em 0;  
   }  
     
-  .contact-form-container {  
-    min-height: 420px;  
-    overflow-y: auto;  
-  } 
   
   .hours-of-operation, .contact-details {  
     width: 45%;  
@@ -413,9 +409,7 @@ main {
   .map-container iframe {  
    height: 200px;  
   }  
-  .contact-form-container {  
-    height: auto;
-} 
+ 
 }
 @media (max-width: 480px) {  
   .map-container iframe {  
@@ -430,10 +424,11 @@ main {
     border: 1px solid #ddd;  
     border-radius: 10px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    height: 340px;
     display: flex;  
   flex-direction: column;  
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 420px;
+  overflow-y: auto;
   } 
   .contact-form-container h2 {  
     font-size: 18px;  
@@ -441,19 +436,20 @@ main {
   } 
   #contact-form {  
     display: flex;  
-    flex-direction: column;  
+    flex-direction: column; 
+    gap: 10px; 
   }  
     
   #contact-form label {  
     font-size: 16px;  
-    margin-bottom: 10px;  
+    margin-bottom: 5px;  
   } 
   #contact-form input, #contact-form textarea {  
     padding: 10px;  
     border: 1px solid #ddd;  
     border-radius: 10px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
-    margin-bottom: 20px;  
+    margin-bottom: 10px;  
   } 
  
 #submit-button {  
@@ -463,10 +459,29 @@ main {
   background-color: #333;  
   color: #fff;  
   cursor: pointer; 
+  margin-top: 10px;
 }  
  
 #submit-button:hover {  
   background-color: #444;  
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .map-container, .contact-form-container {
+    width: 100%;
+  }
+  .contact-form-container {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container iframe {
+    height: 150px;
+  }
 } 
   
 .rental-choice {
